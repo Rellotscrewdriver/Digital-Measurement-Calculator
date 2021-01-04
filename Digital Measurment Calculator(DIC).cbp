@@ -14,8 +14,6 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="include" />
-					<Add directory="2D shapes" />
-					<Add directory="3D shapes" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -26,8 +24,6 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="include" />
-					<Add directory="2D shapes" />
-					<Add directory="3D shapes" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -38,15 +34,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="2D shapes/area_2D.cpp" />
-		<Unit filename="2D shapes/area_2D.h" />
-		<Unit filename="2D shapes/perimeter_2D.cpp" />
-		<Unit filename="2D shapes/perimeter_2D.h" />
-		<Unit filename="3D shapes/area_3D.cpp" />
-		<Unit filename="3D shapes/area_3D.h" />
-		<Unit filename="3D shapes/volume_3D.cpp" />
-		<Unit filename="3D shapes/volume_3D.h" />
+		<Unit filename="include/Shape_2D.h" />
+		<Unit filename="include/Shape_3D.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Shape_2D.cpp" />
+		<Unit filename="src/Shape_3D.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

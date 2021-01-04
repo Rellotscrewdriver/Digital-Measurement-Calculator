@@ -1,52 +1,22 @@
-#include "area_2D.h"
-#include "perimeter_2D.h"
-
-using namespace std;
+#include "Shape_2D.h"
+#include "Shape_3D.h"
+string input = "your input: ";
 
 int main()
 {
-    string input = "input: ";
     string dimensional;
-    //string
-    cout << "Which Dimension do you wanna find out the measure, 2D or 3D" << endl;
+    cout << "Enter The Dimensional in which you wanna find the measure of: " << endl;
     cout << input;
     cin >> dimensional;
 
-    if(dimensional == "2D"){
-        cout << "Which shape do want to choose: " << endl;
-        cout << "Which 2D Shape do you wanna find the measure of:" << endl;
-        cout << "type the number down below" << endl;
-        cout << "1 Square" << endl;
-        cout << "2 Rectangle" << endl;
-        cout << "3 Triangle"<< endl;
-        cout << "4 Parallelogram" <<endl;
-        cout << input;
-//        cin >> whichShape;
-        area_2D();
-    } else if(dimensional == "2d"){
-        area_2D();
-    } else if(dimensional == "3D"){
+    if(dimensional == "2d" || dimensional == "2D")
+        Shape_2D();
+    else if (dimensional == "3d" || dimensional == "3D")
+        Shape_3D();
+    else
+        cout << "InValid Input" << endl;
 
-    } else if(dimensional == "3D"){
-
-    } else {
-        cout << "invaild input, restart the console and try again";
-    }
-
-
-    /* List of shapes in 2D
-        rectangle
-        square
-        Circle
-        Triangle
-
-        List of shapes in 3D
-        cuboid
-        cude
-        cylinder
-        sphere(full sphere or half-hemisphere)
-        Cone
-        (surface area / lateral surface area / total surface area / volume)
-    */
-    return 0;
+    cout << "Type something and Press enter to quit now";
+    cin >> dimensional;
+    //^ sometimes the program unexceptionally quits so I put this input statment
 }

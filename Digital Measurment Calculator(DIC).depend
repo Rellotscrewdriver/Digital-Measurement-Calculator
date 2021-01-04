@@ -1,38 +1,19 @@
 # depslib dependency file v1.0
-1167591009 source:d:\programming-section\c++\asssignments\digital measurment calculator(dic)\main.cpp
-	"area_2D.h"
-	"perimeter_2D.h"
+1167595853 source:d:\programming-section\c++\asssignments\digital measurment calculator(dic)\src\shape_2d.cpp
+	"Shape_2D.h"
 
-1167593728 source:d:\programming-section\c++\asssignments\digital measurment calculator(dic)\src\area.cpp
-	"area.h"
-
-1167593728 d:\programming-section\c++\asssignments\digital measurment calculator(dic)\include\area.h
-
-1167593740 source:d:\programming-section\c++\asssignments\digital measurment calculator(dic)\src\perimeter.cpp
-	"perimeter.h"
-
-1167593740 d:\programming-section\c++\asssignments\digital measurment calculator(dic)\include\perimeter.h
-
-1167591438 d:\programming-section\c++\asssignments\digital measurment calculator(dic)\2d shapes\area_2d.h
+1167595864 d:\programming-section\c++\asssignments\digital measurment calculator(dic)\include\shape_2d.h
 	<iostream>
+	<cmath>
 	<string>
 
-1601869932 source:d:\programming-section\c++\asssignments\digital measurment calculator(dic)\2d shapes\area_2d.cpp
-	"area_2D.h"
+1167596160 source:d:\programming-section\c++\asssignments\digital measurment calculator(dic)\src\shape_3d.cpp
+	"Shape_3D.h"
+	"Shape_2D.h"
 
-1167591504 source:d:\programming-section\c++\asssignments\digital measurment calculator(dic)\3d shapes\area_3d.cpp
-	"area_3D.h"
+1167595779 d:\programming-section\c++\asssignments\digital measurment calculator(dic)\include\shape_3d.h
 
-1167591504 d:\programming-section\c++\asssignments\digital measurment calculator(dic)\3d shapes\area_3d.h
-
-1167591546 source:d:\programming-section\c++\asssignments\digital measurment calculator(dic)\3d shapes\volume_3d.cpp
-	"volume_3D.h"
-
-1167591545 d:\programming-section\c++\asssignments\digital measurment calculator(dic)\3d shapes\volume_3d.h
-
-1601869806 d:\programming-section\c++\asssignments\digital measurment calculator(dic)\2d shapes\perimeter_2d.h
-
-1601870058 source:d:\programming-section\c++\asssignments\digital measurment calculator(dic)\2d shapes\perimeter_2d.cpp
-	"perimeter_2D.h"
-	"area_2D.h"
+1602388054 source:d:\programming-section\c++\asssignments\digital measurment calculator(dic)\main.cpp
+	"Shape_2D.h"
+	"Shape_3D.h"
 

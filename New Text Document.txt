@@ -1,4 +1,4 @@
 ask which 2d or 3d shpae 
 then ask which shape
-which measue of that shape it wants
+which measue of rectangle(if the user chooses) shape it wants
 solve
