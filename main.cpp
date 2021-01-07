@@ -18,5 +18,5 @@ int main()
 
     cout << "Type something and Press enter to quit now";
     cin >> dimensional;
-    //^ sometimes the program unexceptionally quits so I put this input statment
+    //^ sometimes the program quits unexceptionally so I put this input statment
 }
