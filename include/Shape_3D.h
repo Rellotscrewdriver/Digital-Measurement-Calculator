@@ -1,6 +1,6 @@
 #ifndef SHAPE_3D_H
 #define SHAPE_3D_H
-
+#include "Shape_2D.h"
 
 class Shape_3D
 {
@@ -13,9 +13,16 @@ class Shape_3D
     protected:
         int side;
         int height;
+        int slant_height;
         int width;
         int length;
+        const double pi = 3.14;
+        int radius;
 
+        string Text_radius = "radius: ";
+        string Text_width = "width: ";
+        string Text_length = "length: ";
+        string Text_height = "height: ";
 
     private:
 
@@ -52,9 +59,6 @@ class Shape_3D
         void CSACylinder();
         void TSACylinder();
         void VCylinder();
-
-
-
 };
 
 #endif // SHAPE_3D_H

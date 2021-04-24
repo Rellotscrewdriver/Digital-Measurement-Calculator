@@ -1,5 +1,6 @@
 #include "Shape_2D.h"
 
+
 const static string input = "your input: ";
 string shape;
 const string output = "Output: ";
@@ -13,8 +14,7 @@ Shape_2D::Shape_2D()
     cout << "4. Circle \n";
     cout << "5. Quadrilateral \n";
     cout << "6. Trapezium \n";
-    cout << input;
-    cin >> WhichShape;
+    cout << input; cin >> WhichShape;
 
     switch(WhichShape){
         case 1:
@@ -48,27 +48,26 @@ void Shape_2D::Square(){
     cout << "What you wanna measure form" << shape << "?" << endl;
     cout << "1. Area" << endl;
     cout << "2. perimeter" << endl;
-    cin >> WhichShape;
+    cout << input; cin >> WhichShape;
     if(WhichShape == 1)
         this->Asquare();
     else if (WhichShape == 2)
         this->Psquare();
     else
-        cout << "Try Again" << endl;
+        cout << "try typing the correct value from above again?" << endl << input;
+        cin >> WhichShape;
 }
 
 void Shape_2D::Psquare(){
     cout << "Specify one side of square to find out the perimeter " << endl;
-    cout << input;
-    cin >> side;
-    cout << 4 * side << endl;
+    cout << input; cin >> side;
+    cout << output << 4 * side << endl;
 }
 
 void Shape_2D::Asquare(){
     cout << "Specify one side of square to find out it's perimeter" << endl;
-    cout << input;
-    cin >> side;
-    cout << side * side << endl;
+    cout << input; cin >> side;
+    cout << output << side * side << endl;
 }
 
 //Square class ending
@@ -80,7 +79,7 @@ void Shape_2D::Rectangle(){
     cout << "What you wanna measure form" << shape << "?" << endl;
     cout << "1. Area" << endl;
     cout << "2. perimeter" << endl;
-    cin >> WhichShape;
+    cout << input; cin >> WhichShape;
     if(WhichShape == 1)
         this->ARectangle();
     else if (WhichShape == 2)
@@ -90,17 +89,15 @@ void Shape_2D::Rectangle(){
 }
 void Shape_2D::PRectangle(){
     cout << "Specify the width and height for perimeter" << endl;
-    cout << input;
-    cin >> length;
-    cin >> width;
+    cout << Text_length; cin >> length;
+    cout << Text_width; cin >> width;
     cout << output << 2 * (length + width);
 }
 void Shape_2D::ARectangle(){
-    cout << "Specify the width and height for area \n" << "height/length: \n";
-    cin >> height;
-    cout << "Width: ";
-    cin >> width;
-    cout << height * width << endl;
+    cout << "Specify the width and height for area respectively" << endl;
+    cout << Text_height; cin >> height;
+    cout << Text_width; cin >> width;
+    cout << output << height * width << endl;
 }
 
 //Rectangle class ending
@@ -112,7 +109,7 @@ void Shape_2D::Parallelogram(){
     cout << "What you wanna measure form" << shape << "?" << endl;
     cout << "1. Area" << endl;
     cout << "2. perimeter" << endl;
-    cin >> WhichShape;
+    cout << input; cin >> WhichShape;
     if(WhichShape == 1)
         this->AParallelogram();
     else if (WhichShape == 2)
@@ -121,17 +118,15 @@ void Shape_2D::Parallelogram(){
         cout << "Try Again" << endl;
 }
 void Shape_2D::AParallelogram(){
-    cout << "Specify the width and height for area \n" << "height/length: \n";
-    cin >> height;
-    cout << "Width: ";
-    cin >> width;
-    cout << height * width << endl;
+    cout << "Specify the width and height for area respectively" << endl;
+    cout << Text_height; cin >> height;
+    cout << Text_width; cin >> width;
+    cout << output << height * width << endl;
 }
 void Shape_2D::PParallelogram(){
     cout << "Specify the width and height for perimeter" << endl;
-    cout << input;
-    cin >> length;
-    cin >> width;
+    cout << Text_length; cin >> length;
+    cout << Text_width; cin >> width;
     cout << output << 2 * (length + width);
 }
 
@@ -143,7 +138,7 @@ void Shape_2D::Circle(){
     cout << "What you wanna measure form" << shape << "?" << endl;
     cout << "1. Area" << endl;
     cout << "2. perimeter" << endl;
-    cin >> WhichShape;
+    cout << input; cin >> WhichShape;
     if(WhichShape == 1)
         this->ACircle();
     else if (WhichShape == 2)
@@ -153,15 +148,13 @@ void Shape_2D::Circle(){
 }
 void Shape_2D::ACircle(){
     cout << "Specify the radius to find the area of circle " << endl;
-    cout << input;
-    cout << Radius;
-    cout << Pi * (2 * Radius);
+    cout << Text_radius; cin >> Radius;
+    cout << output << Pi * (2 * Radius);
 }
 void Shape_2D::PCircle(){
     cout << "Specify the radius to find the perimeter of circle " << endl;
-    cout << input;
-    cout << Radius;
-    cout << 2 * Radius * Pi << endl;
+    cout << Text_radius; cin >> Radius;
+    cout << output << 2 * Radius * Pi << endl;
 }
 //Circle class ending
 
@@ -172,7 +165,7 @@ void Shape_2D::Quadrilateral(){
     cout << "What you wanna measure form" << shape << "?" << endl;
     cout << "1. Area" << endl;
     cout << "2. perimeter" << endl;
-    cin >> WhichShape;
+    cout << input; cin >> WhichShape;
     if(WhichShape == 1)
         this->AQuadrilateral();
     else if (WhichShape == 2)
@@ -183,19 +176,20 @@ void Shape_2D::Quadrilateral(){
 void Shape_2D::PQuadrilateral(){
 
 }
+
 void Shape_2D::AQuadrilateral(){
 
 }
 //Quadrilateral class ending
 
-
 //Trapezium class starting
+
 void Shape_2D::Trapezium(){
     shape = " Trapezium";
     cout << "What you wanna measure form" << shape << "?" << endl;
     cout << "1. Area" << endl;
     cout << "2. perimeter" << endl;
-    cin >> WhichShape;
+    cout << input; cin >> WhichShape;
     if(WhichShape == 1)
         this->ATrapezium();
     else if (WhichShape == 2)
@@ -205,12 +199,12 @@ void Shape_2D::Trapezium(){
 }
 
 void Shape_2D::ATrapezium(){
-    cout << "specify the height, base1 and base2 repectively" << endl;
-    cin >> height;
-    cin >> base1;
-    cin >> base2;
-    cout << half * height * (base1 + base2);
- //1/2h (b1 * b2)
+    cout << "specify the height, base1 and base2 repectively" << endl
+    cout << Text_height; cin >> height;
+    cout << "base1: "; cin >> base1;
+    cout << "base2: "; cin >> base2;
+    cout << output << half * height * (base1 + base2);
+
 }
 void Shape_2D::PTrapezium(){
 

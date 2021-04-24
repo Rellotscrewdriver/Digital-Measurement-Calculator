@@ -12,9 +12,9 @@ class Shape_2D
     public:
         Shape_2D();
         virtual ~Shape_2D();
-
         int WhichShape;
         //^ this variable asks for input
+
     protected:
         int length;
         int width;
@@ -27,6 +27,11 @@ class Shape_2D
         int base1;
         int base2;
         int half = 0.5;
+
+        string Text_radius = "radius: ";
+        string Text_width = "width: ";
+        string Text_length = "length: ";
+        string Text_height = "height: ";
     private:
         //Global
         void Square();
