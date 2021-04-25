@@ -199,7 +199,7 @@ void Shape_2D::Trapezium(){
 }
 
 void Shape_2D::ATrapezium(){
-    cout << "specify the height, base1 and base2 repectively" << endl
+    cout << "specify the height, base1 and base2 repectively" << endl;
     cout << Text_height; cin >> height;
     cout << "base1: "; cin >> base1;
     cout << "base2: "; cin >> base2;

@@ -127,8 +127,9 @@ void Shape_3D::SASphere(){
     cout << 4 * pi * radius * radius;
 }
 void Shape_3D::VSphere(){
-    //4 pi radius(3 times)
-    //3
+    cout << "specify the radius" << input;
+    cin >> radius;
+    cout << output << 4/3 * pi * radius(radius * radius * radius);
 }
 
 // Hemisphere class
@@ -154,21 +155,15 @@ void Shape_3D::CSAHemisphere(){
     cout << "Specify the radius to find the Curved Surface area of hemisphere: ";
     cout << Text_radius; cin >> radius;
     cout << output << 2 * pi * (radius * radius);
-    //2 pi r(2 times)
 }
 void Shape_3D::TSAHemisphere(){
     cout << "Specify the radius to find the Total Surface Area of hemisphere: ";
     cout << Text_radius; cin >> radius;
-    cout << output << 3 * pi * (radius * radius);
-    //3 pi r(2times)
-}
+    cout << output << 3 * pi * (radius * radius);}
 void Shape_3D::VHemisphere(){
     cout << "Specify the radius to find the volume of hemisphere: ";
     cout << Text_radius; cin >> radius;
     cout << output << 2/3 * pi * (radius * radius * radius);
-    //2 pi r(3times)
-    //-
-    //3
 }
 
 //Cone Class
@@ -193,22 +188,18 @@ void Shape_3D::CSACone(){
     cout << "specify the radius to find Curved surface area of cone";
     cout << Text_radius; cin >> radius;
     cout << "Output:" << pi * radius * length;
-    //pi r length
 }
 void Shape_3D::TSACone(){
     cin >> radius;
     cin >> slant_height;
     int result = pi * radius * (slant_height * radius);
     cout << result;
-    //pi r (l + r)
 }
 void Shape_3D::VCone(){
-    cout << ""
+    cout << "";
     cin >> radius;
     cin >> height;
     cout << 1/3 * pi * (radius * radius) * height;
-    //1 pi r(2times) h
-    //3
 }
 
 //Cylinder class
@@ -227,24 +218,20 @@ void Shape_3D::Cylinder(){
         this->VCylinder();
     else
         cout << "Try Again" << endl;
-
 }
 
 void Shape_3D::CSACylinder(){
     cin >> radius;
     cin >> height;
     cout << 2 * pi * radius * height;
-    //2 pi r h
 }
 void Shape_3D::TSACylinder(){
     cout << Text_radius; cin >> radius;
     cin >> height;
     cout << 2 * pi * radius * (radius + height);
-    //2 pi r (r + h)
 }
 void Shape_3D::VCylinder(){
     cout << Text_radius; cin >> radius;
     cout << Text_height; cin >> height;
     cout << pi * radius * radius * height;
-    //pi r(2times) h
 }
