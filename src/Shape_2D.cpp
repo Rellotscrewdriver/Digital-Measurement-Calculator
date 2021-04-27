@@ -174,11 +174,18 @@ void Shape_2D::Quadrilateral(){
         cout << "Try Again" << endl;
 }
 void Shape_2D::PQuadrilateral(){
-
+    int SideA, SideB, SideC, SideD;
+    cout << "Enter the each side of the quadrilateral: " << input;
+    cin >> SideA;
+    cin >> SideB;
+    cin >> SideC;
+    cin >> SideD;
+    cout << output << SideA + SideB + SideC + SideD;
 }
 
 void Shape_2D::AQuadrilateral(){
-
+    cout << "Enter";
+    //1/2 x diagonal x 2 heigths of triangle
 }
 //Quadrilateral class ending
 
@@ -203,10 +210,15 @@ void Shape_2D::ATrapezium(){
     cout << Text_height; cin >> height;
     cout << "base1: "; cin >> base1;
     cout << "base2: "; cin >> base2;
-    cout << output << half * height * (base1 + base2);
-
+    cout << output << base1 + base2/2 * height;
 }
 void Shape_2D::PTrapezium(){
-
+    int SideA, SideB, SideC, SideD;
+    cout << "Enter the each side of the quadrilateral: ";
+    cout << "Side_A: "; cin >> SideA;
+    cout << "Side_B: "; cin >> SideB;
+    cout << "Side_C: "; cin >> SideC;
+    cout << "Side_D: "; cin >> SideD;
+    cout << output << SideA + SideB + SideC + SideD;
 }
 //Trapezium class ending

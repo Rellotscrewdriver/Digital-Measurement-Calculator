@@ -129,7 +129,7 @@ void Shape_3D::SASphere(){
 void Shape_3D::VSphere(){
     cout << "specify the radius" << input;
     cin >> radius;
-    cout << output << 4/3 * pi * radius(radius * radius * radius);
+    cout << output << 4/3 * pi * radius * (radius * radius * radius);
 }
 
 // Hemisphere class
