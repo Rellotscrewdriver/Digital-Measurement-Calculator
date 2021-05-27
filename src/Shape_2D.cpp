@@ -2,7 +2,6 @@
 
 
 const static string input = "your input: ";
-string shape;
 const string output = "Output: ";
 
 Shape_2D::Shape_2D()
@@ -15,7 +14,7 @@ Shape_2D::Shape_2D()
     cout << "5. Quadrilateral \n";
     cout << "6. Trapezium \n";
     cout << input; cin >> WhichShape;
-
+    cout << endl;
     switch(WhichShape){
         case 1:
             this->Square();
@@ -35,6 +34,9 @@ Shape_2D::Shape_2D()
         case 6:
             this->Trapezium();
         break;
+        default:
+            cout << "Invaild Input" << endl;
+            Shape_2D();
     }
 
 }
@@ -56,18 +58,21 @@ void Shape_2D::Square(){
     else
         cout << "try typing the correct value from above again?" << endl << input;
         cin >> WhichShape;
+    Square();
 }
 
 void Shape_2D::Psquare(){
     cout << "Specify one side of square to find out the perimeter " << endl;
     cout << input; cin >> side;
     cout << output << 4 * side << endl;
+    Shape_2D();
 }
 
 void Shape_2D::Asquare(){
     cout << "Specify one side of square to find out it's perimeter" << endl;
     cout << input; cin >> side;
     cout << output << side * side << endl;
+    Shape_2D();
 }
 
 //Square class ending
@@ -86,18 +91,21 @@ void Shape_2D::Rectangle(){
         this->PRectangle();
     else
         cout << "Try Again" << endl;
+        Rectangle();
 }
 void Shape_2D::PRectangle(){
     cout << "Specify the width and height for perimeter" << endl;
     cout << Text_length; cin >> length;
     cout << Text_width; cin >> width;
     cout << output << 2 * (length + width);
+    Shape_2D();
 }
 void Shape_2D::ARectangle(){
     cout << "Specify the width and height for area respectively" << endl;
     cout << Text_height; cin >> height;
     cout << Text_width; cin >> width;
     cout << output << height * width << endl;
+    Shape_2D();
 }
 
 //Rectangle class ending
@@ -116,18 +124,21 @@ void Shape_2D::Parallelogram(){
         this->PParallelogram();
     else
         cout << "Try Again" << endl;
+        Parallelogram();
 }
 void Shape_2D::AParallelogram(){
     cout << "Specify the width and height for area respectively" << endl;
     cout << Text_height; cin >> height;
     cout << Text_width; cin >> width;
     cout << output << height * width << endl;
+    Shape_2D();
 }
 void Shape_2D::PParallelogram(){
     cout << "Specify the width and height for perimeter" << endl;
     cout << Text_length; cin >> length;
     cout << Text_width; cin >> width;
     cout << output << 2 * (length + width);
+    Shape_2D();
 }
 
 //Parallelogram class ending
@@ -145,16 +156,19 @@ void Shape_2D::Circle(){
         this->PCircle();
     else
         cout << "Try Again" << endl;
+        Circle();
 }
 void Shape_2D::ACircle(){
     cout << "Specify the radius to find the area of circle " << endl;
     cout << Text_radius; cin >> Radius;
     cout << output << Pi * (2 * Radius);
+    Shape_2D();
 }
 void Shape_2D::PCircle(){
     cout << "Specify the radius to find the perimeter of circle " << endl;
     cout << Text_radius; cin >> Radius;
     cout << output << 2 * Radius * Pi << endl;
+    Shape_2D();
 }
 //Circle class ending
 
@@ -172,6 +186,7 @@ void Shape_2D::Quadrilateral(){
         this->PQuadrilateral();
     else
         cout << "Try Again" << endl;
+        Quadrilateral();
 }
 void Shape_2D::PQuadrilateral(){
     int SideA, SideB, SideC, SideD;
@@ -181,11 +196,16 @@ void Shape_2D::PQuadrilateral(){
     cin >> SideC;
     cin >> SideD;
     cout << output << SideA + SideB + SideC + SideD;
+    Shape_2D();
 }
 
 void Shape_2D::AQuadrilateral(){
-    cout << "Enter";
-    //1/2 x diagonal x 2 heigths of triangle
+    cout << "Enter the Diagonal and 2 heigths of triangle";
+    cin << diagonal;
+    cin << base1;
+    cin << base2;
+    cout << 1/2 * diagonal * base1 * base2 << endl;
+    Shape_2D();
 }
 //Quadrilateral class ending
 
@@ -203,6 +223,7 @@ void Shape_2D::Trapezium(){
         this->PTrapezium();
     else
         cout << "Try Again" << endl;
+        Trapezium();
 }
 
 void Shape_2D::ATrapezium(){
@@ -211,6 +232,7 @@ void Shape_2D::ATrapezium(){
     cout << "base1: "; cin >> base1;
     cout << "base2: "; cin >> base2;
     cout << output << base1 + base2/2 * height;
+    Shape_2D();
 }
 void Shape_2D::PTrapezium(){
     int SideA, SideB, SideC, SideD;
@@ -220,5 +242,6 @@ void Shape_2D::PTrapezium(){
     cout << "Side_C: "; cin >> SideC;
     cout << "Side_D: "; cin >> SideD;
     cout << output << SideA + SideB + SideC + SideD;
+    Shape_2D();
 }
 //Trapezium class ending

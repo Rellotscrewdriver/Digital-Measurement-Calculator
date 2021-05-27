@@ -12,22 +12,23 @@ class Shape_2D
     public:
         Shape_2D();
         virtual ~Shape_2D();
+        //this variable is responsible for taking input
         int WhichShape;
-        //^ this variable asks for input
+        string shape;
 
     protected:
         int length;
         int width;
         int height;
         int side;
-        float Pi = 3.14;
+        const float Pi = 3.14;
         int pi = 22/7;
         int Radius;
         int Diameter = Radius/2;
         int base1;
         int base2;
         int half = 0.5;
-
+        int diagonal;
         string Text_radius = "radius: ";
         string Text_width = "width: ";
         string Text_length = "length: ";
