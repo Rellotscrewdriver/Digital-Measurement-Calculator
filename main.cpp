@@ -1,5 +1,5 @@
 #include "Shape_2D.h"
-#include "Shape_3D.h"
+#include "3D_Shapes/Shape_3D.h"
 
 string input = "your input: ";
 
@@ -19,10 +19,11 @@ int main()
         cout << endl;
         Shape_3D();
     }
-    else
+    else{
         cout << "InValid Input, Try again\n" << endl;
-        main();
+        //main();
         cout << endl;
+    }
 
     cout << endl;
 
