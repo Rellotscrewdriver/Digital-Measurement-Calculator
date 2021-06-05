@@ -1,0 +1,10 @@
+# Code::Blocks project files
+*.cbp
+*.depend
+*.layout
+
+#Complied Object Files
+*.o
+
+# Executables
+*.exe
