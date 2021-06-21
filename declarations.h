@@ -4,6 +4,9 @@
 #include <iostream>
 #include <cmath>
 #include <string>
+#include <fstream>
+#include <algorithm>
+#include <ctime>
 
 using namespace std;
 
@@ -12,23 +15,25 @@ class declarations{
         //this variable is responsible for taking input
         int WhichShape;
         string shape;
-        const string input = "your input: ";
+        const string input = "Input: ";
         const string output = "Output: ";
+        time_t timetoday;
+
     protected:
-        int length;
-        int width;
-        int height;
-        int side;
+        double length;
+        double width;
+        double height;
+        double side;
         const float Pi = 3.14;
-        int pi = 22/7;
-        int Radius;
-        int Diameter = Radius/2;
-        int base1;
-        int base2;
-        int half = 0.5;
-        int diagonal;
-        int slant_height;
-        int radius;
+        double pi = 22/7;
+        double Radius;
+        double Diameter = Radius/2;
+        double base1;
+        double base2;
+        float half = 0.5;
+        double diagonal;
+        double slant_height;
+        //double radius;
         string Text_radius = "radius: ";
         string Text_width = "width: ";
         string Text_length = "length: ";

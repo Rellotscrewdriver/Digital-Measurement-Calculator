@@ -8,3 +8,6 @@
 
 # Executables
 *.exe
+
+#Plain Text File
+.txt
