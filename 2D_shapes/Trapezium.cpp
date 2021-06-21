@@ -11,8 +11,7 @@ Trapezium::Trapezium(){
     else if (WhichShape == 2)
         this->PTrapezium();
     else
-        cout << "Try Again" << endl;
-        Trapezium();
+        Exh.check_if_typed_string_and_invaild_number();
 }
 
 void Trapezium::ATrapezium(){
@@ -20,6 +19,7 @@ void Trapezium::ATrapezium(){
     cout << Text_height; cin >> height;
     cout << "base1: "; cin >> base1;
     cout << "base2: "; cin >> base2;
+    Exh.check_if_typed_string();
     cout << output << base1 + base2/2 * height;
     Shape_2D();
 }
@@ -30,6 +30,7 @@ void Trapezium::PTrapezium(){
     cout << "Side_B: "; cin >> SideB;
     cout << "Side_C: "; cin >> SideC;
     cout << "Side_D: "; cin >> SideD;
+    Exh.check_if_typed_string();
     cout << output << SideA + SideB + SideC + SideD;
     Shape_2D();
 }

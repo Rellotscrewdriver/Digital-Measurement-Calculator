@@ -10,22 +10,22 @@ Square::Square(){
         this->Asquare();
     else if (WhichShape == 2)
         this->Psquare();
-    else{
-        cout << "try typing the correct value from above again?" << endl;
-        Square();
-    }
+    else
+        Exh.check_if_typed_string_and_invaild_number();
 }
 
 void Square::Psquare(){
     cout << "Specify one side of square to find out the perimeter " << endl;
     cout << input; cin >> side;
+    Exh.check_if_typed_string();
     cout << output << 4 * side << endl;
-    Shape_2D();
+
 }
 
 void Square::Asquare(){
     cout << "Specify one side of square to find out it's perimeter" << endl;
     cout << input; cin >> side;
+    Exh.check_if_typed_string();
     cout << output << side * side << endl;
     Shape_2D();
 }

@@ -2,14 +2,14 @@
 
 Shape_3D::Shape_3D()
 {
-
     cout << "Which 3D shape do you want to wanna measure: " << endl;
     cout << "1. Cube \n";
     cout << "2. Cuboid \n";
     cout << "3. Sphere \n";
     cout << "4. Cone \n";
     cout << "5. Cylinder \n";
-    cout << input; cin >> WhichShape;
+    cout << input;
+    cin >> WhichShape;
     cout << endl;
     switch(WhichShape){
         case 1:
@@ -28,8 +28,7 @@ Shape_3D::Shape_3D()
             Cylinder();
         break;
         default:
-            cout << "Invaild Input" << endl;
-            Shape_3D();
+            Exh.check_if_typed_string_and_invaild_number();
         break;
     }
 }

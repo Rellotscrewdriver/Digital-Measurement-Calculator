@@ -2,15 +2,17 @@
 #define SHAPE_2D_H
 
 #include "../declarations.h"
+#include "../exception_handling.h"
 
 class Shape_2D : public declarations{
     public:
         Shape_2D();
+    Exception_Handling Exh;
 };
 
 class Square : public declarations{
 public:
-
+    Exception_Handling Exh;
     Square();
     void Asquare();
     void Psquare();
@@ -18,7 +20,7 @@ public:
 
 class Rectangle : public declarations{
 public:
-
+    Exception_Handling Exh;
     Rectangle();
     void ARectangle();
     void PRectangle();
@@ -27,7 +29,7 @@ public:
 
 class Parallelogram : public declarations{
 public:
-
+    Exception_Handling Exh;
     Parallelogram();
     void AParallelogram();
     void PParallelogram();
@@ -35,7 +37,7 @@ public:
 
 class Circle : public declarations{
 public:
-
+    Exception_Handling Exh;
     Circle();
     void ACircle();
     void PCircle();
@@ -43,7 +45,7 @@ public:
 
 class Quadrilateral : public declarations{
 public:
-
+    Exception_Handling Exh;
     Quadrilateral();
     void PQuadrilateral();
     void AQuadrilateral();
@@ -51,7 +53,7 @@ public:
 
 class Trapezium : public declarations{
 public:
-
+    Exception_Handling Exh;
     Trapezium();
     void ATrapezium();
     void PTrapezium();

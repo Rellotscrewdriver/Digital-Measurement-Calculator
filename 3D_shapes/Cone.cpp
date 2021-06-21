@@ -14,28 +14,28 @@ Cone::Cone(){
         this->TSACone();
     else if (WhichShape == 2)
         this->VCone();
-    else{
-        cout << "Try Again" << endl;
-        Cone();
-    }
+    else
+        Exh.check_if_typed_string_and_invaild_number();
 }
 
 void Cone::CSACone(){
     cout << "specify the radius to find Curved surface area of cone";
-    cout << Text_radius; cin >> radius;
-    cout << "Output:" << pi * radius * length << endl;
-    Shape_3D();
+    cout << Text_radius; cin >> Radius;
+    cin >> length;
+    Exh.check_if_typed_string();
+    cout << "Output:" << pi * Radius * length << endl;
 }
 void Cone::TSACone(){
-    cin >> radius;
+    cin >> Radius;
     cin >> slant_height;
-    cout << pi * radius * (slant_height * radius) << endl;
-    Shape_3D();
+    Exh.check_if_typed_string();
+    cout << pi * Radius * (slant_height * Radius) << endl;
+
 }
 void Cone::VCone(){
     cout << "";
-    cin >> radius;
+    cin >> Radius;
     cin >> height;
-    cout << 1/3 * pi * (radius * radius) * height << endl;
-    Shape_3D();
+    Exh.check_if_typed_string();
+    cout << 1/3 * pi * (Radius * Radius) * height << endl;
 }

@@ -1,4 +1,7 @@
 #include "Shape_2D.h"
+#include "../declarations.h"
+#include "../exception_handling.h"
+
 
 Shape_2D::Shape_2D()
 {
@@ -9,7 +12,9 @@ Shape_2D::Shape_2D()
     cout << "4. Circle \n";
     cout << "5. Quadrilateral \n";
     cout << "6. Trapezium \n";
+
     cout << input; cin >> WhichShape;
+
     cout << endl;
         switch(WhichShape){
             case 1:
@@ -37,8 +42,7 @@ Shape_2D::Shape_2D()
             break;
 
             default:
-                cout << "Invaild Input" << endl;
-                Shape_2D();
+                Exh.check_if_typed_string_and_invaild_number();
             break;
         }
 

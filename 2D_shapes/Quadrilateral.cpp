@@ -11,10 +11,8 @@ Quadrilateral::Quadrilateral(){
         this->AQuadrilateral();
     else if (WhichShape == 2)
         this->PQuadrilateral();
-    else{
-        cout << "Try Again" << endl;
-        Quadrilateral();
-    }
+    else
+        Exh.check_if_typed_string_and_invaild_number();
 }
 void Quadrilateral::PQuadrilateral(){
     int SideA, SideB, SideC, SideD;
@@ -23,6 +21,7 @@ void Quadrilateral::PQuadrilateral(){
     cin >> SideB;
     cin >> SideC;
     cin >> SideD;
+    Exh.check_if_typed_string();
     cout << output << SideA + SideB + SideC + SideD;
     Shape_2D();
 }
@@ -32,6 +31,7 @@ void Quadrilateral::AQuadrilateral(){
     cin >> diagonal;
     cin >> base1;
     cin >> base2;
+    Exh.check_if_typed_string();
     cout << 1/2 * diagonal * base1 * base2 << endl;
     Shape_2D();
 }

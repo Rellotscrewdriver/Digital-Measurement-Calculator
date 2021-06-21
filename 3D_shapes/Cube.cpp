@@ -10,22 +10,22 @@ Cube::Cube(){
         SACube();
     else if (WhichShape == 2)
         VCube();
-    else{
-        cout << "Try Again" << endl;
-        Cube();
-    }
+    else
+        Exh.check_if_typed_string_and_invaild_number();
 }
 
 void Cube::SACube(){
     cout << "Specify one side of cube to find the area" << endl;
     cout << input; cin >> side;
-    cout << output << 6 * (side * side);
+    Exh.check_if_typed_string();
+    cout << output << 6 * (side * side) << endl << endl;
     Shape_3D();
 }
 
 void Cube::VCube(){
     cout << "specify one side of cube to find it's volume" << endl;
     cout << input; cin >> side;
+    Exh.check_if_typed_string();
     cout << output << side * side * side;
     Shape_3D();
 }

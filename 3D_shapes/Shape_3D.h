@@ -2,11 +2,12 @@
 #define SHAPE_3D_H
 
 #include "../declarations.h"
+#include "../exception_handling.h"
 
 class Shape_3D : public declarations{
     public:
         Shape_3D();
-
+    Exception_Handling Exh;
 };
     /*
         SA = Surface Area
@@ -21,6 +22,7 @@ public:
         Cube();
         void SACube();
         void VCube();
+        Exception_Handling Exh;
 };
 
 class Cuboid : public declarations{
@@ -28,6 +30,7 @@ public:
         Cuboid();
         void SACuboid();
         void VCuboid();
+        Exception_Handling Exh;
 };
 
 class Hemisphere : public declarations{
@@ -35,6 +38,7 @@ public:
         Hemisphere();
         void CSAHemisphere();
         void TSAHemisphere();
+        Exception_Handling Exh;
         void VHemisphere();
 };
 
@@ -43,6 +47,7 @@ public:
         Sphere();
         void SASphere();
         void VSphere();
+        Exception_Handling Exh;
 };
 
 
@@ -52,6 +57,7 @@ public:
         void CSACone();
         void TSACone();
         void VCone();
+        Exception_Handling Exh;
 };
 
 class Cylinder : public declarations{
@@ -60,6 +66,7 @@ public:
         void CSACylinder();
         void TSACylinder();
         void VCylinder();
+        Exception_Handling Exh;
 };
 
 

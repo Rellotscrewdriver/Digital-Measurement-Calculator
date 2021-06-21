@@ -13,28 +13,29 @@ Hemisphere::Hemisphere(){
         this->TSAHemisphere();
     else if (WhichShape == 3)
         this->VHemisphere();
-    else{
-        cout << "Try Again" << endl;
-        Hemisphere();
-    }
+    else
+        Exh.check_if_typed_string_and_invaild_number();
 
 }
 
 void Hemisphere::CSAHemisphere(){
     cout << "Specify the radius to find the Curved Surface area of hemisphere: ";
-    cout << Text_radius; cin >> radius;
-    cout << output << 2 * pi * (radius * radius) << endl;
+    cout << Text_radius; cin >> Radius;
+    Exh.check_if_typed_string();
+    cout << output << 2 * pi * (Radius * Radius) << endl;
     Shape_3D();
 }
 void Hemisphere::TSAHemisphere(){
     cout << "Specify the radius to find the Total Surface Area of hemisphere: ";
-    cout << Text_radius; cin >> radius;
-    cout << output << 3 * pi * (radius * radius) << endl;
+    cout << Text_radius; cin >> Radius;
+    Exh.check_if_typed_string();
+    cout << output << 3 * pi * (Radius * Radius) << endl;
     Shape_3D();
 }
 void Hemisphere::VHemisphere(){
     cout << "Specify the radius to find the volume of hemisphere: ";
-    cout << Text_radius; cin >> radius;
-    cout << output << 2/3 * pi * (radius * radius * radius) << endl;
+    cout << Text_radius; cin >> Radius;
+    Exh.check_if_typed_string();
+    cout << output << 2/3 * pi * (Radius * Radius * Radius) << endl;
     Shape_3D();
 }

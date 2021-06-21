@@ -10,10 +10,8 @@ Cuboid::Cuboid(){
         SACuboid();
     else if (WhichShape == 2)
         VCuboid();
-    else{
-        cout << "Try Again" << endl;
-        Cuboid();
-    }
+    else
+        Exh.check_if_typed_string_and_invaild_number();
 }
 
 void Cuboid::SACuboid(){
@@ -27,6 +25,7 @@ void Cuboid::SACuboid(){
     cout << Text_length;
     cin >> length;
     cout << endl;
+    Exh.check_if_typed_string();
     cout << 2 * ((length * width) + (width * height) + (height * length)) << endl;
     Shape_3D();
 }
@@ -36,6 +35,7 @@ void Cuboid::VCuboid(){
     cout << Text_width; cin >> width;
     cout << Text_height; cin >> height;
     cout << Text_length; cin >> length;
+    Exh.check_if_typed_string();
     cout << length * height * width << endl << endl;
     Shape_3D();
 }

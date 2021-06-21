@@ -1,5 +1,6 @@
 #include "../3D_Shapes/Shape_3D.h"
 
+
 Cylinder::Cylinder(){
     shape = "Cylinder";
     cout << "What you wanna measure form" << shape << "?" << endl;
@@ -14,25 +15,30 @@ Cylinder::Cylinder(){
     else if (WhichShape == 3)
         this->VCylinder();
     else
-        cout << "Try Again" << endl;
-        Cylinder();
+        Exh.check_if_typed_string_and_invaild_number();
 }
 
 void Cylinder::CSACylinder(){
-    cin >> radius;
+    cin >> Radius;
     cin >> height;
-    cout << 2 * pi * radius * height << endl;
-    Shape_3D();
+    Exh.check_if_typed_string();
+    cout << 2 * pi * Radius * height << endl;
+
 }
 void Cylinder::TSACylinder(){
-    cout << Text_radius; cin >> radius;
+    cout << Text_radius;
+    cin >> Radius;
     cin >> height;
-    cout << 2 * pi * radius * (radius + height) << endl;
-    Shape_3D();
+    Exh.check_if_typed_string();
+    cout << 2 * pi * Radius * (Radius + height) << endl;
+
 }
+
 void Cylinder::VCylinder(){
-    cout << Text_radius; cin >> radius;
-    cout << Text_height; cin >> height;
-    cout << pi * radius * radius * height << endl;
-    Shape_3D();
+    cout << Text_radius;
+    cin >> Radius;
+    cout << Text_height;
+    cin >> height;
+    Exh.check_if_typed_string();
+    cout << pi * Radius * Radius * height << endl;
 }
