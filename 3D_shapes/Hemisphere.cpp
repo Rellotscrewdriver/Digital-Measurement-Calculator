@@ -13,8 +13,10 @@ Hemisphere::Hemisphere(){
         this->TSAHemisphere();
     else if (WhichShape == 3)
         this->VHemisphere();
-    else
+    else{
         Exh.check_if_typed_string_and_invaild_number();
+        Hemisphere();
+    }
 
 }
 

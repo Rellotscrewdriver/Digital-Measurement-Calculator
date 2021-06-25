@@ -11,8 +11,10 @@ Circle::Circle(){
         this->ACircle();
     else if (WhichShape == 2)
         this->PCircle();
-    else
+    else{
         Exh.check_if_typed_string_and_invaild_number();
+        Circle();
+    }
 }
 void Circle::ACircle(){
     cout << "Specify the radius to find the area of circle " << endl;

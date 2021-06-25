@@ -33,7 +33,7 @@ class declarations{
         float half = 0.5;
         double diagonal;
         double slant_height;
-        //double radius;
+
         string Text_radius = "radius: ";
         string Text_width = "width: ";
         string Text_length = "length: ";

@@ -10,8 +10,10 @@ Square::Square(){
         this->Asquare();
     else if (WhichShape == 2)
         this->Psquare();
-    else
+    else{
         Exh.check_if_typed_string_and_invaild_number();
+        Square();
+    }
 }
 
 void Square::Psquare(){
@@ -19,7 +21,7 @@ void Square::Psquare(){
     cout << input; cin >> side;
     Exh.check_if_typed_string();
     cout << output << 4 * side << endl;
-
+    Shape_2D();
 }
 
 void Square::Asquare(){

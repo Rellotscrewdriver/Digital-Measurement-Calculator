@@ -10,8 +10,10 @@ Cube::Cube(){
         SACube();
     else if (WhichShape == 2)
         VCube();
-    else
+    else{
         Exh.check_if_typed_string_and_invaild_number();
+        Cube();
+    }
 }
 
 void Cube::SACube(){

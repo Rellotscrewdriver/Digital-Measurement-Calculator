@@ -11,8 +11,10 @@ Quadrilateral::Quadrilateral(){
         this->AQuadrilateral();
     else if (WhichShape == 2)
         this->PQuadrilateral();
-    else
+    else{
         Exh.check_if_typed_string_and_invaild_number();
+        Quadrilateral();
+    }
 }
 void Quadrilateral::PQuadrilateral(){
     int SideA, SideB, SideC, SideD;

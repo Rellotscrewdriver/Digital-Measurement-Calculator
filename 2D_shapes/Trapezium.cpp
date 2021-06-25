@@ -10,8 +10,10 @@ Trapezium::Trapezium(){
         this->ATrapezium();
     else if (WhichShape == 2)
         this->PTrapezium();
-    else
+    else{
         Exh.check_if_typed_string_and_invaild_number();
+        Trapezium();
+    }
 }
 
 void Trapezium::ATrapezium(){

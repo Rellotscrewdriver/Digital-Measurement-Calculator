@@ -43,6 +43,7 @@ Shape_2D::Shape_2D()
 
             default:
                 Exh.check_if_typed_string_and_invaild_number();
+                Shape_2D();
             break;
         }
 

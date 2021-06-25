@@ -14,8 +14,10 @@ Cone::Cone(){
         this->TSACone();
     else if (WhichShape == 2)
         this->VCone();
-    else
+    else{
         Exh.check_if_typed_string_and_invaild_number();
+        Cone();
+    }
 }
 
 void Cone::CSACone(){
@@ -24,13 +26,14 @@ void Cone::CSACone(){
     cin >> length;
     Exh.check_if_typed_string();
     cout << "Output:" << pi * Radius * length << endl;
+    Shape_3D();
 }
 void Cone::TSACone(){
     cin >> Radius;
     cin >> slant_height;
     Exh.check_if_typed_string();
     cout << pi * Radius * (slant_height * Radius) << endl;
-
+    Shape_3D();
 }
 void Cone::VCone(){
     cout << "";
@@ -38,4 +41,5 @@ void Cone::VCone(){
     cin >> height;
     Exh.check_if_typed_string();
     cout << 1/3 * pi * (Radius * Radius) * height << endl;
+    Shape_3D();
 }

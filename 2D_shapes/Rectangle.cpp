@@ -10,9 +10,12 @@ Rectangle::Rectangle(){
         this->ARectangle();
     else if (WhichShape == 2)
         this->PRectangle();
-    else
+    else{
         Exh.check_if_typed_string_and_invaild_number();
+        Rectangle();
+    }
 }
+
 void Rectangle::PRectangle(){
     cout << "Specify the width and height for perimeter" << endl;
     cout << Text_length; cin >> length;
@@ -21,6 +24,7 @@ void Rectangle::PRectangle(){
     cout << output << 2 * (length + width);
     Shape_2D();
 }
+
 void Rectangle::ARectangle(){
     cout << "Specify the width and height for area respectively" << endl;
     cout << Text_height; cin >> height;

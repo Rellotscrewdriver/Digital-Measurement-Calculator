@@ -10,8 +10,10 @@ Cuboid::Cuboid(){
         SACuboid();
     else if (WhichShape == 2)
         VCuboid();
-    else
+    else{
         Exh.check_if_typed_string_and_invaild_number();
+        Cuboid();
+    }
 }
 
 void Cuboid::SACuboid(){

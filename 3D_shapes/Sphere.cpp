@@ -8,13 +8,15 @@ Sphere::Sphere(){
     cout << "3. Hemisphere";
     cin >> WhichShape;
     if(WhichShape == 1)
-        SASphere();
+        this->SASphere();
     else if (WhichShape == 2)
-        VSphere();
+        this->VSphere();
     else if (WhichShape == 3)
         Hemisphere();
-    else
+    else{
         Exh.check_if_typed_string_and_invaild_number();
+        Sphere();
+    }
 }
 
 void Sphere::SASphere(){
@@ -22,7 +24,7 @@ void Sphere::SASphere(){
     cin >> Radius;
     Exh.check_if_typed_string();
     cout << 4 * pi * Radius * Radius << endl;
-
+    Shape_3D();
 }
 
 void Sphere::VSphere(){

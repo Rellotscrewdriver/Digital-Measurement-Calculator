@@ -29,6 +29,7 @@ Shape_3D::Shape_3D()
         break;
         default:
             Exh.check_if_typed_string_and_invaild_number();
+            Shape_3D();
         break;
     }
 }

@@ -10,8 +10,10 @@ Parallelogram::Parallelogram(){
         this->AParallelogram();
     else if (WhichShape == 2)
         this->PParallelogram();
-    else
+    else{
         Exh.check_if_typed_string_and_invaild_number();
+        Parallelogram();
+    }
 }
 void Parallelogram::AParallelogram(){
     cout << "Specify the width and height for area respectively" << endl;

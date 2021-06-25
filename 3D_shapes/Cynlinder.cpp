@@ -14,8 +14,10 @@ Cylinder::Cylinder(){
         this->TSACylinder();
     else if (WhichShape == 3)
         this->VCylinder();
-    else
+    else{
         Exh.check_if_typed_string_and_invaild_number();
+        Cylinder();
+    }
 }
 
 void Cylinder::CSACylinder(){
@@ -23,7 +25,7 @@ void Cylinder::CSACylinder(){
     cin >> height;
     Exh.check_if_typed_string();
     cout << 2 * pi * Radius * height << endl;
-
+    Shape_3D();
 }
 void Cylinder::TSACylinder(){
     cout << Text_radius;
@@ -31,7 +33,7 @@ void Cylinder::TSACylinder(){
     cin >> height;
     Exh.check_if_typed_string();
     cout << 2 * pi * Radius * (Radius + height) << endl;
-
+    Shape_3D();
 }
 
 void Cylinder::VCylinder(){
@@ -41,4 +43,5 @@ void Cylinder::VCylinder(){
     cin >> height;
     Exh.check_if_typed_string();
     cout << pi * Radius * Radius * height << endl;
+    Shape_3D();
 }
