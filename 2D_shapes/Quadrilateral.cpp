@@ -24,7 +24,13 @@ void Quadrilateral::PQuadrilateral(){
     cin >> SideC;
     cin >> SideD;
     Exh.check_if_typed_string();
-    cout << output << SideA + SideB + SideC + SideD;
+    if( (SideA <= 0.0 && SideB <= 0.0) || (SideA <= 0.0 || SideB <= 0.0) ){
+        cout << Exh.error_message;
+    } else if( (SideC <= 0.0 && SideD <= 0.0) || (SideA <= 0.0 || SideB <= 0.0) ){
+        cout << "Inputs Can't be Negative or Zero" << endl << endl;
+    } else {
+        cout << output << SideA + SideB + SideC + SideD;
+    }
     Shape_2D();
 }
 
@@ -34,6 +40,12 @@ void Quadrilateral::AQuadrilateral(){
     cin >> base1;
     cin >> base2;
     Exh.check_if_typed_string();
-    cout << 1/2 * diagonal * base1 * base2 << endl;
+    if( (base1 <= 0.0 && base2 <= 0.0) || (base1 <= 0.0 || base2 <= 0.0) ){
+        cout << Exh.error_message;
+    } else if(diagonal <= 0.0){
+        cout << Exh.error_message;
+    } else {
+        cout << half * diagonal * base1 * base2 << endl;
+    }
     Shape_2D();
 }

@@ -21,7 +21,11 @@ void Rectangle::PRectangle(){
     cout << Text_length; cin >> length;
     cout << Text_width; cin >> width;
     Exh.check_if_typed_string();
-    cout << output << 2 * (length + width);
+    if( (height <= 0.0 && width <= 0.0) || (height <= 0.0 || width <= 0.0) ){
+        cout << Exh.error_message;
+    } else {
+        cout << output << 2 * (length + width);
+    }
     Shape_2D();
 }
 
@@ -30,6 +34,10 @@ void Rectangle::ARectangle(){
     cout << Text_height; cin >> height;
     cout << Text_width; cin >> width;
     Exh.check_if_typed_string();
-    cout << output << height * width << endl;
+    if( (height <= 0.0 && width <= 0.0) || (height <= 0.0 || width <= 0.0) ){
+        cout << Exh.error_message;
+    } else {
+        cout << output << height * width;
+    }
     Shape_2D();
 }

@@ -16,17 +16,27 @@ Circle::Circle(){
         Circle();
     }
 }
+
 void Circle::ACircle(){
     cout << "Specify the radius to find the area of circle " << endl;
     cout << Text_radius; cin >> Radius;
     Exh.check_if_typed_string();
-    cout << output << Pi * (2 * Radius);
+    if(Radius <= 0.0){
+        Exh.error_message;
+    } else {
+        cout << output << Pi * (2 * Radius) << endl << endl;
+    }
     Shape_2D();
 }
+
 void Circle::PCircle(){
     cout << "Specify the radius to find the perimeter of circle " << endl;
     cout << Text_radius; cin >> Radius;
     Exh.check_if_typed_string();
-    cout << output << 2 * Radius * Pi << endl;
+    if(Radius <= 0.0){
+        Exh.error_message;
+    } else {
+        cout << output << 2 * Radius * Pi << endl << endl;
+    }
     Shape_2D();
 }

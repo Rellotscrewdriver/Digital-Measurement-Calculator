@@ -25,21 +25,34 @@ void Cone::CSACone(){
     cout << Text_radius; cin >> Radius;
     cin >> length;
     Exh.check_if_typed_string();
+    if( (Radius <= 0.0 && length <= 0.0) || (length <= 0.0 || Radius <= 0.0) )
+        cout << Exh.error_message;
+    else
     cout << "Output:" << pi * Radius * length << endl;
+
     Shape_3D();
 }
+
 void Cone::TSACone(){
     cin >> Radius;
     cin >> slant_height;
     Exh.check_if_typed_string();
+    if( (Radius <= 0.0 && slant_height <= 0.0) || (slant_height <= 0.0 || Radius <= 0.0) )
+        cout << Exh.error_message;
+    else
     cout << pi * Radius * (slant_height * Radius) << endl;
+
     Shape_3D();
 }
+
 void Cone::VCone(){
-    cout << "";
     cin >> Radius;
     cin >> height;
     Exh.check_if_typed_string();
+    if( (Radius <= 0.0 && height <= 0.0) || (height <= 0.0 || Radius <= 0.0) )
+        cout << Exh.error_message;
+    else
     cout << 1/3 * pi * (Radius * Radius) * height << endl;
+
     Shape_3D();
 }

@@ -6,7 +6,8 @@ class Exception_Handling : public declarations {
     public:
         void check_if_typed_string();
         void check_if_typed_string_and_invaild_number();
-        void check_if_number_is_negative();
+        string error_message = "Inputs Can't be Negative or Zero\n\n";
+
 };
 
 #endif

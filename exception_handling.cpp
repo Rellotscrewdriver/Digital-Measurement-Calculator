@@ -7,6 +7,8 @@ void Exception_Handling::check_if_typed_string(){
         cout << "You typed a string, try again" << endl << endl;
         cin.clear();
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cin.sync();//discards all that is left in buffer
+        cin >> ws; //discards all the whitespace before any operation
     }
 }
 
@@ -15,20 +17,9 @@ void Exception_Handling::check_if_typed_string_and_invaild_number(){
         cout << "You typed a string, try again" << endl << endl;
         cin.clear();
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cin.sync();
+        cin >> ws;
     } else {
         cout << "Invaild Input Detected" << endl << endl;
     }
 }
-
-void Exception_Handling::check_if_number_is_negative(){
-//fuck this thing... it doesn't work and C++ doesn't have simple exceptions
-    if(length <= 0.0 || width <= 0.0 || height <= 0.0 || side <= 0.0){
-        cout << "Opps, Measurements can't be Zero" << endl;
-    } else if(Radius <= 0.0 || base1 <= 0.0 || base2 <= 0.0){
-        cout << "Opps, Measurements can't be Zero" << endl;
-    } else if(diagonal <= 0.0 || slant_height <= 0.0){
-        cout << "Opps, Measurements can't be Zero" << endl;
-    }
-}
-
-

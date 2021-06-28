@@ -23,7 +23,10 @@ void Sphere::SASphere(){
     cout << "specify the radius" << input;
     cin >> Radius;
     Exh.check_if_typed_string();
-    cout << 4 * pi * Radius * Radius << endl;
+    if(Radius <= 0.0)
+        Exh.error_message;
+    else
+        cout << 4 * pi * Radius * Radius << endl;
     Shape_3D();
 }
 
@@ -31,6 +34,9 @@ void Sphere::VSphere(){
     cout << "specify the radius" << input;
     cin >> Radius;
     Exh.check_if_typed_string();
-    cout << output << 4/3 * pi * Radius * (Radius * Radius * Radius) << endl;
+    if(Radius <= 0.0)
+        Exh.error_message;
+    else
+        cout << output << 4/3 * pi * Radius * (Radius * Radius * Radius) << endl;
     Shape_3D();
 }

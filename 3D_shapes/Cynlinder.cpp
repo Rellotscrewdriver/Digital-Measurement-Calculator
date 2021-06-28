@@ -24,7 +24,10 @@ void Cylinder::CSACylinder(){
     cin >> Radius;
     cin >> height;
     Exh.check_if_typed_string();
-    cout << 2 * pi * Radius * height << endl;
+    if( (height <= 0.0 && Radius <= 0.0) || (height <= 0.0 || Radius <= 0.0) )
+        cout << Exh.error_message;
+    else
+        cout << 2 * pi * Radius * height << endl;
     Shape_3D();
 }
 void Cylinder::TSACylinder(){
@@ -32,7 +35,10 @@ void Cylinder::TSACylinder(){
     cin >> Radius;
     cin >> height;
     Exh.check_if_typed_string();
-    cout << 2 * pi * Radius * (Radius + height) << endl;
+    if( (height <= 0.0 && Radius <= 0.0) || (height <= 0.0 || Radius <= 0.0) )
+        cout << Exh.error_message;
+    else
+        cout << 2 * pi * Radius * (Radius + height) << endl;
     Shape_3D();
 }
 
@@ -42,6 +48,9 @@ void Cylinder::VCylinder(){
     cout << Text_height;
     cin >> height;
     Exh.check_if_typed_string();
-    cout << pi * Radius * Radius * height << endl;
+    if( (height <= 0.0 && Radius <= 0.0) || (height <= 0.0 || Radius <= 0.0) )
+        cout << Exh.error_message;
+    else
+        cout << pi * Radius * Radius * height << endl;
     Shape_3D();
 }

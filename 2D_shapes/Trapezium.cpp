@@ -22,9 +22,16 @@ void Trapezium::ATrapezium(){
     cout << "base1: "; cin >> base1;
     cout << "base2: "; cin >> base2;
     Exh.check_if_typed_string();
-    cout << output << base1 + base2/2 * height;
+    if( (base1 <= 0.0 && base2 <= 0.0) || (base1 <= 0.0 || base2 <= 0.0) ){
+        cout << Exh.error_message;
+    } else if(diagonal <= 0.0){
+        cout << Exh.error_message;
+    } else {
+        cout << output << (base1 + base2)/2 * height;
+    }
     Shape_2D();
 }
+
 void Trapezium::PTrapezium(){
     int SideA, SideB, SideC, SideD;
     cout << "Enter the each side of the quadrilateral: ";
@@ -33,6 +40,13 @@ void Trapezium::PTrapezium(){
     cout << "Side_C: "; cin >> SideC;
     cout << "Side_D: "; cin >> SideD;
     Exh.check_if_typed_string();
-    cout << output << SideA + SideB + SideC + SideD;
+    if( (SideA <= 0.0 && SideB <= 0.0) || (SideA <= 0.0 || SideB <= 0.0) ){
+        cout << Exh.error_message;
+    } else if((SideC <= 0.0 && SideD <= 0.0) || (SideC <= 0.0 || SideD <= 0.0)){
+        cout << Exh.error_message;
+    } else {
+        cout << output << SideA + SideB + SideC + SideD;
+    }
+
     Shape_2D();
 }

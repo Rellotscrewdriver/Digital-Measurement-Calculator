@@ -24,20 +24,29 @@ void Hemisphere::CSAHemisphere(){
     cout << "Specify the radius to find the Curved Surface area of hemisphere: ";
     cout << Text_radius; cin >> Radius;
     Exh.check_if_typed_string();
-    cout << output << 2 * pi * (Radius * Radius) << endl;
+    if(Radius <= 0.0)
+        cout << Exh.error_message;
+    else
+        cout << output << 2 * pi * (Radius * Radius) << endl;
     Shape_3D();
 }
 void Hemisphere::TSAHemisphere(){
     cout << "Specify the radius to find the Total Surface Area of hemisphere: ";
     cout << Text_radius; cin >> Radius;
     Exh.check_if_typed_string();
-    cout << output << 3 * pi * (Radius * Radius) << endl;
+    if(Radius <= 0.0)
+        cout << Exh.error_message;
+    else
+        cout << output << 3 * pi * (Radius * Radius) << endl;
     Shape_3D();
 }
 void Hemisphere::VHemisphere(){
     cout << "Specify the radius to find the volume of hemisphere: ";
     cout << Text_radius; cin >> Radius;
     Exh.check_if_typed_string();
-    cout << output << 2/3 * pi * (Radius * Radius * Radius) << endl;
+    if(Radius <= 0.0)
+        cout << Exh.error_message;
+    else
+        cout << output << 2/3 * pi * (Radius * Radius * Radius) << endl;
     Shape_3D();
 }
