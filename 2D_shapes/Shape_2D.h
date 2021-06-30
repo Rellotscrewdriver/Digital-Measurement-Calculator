@@ -5,10 +5,15 @@
 #include "../exception_handling.h"
 
 class Shape_2D : public declarations{
-    public:
-        Shape_2D();
+public:
+    Shape_2D();
     Exception_Handling Exh;
 };
+
+/*
+    A = Area
+    P = Perimeter
+*/
 
 class Square : public declarations{
 public:
@@ -58,6 +63,5 @@ public:
     void ATrapezium();
     void PTrapezium();
 };
-
 
 #endif // SHAPE_2D_H

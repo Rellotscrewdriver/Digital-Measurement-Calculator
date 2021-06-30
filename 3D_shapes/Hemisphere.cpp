@@ -2,7 +2,7 @@
 
 Hemisphere::Hemisphere(){
     shape = "Hemisphere";
-    cout << "What you wanna measure form" << shape << "?" << endl;
+    cout << "What you wanna measure from " << shape << " ?" << endl;
     cout << "1. Curved Surface Area" << endl;
     cout << "2. Total Surface Area" << endl;
     cout << "3. Volume" << endl;

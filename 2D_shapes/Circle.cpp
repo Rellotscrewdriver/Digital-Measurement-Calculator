@@ -1,9 +1,8 @@
 #include "../2D_Shapes/Shape_2D.h"
-#include "../exception_handling.h"
 
 Circle::Circle(){
-    shape = " Circle";
-    cout << "What you wanna measure form" << shape << "?" << endl;
+    shape = "Circle";
+    cout << "What you wanna measure from " << shape << " ?" << endl;
     cout << "1. Area" << endl;
     cout << "2. perimeter" << endl;
     cout << input; cin >> WhichShape;
@@ -22,7 +21,7 @@ void Circle::ACircle(){
     cout << Text_radius; cin >> Radius;
     Exh.check_if_typed_string();
     if(Radius <= 0.0){
-        Exh.error_message;
+        cout << Exh.error_message;
     } else {
         cout << output << Pi * (2 * Radius) << endl << endl;
     }
@@ -34,7 +33,7 @@ void Circle::PCircle(){
     cout << Text_radius; cin >> Radius;
     Exh.check_if_typed_string();
     if(Radius <= 0.0){
-        Exh.error_message;
+        cout << Exh.error_message;
     } else {
         cout << output << 2 * Radius * Pi << endl << endl;
     }

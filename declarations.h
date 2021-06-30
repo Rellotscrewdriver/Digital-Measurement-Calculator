@@ -10,6 +10,7 @@
 
 using namespace std;
 
+
 class declarations{
     public:
         //this variable is responsible for taking input
@@ -26,8 +27,8 @@ class declarations{
         double side;
         const float Pi = 3.14;
         double pi = 22/7;
-        double Radius;
         double Diameter = Radius/2;
+        double Radius;
         double base1;
         double base2;
         float half = 0.5;

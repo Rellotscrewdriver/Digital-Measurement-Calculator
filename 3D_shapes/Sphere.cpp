@@ -1,8 +1,8 @@
 #include "../3D_Shapes/Shape_3D.h"
 
 Sphere::Sphere(){
-    shape = " Sphere";
-    cout << "What you wanna measure form " << shape << " ?" << endl;
+    shape = "Sphere";
+    cout << "What you wanna measure from " << shape << " ?" << endl;
     cout << "1. Surface Area" << endl;
     cout << "2. Volume" << endl;
     cout << "3. Hemisphere";
@@ -24,7 +24,7 @@ void Sphere::SASphere(){
     cin >> Radius;
     Exh.check_if_typed_string();
     if(Radius <= 0.0)
-        Exh.error_message;
+        cout << Exh.error_message;
     else
         cout << 4 * pi * Radius * Radius << endl;
     Shape_3D();
@@ -35,7 +35,7 @@ void Sphere::VSphere(){
     cin >> Radius;
     Exh.check_if_typed_string();
     if(Radius <= 0.0)
-        Exh.error_message;
+        cout << Exh.error_message;
     else
         cout << output << 4/3 * pi * Radius * (Radius * Radius * Radius) << endl;
     Shape_3D();

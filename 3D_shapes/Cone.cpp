@@ -1,9 +1,8 @@
 #include "Shape_3D.h"
-#include "../declarations.h"
 
 Cone::Cone(){
     shape = "Cone";
-    cout << "What you wanna measure form" << shape << "?" << endl;
+    cout << "What you wanna measure from " << shape << " ?" << endl;
     cout << "1. Curved Surface Area" << endl;
     cout << "2. Total Surface Area(Right Circular)" << endl;
     cout << "3. Volume" << endl;

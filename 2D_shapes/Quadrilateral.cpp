@@ -1,9 +1,8 @@
 #include "../2D_Shapes/Shape_2D.h"
 
-
 Quadrilateral::Quadrilateral(){
-    shape = " Quadrilateral";
-    cout << "What you wanna measure form" << shape << "?" << endl;
+    shape = "Quadrilateral";
+    cout << "What you wanna measure from " << shape << " ?" << endl;
     cout << "1. Area" << endl;
     cout << "2. perimeter" << endl;
     cout << input; cin >> WhichShape;

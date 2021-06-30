@@ -1,8 +1,8 @@
 #include "../3D_Shapes/Shape_3D.h"
 
 Cube::Cube(){
-    //shape = "Cube ";
-    cout << "What you wanna measure form " << "?" << endl;
+    shape = "Cube";
+    cout << "What you wanna measure from " << shape << " ?" << endl;
     cout << "1. Surface Area" << endl;
     cout << "2. Volume" << endl;
     cout << input; cin >> WhichShape;

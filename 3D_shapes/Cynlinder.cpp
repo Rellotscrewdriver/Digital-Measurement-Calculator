@@ -1,9 +1,8 @@
 #include "../3D_Shapes/Shape_3D.h"
 
-
 Cylinder::Cylinder(){
     shape = "Cylinder";
-    cout << "What you wanna measure form" << shape << "?" << endl;
+    cout << "What you wanna measure from " << shape << " ?" << endl;
     cout << "1. Curved Surface Area" << endl;
     cout << "2. Total Surface Area" << endl;
     cout << "3. Volume" << endl;

@@ -1,8 +1,8 @@
 #include "Shape_3D.h"
 
 Cuboid::Cuboid(){
-    shape = "Cuboid ";
-    cout << "What you wanna measure form "<< shape <<"?" << endl;
+    shape = "Cuboid";
+    cout << "What you wanna measure from " << shape << " ?" << endl;
     cout << "1. Surface Area" << endl;
     cout << "2. Volume" << endl;
     cout << input; cin >> WhichShape;
