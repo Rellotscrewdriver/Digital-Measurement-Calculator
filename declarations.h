@@ -4,9 +4,7 @@
 #include <iostream>
 #include <cmath>
 #include <string>
-#include <fstream>
-#include <algorithm>
-#include <ctime>
+#include <limits>
 
 using namespace std;
 
@@ -18,8 +16,9 @@ class declarations{
         string shape;
         const string input = "Input: ";
         const string output = "Output: ";
-        time_t timetoday;
-
+        const string exit_str = ". exit the program\n";
+        const string console_message = "Press any key to continue...";
+        const string str_measure_type = "Enter the measure type\n";
     protected:
         double length;
         double width;

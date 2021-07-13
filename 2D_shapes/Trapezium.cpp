@@ -1,16 +1,19 @@
 #include "../2D_Shapes/Shape_2D.h"
 
 Trapezium::Trapezium(){
-    shape = "Trapezium";
-    cout << "What you wanna measure from " << shape << " ?" << endl;
+    cout << str_measure_type;
     cout << "1. Area" << endl;
     cout << "2. perimeter" << endl;
+    cout << "3" << exit_str;
     cout << input; cin >> WhichShape;
     if(WhichShape == 1)
         this->ATrapezium();
     else if (WhichShape == 2)
         this->PTrapezium();
-    else{
+    else if (WhichShape == 3) {
+        cout << console_message;
+        getchar();
+    } else {
         Exh.check_if_typed_string_and_invaild_number();
         Trapezium();
     }
@@ -27,7 +30,7 @@ void Trapezium::ATrapezium(){
     } else if(diagonal <= 0.0){
         cout << Exh.error_message;
     } else {
-        cout << output << (base1 + base2)/2 * height;
+        cout << output << (base1 + base2)/2 * height << endl << endl;
     }
     Shape_2D();
 }
@@ -45,7 +48,7 @@ void Trapezium::PTrapezium(){
     } else if((SideC <= 0.0 && SideD <= 0.0) || (SideC <= 0.0 || SideD <= 0.0)){
         cout << Exh.error_message;
     } else {
-        cout << output << SideA + SideB + SideC + SideD;
+        cout << output << SideA + SideB + SideC + SideD << endl << endl;
     }
 
     Shape_2D();

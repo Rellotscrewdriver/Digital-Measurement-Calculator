@@ -1,16 +1,19 @@
 #include "Shape_3D.h"
 
 Cuboid::Cuboid(){
-    shape = "Cuboid";
-    cout << "What you wanna measure from " << shape << " ?" << endl;
+    cout << str_measure_type;
     cout << "1. Surface Area" << endl;
     cout << "2. Volume" << endl;
+    cout << "3" << exit_str;
     cout << input; cin >> WhichShape;
     if(WhichShape == 1)
         SACuboid();
     else if (WhichShape == 2)
         VCuboid();
-    else{
+    else if (WhichShape == 3) {
+        cout << console_message;
+        getchar();
+    } else {
         Exh.check_if_typed_string_and_invaild_number();
         Cuboid();
     }
@@ -33,7 +36,7 @@ void Cuboid::SACuboid(){
     else if(length <= 0.0)
         cout << Exh.error_message;
     else
-        cout << 2 * ((length * width) + (width * height) + (height * length)) << endl;
+        cout << 2 * ((length * width) + (width * height) + (height * length)) << endl << endl;
 
     Shape_3D();
 }

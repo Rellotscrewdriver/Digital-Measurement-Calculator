@@ -5,14 +5,14 @@
 
 Shape_2D::Shape_2D()
 {
-    cout << "Which 2D shape do you want to find the measure: " << endl;
+    cout << "Enter any 2D shape respectively" << endl;
     cout << "1. Square \n";
     cout << "2. Rectangle \n";
     cout << "3. Parallelogram \n";
     cout << "4. Circle \n";
     cout << "5. Quadrilateral \n";
     cout << "6. Trapezium \n";
-
+    cout << "7" << exit_str;
     cout << input; cin >> WhichShape;
 
     cout << endl;
@@ -39,6 +39,11 @@ Shape_2D::Shape_2D()
 
             case 6:
                 Trapezium();
+            break;
+
+            case 7:
+                cout << console_message;
+                getchar();
             break;
 
             default:

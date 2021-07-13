@@ -1,11 +1,11 @@
 #include "Shape_3D.h"
 
 Cone::Cone(){
-    shape = "Cone";
-    cout << "What you wanna measure from " << shape << " ?" << endl;
+    cout << str_measure_type;
     cout << "1. Curved Surface Area" << endl;
     cout << "2. Total Surface Area(Right Circular)" << endl;
     cout << "3. Volume" << endl;
+    cout << "4" << exit_str;
     cin >> WhichShape;
     if(WhichShape == 1)
         this->CSACone();
@@ -13,7 +13,10 @@ Cone::Cone(){
         this->TSACone();
     else if (WhichShape == 2)
         this->VCone();
-    else{
+    else if (WhichShape == 4) {
+        cout << console_message;
+        getchar();
+    } else {
         Exh.check_if_typed_string_and_invaild_number();
         Cone();
     }
@@ -27,7 +30,7 @@ void Cone::CSACone(){
     if( (Radius <= 0.0 && length <= 0.0) || (length <= 0.0 || Radius <= 0.0) )
         cout << Exh.error_message;
     else
-    cout << "Output:" << pi * Radius * length << endl;
+    cout << "Output:" << pi * Radius * length << endl << endl;
 
     Shape_3D();
 }
@@ -39,7 +42,7 @@ void Cone::TSACone(){
     if( (Radius <= 0.0 && slant_height <= 0.0) || (slant_height <= 0.0 || Radius <= 0.0) )
         cout << Exh.error_message;
     else
-    cout << pi * Radius * (slant_height * Radius) << endl;
+    cout << pi * Radius * (slant_height * Radius) << endl << endl;
 
     Shape_3D();
 }
@@ -51,7 +54,7 @@ void Cone::VCone(){
     if( (Radius <= 0.0 && height <= 0.0) || (height <= 0.0 || Radius <= 0.0) )
         cout << Exh.error_message;
     else
-    cout << 1/3 * pi * (Radius * Radius) * height << endl;
+    cout << 1/3 * pi * (Radius * Radius) * height << endl << endl;
 
     Shape_3D();
 }
