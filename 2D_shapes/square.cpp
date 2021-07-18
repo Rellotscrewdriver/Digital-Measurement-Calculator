@@ -4,13 +4,16 @@ Square::Square() {
 	cout << str_measure_type;
 	cout << "1. Area" << endl;
 	cout << "2. perimeter" << endl;
-	cout << "3" << exit_str;
+	cout << "3" << previous_step;
+	cout << "4" << exit_str;
 	cout << input; cin >> WhichShape;
 	if (WhichShape == 1)
 		this->Asquare();
 	else if (WhichShape == 2)
 		this->Psquare();
-	else if (WhichShape == 3) {
+    else if (WhichShape == 3)
+		Shape_2D();
+	else if (WhichShape == 4) {
 		cout << console_message;
 		getchar();
 	} else {

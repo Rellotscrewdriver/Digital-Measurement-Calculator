@@ -10,7 +10,9 @@ Parallelogram::Parallelogram() {
 		this->AParallelogram();
 	else if (WhichShape == 2)
 		this->PParallelogram();
-	else if (WhichShape == 3) {
+    else if (WhichShape == 3)
+		Shape_2D();
+	else if (WhichShape == 4) {
 		cout << console_message;
 		getchar();
 	} else {

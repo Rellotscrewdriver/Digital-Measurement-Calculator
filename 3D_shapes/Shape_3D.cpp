@@ -1,4 +1,5 @@
 #include "Shape_3D.h"
+#include "../2D_shapes/Shape_2D.h"
 
 Shape_3D::Shape_3D() {
 	cout << "Enter any 3D shape respectively" << endl;
@@ -7,7 +8,8 @@ Shape_3D::Shape_3D() {
 	cout << "3. Sphere \n";
 	cout << "4. Cone \n";
 	cout << "5. Cylinder \n";
-	cout << "6" << exit_str;
+	cout << "6" << switch_to_2D;
+	cout << "7" << exit_str;
 	cout << input;
 	cin >> WhichShape;
 	cout << endl;
@@ -32,7 +34,11 @@ Shape_3D::Shape_3D() {
 			Cylinder();
 			break;
 
-		case 6:
+        case 6:
+            Shape_2D();
+            break;
+
+		case 7:
 			cout << console_message;
 			getchar();
 			break;

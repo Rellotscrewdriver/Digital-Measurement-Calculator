@@ -4,14 +4,17 @@ Cuboid::Cuboid() {
 	cout << str_measure_type;
 	cout << "1. Surface Area" << endl;
 	cout << "2. Volume" << endl;
-	cout << "3" << exit_str;
+	cout << "3" << previous_step;
+	cout << "4" << exit_str;
 	cout << input;
 	cin >> WhichShape;
 	if (WhichShape == 1)
 		SACuboid();
 	else if (WhichShape == 2)
 		VCuboid();
-	else if (WhichShape == 3) {
+	else if (WhichShape == 3)
+        Shape_3D();
+	else if (WhichShape == 4) {
 		cout << console_message;
 		getchar();
 	} else {

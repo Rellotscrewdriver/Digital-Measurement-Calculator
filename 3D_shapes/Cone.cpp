@@ -5,15 +5,18 @@ Cone::Cone() {
 	cout << "1. Curved Surface Area" << endl;
 	cout << "2. Total Surface Area(Right Circular)" << endl;
 	cout << "3. Volume" << endl;
-	cout << "4" << exit_str;
+	cout << "4" << previous_step;
+	cout << "5" << exit_str;
 	cin >> WhichShape;
 	if (WhichShape == 1)
 		this->CSACone();
 	else if (WhichShape == 2)
 		this->TSACone();
-	else if (WhichShape == 2)
+	else if (WhichShape == 3)
 		this->VCone();
-	else if (WhichShape == 4) {
+	else if (WhichShape == 4)
+        Shape_3D();
+	else if (WhichShape == 5) {
 		cout << console_message;
 		getchar();
 	} else {

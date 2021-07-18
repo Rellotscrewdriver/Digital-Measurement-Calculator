@@ -5,19 +5,22 @@ Cylinder::Cylinder() {
 	cout << "1. Curved Surface Area" << endl;
 	cout << "2. Total Surface Area" << endl;
 	cout << "3. Volume" << endl;
-	cout << "4" << exit_str;
+	cout << "4" << previous_step;
+	cout << "5" << exit_str;
 	cin >> WhichShape;
-	//cin.getline(user_input, 10);
 	if (WhichShape == 1)
 		this->CSACylinder();
 	else if (WhichShape == 2)
 		this->TSACylinder();
 	else if (WhichShape == 3)
 		this->VCylinder();
-	else if (WhichShape == 4) {
+	else if (WhichShape == 4)
+        Shape_3D();
+	else if (WhichShape == 5){
 		cout << console_message;
 		getchar();
-	} else {
+	}
+	 else {
 		Exh.check_if_typed_string_and_invaild_number();
 		Cylinder();
 	}
