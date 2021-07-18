@@ -6,6 +6,7 @@
 
 class Shape_3D : public declarations {
 public:
+    bool is3D = true;
 	Shape_3D();
 	Exception_Handling Exh;
 };

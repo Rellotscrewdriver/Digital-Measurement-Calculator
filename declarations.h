@@ -37,6 +37,10 @@ protected:
 	float slant_height;
 	float apothem;
 
+    string switch_to_3D = ". switch to 3D\n";
+    string switch_to_2D = ". Switch to 2D\n";
+    string previous_step = ". Previous step\n";
+
 	string Text_radius = "radius: ";
 	string Text_width = "width: ";
 	string Text_length = "length: ";

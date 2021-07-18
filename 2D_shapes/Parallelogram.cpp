@@ -10,7 +10,9 @@ Parallelogram::Parallelogram() {
 		this->AParallelogram();
 	else if (WhichShape == 2)
 		this->PParallelogram();
-	else if (WhichShape == 3) {
+    else if (WhichShape == 3)
+		Shape_2D();
+	else if (WhichShape == 4) {
 		cout << console_message;
 		getchar();
 	} else {
@@ -22,10 +24,9 @@ void Parallelogram::AParallelogram() {
 	cout << "Specify the width and height for area respectively" << endl;
 	cout << Text_height; cin >> height;
 	cout << Text_width; cin >> width;
-	Exh.check_if_typed_string();
-	if ((height <= 0.0 && width <= 0.0) || (height <= 0.0 || width <= 0.0))
+	Exh.check_if_typed_string(false);
+	if (Exh.check_two_conditions(height, width))
 		cout << Exh.error_message;
-
 	else
 		cout << output << height * width << endl << endl;
 	Shape_2D();
@@ -34,8 +35,8 @@ void Parallelogram::PParallelogram() {
 	cout << "Specify the width and height for perimeter" << endl;
 	cout << Text_length; cin >> length;
 	cout << Text_width; cin >> width;
-	Exh.check_if_typed_string();
-	if ((height <= 0.0 && width <= 0.0) || (height <= 0.0 || width <= 0.0))
+	Exh.check_if_typed_string(false);
+	if (Exh.check_two_conditions(length, width))
 		cout << Exh.error_message;
 
 	else

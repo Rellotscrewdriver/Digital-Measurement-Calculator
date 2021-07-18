@@ -4,14 +4,17 @@ Cuboid::Cuboid() {
 	cout << str_measure_type;
 	cout << "1. Surface Area" << endl;
 	cout << "2. Volume" << endl;
-	cout << "3" << exit_str;
+	cout << "3" << previous_step;
+	cout << "4" << exit_str;
 	cout << input;
 	cin >> WhichShape;
 	if (WhichShape == 1)
 		SACuboid();
 	else if (WhichShape == 2)
 		VCuboid();
-	else if (WhichShape == 3) {
+	else if (WhichShape == 3)
+        Shape_3D();
+	else if (WhichShape == 4) {
 		cout << console_message;
 		getchar();
 	} else {
@@ -31,10 +34,8 @@ void Cuboid::SACuboid() {
 	cout << Text_length;
 	cin >> length;
 	cout << endl;
-	Exh.check_if_typed_string();
-	if ((width <= 0.0 && height <= 0.0) || (height <= 0.0 || width <= 0.0))
-		cout << Exh.error_message;
-	else if (length <= 0.0)
+	Exh.check_if_typed_string(true);
+	if(Exh.check_three_conditions(width, height, length))
 		cout << Exh.error_message;
 	else
 		cout << 2 * ((length * width) + (width * height) + (height * length)) << endl << endl;
@@ -49,10 +50,8 @@ void Cuboid::VCuboid() {
 	cin >> height;
 	cout << Text_length;
 	cin >> length;
-	Exh.check_if_typed_string();
-	if ((width <= 0.0 && height <= 0.0) || (height <= 0.0 || width <= 0.0))
-		cout << Exh.error_message;
-	else if (length <= 0.0)
+	Exh.check_if_typed_string(true);
+	if (Exh.check_three_conditions(length, width, height))
 		cout << Exh.error_message;
 	else
 		cout << length * height * width << endl << endl;

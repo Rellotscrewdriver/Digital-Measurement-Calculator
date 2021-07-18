@@ -1,4 +1,5 @@
 #include "Shape_2D.h"
+#include "../3D_shapes/Shape_3D.h"
 #include "../declarations.h"
 #include "../exception_handling.h"
 
@@ -12,7 +13,8 @@ Shape_2D::Shape_2D() {
 	cout << "5. Quadrilateral \n";
 	cout << "6. Trapezium \n";
 	cout << "7. Polygon \n";
-	cout << "8" << exit_str;
+	cout << "8" << switch_to_3D;
+	cout << "9" << exit_str;
 	cout << input; cin >> WhichShape;
 	cout << endl;
 	switch (WhichShape) {
@@ -44,7 +46,11 @@ Shape_2D::Shape_2D() {
             Polygon();
             break;
 
-		case 8:
+        case 8:
+            Shape_3D();
+            break;
+
+		case 9:
 			cout << console_message;
 			getchar();
 			break;

@@ -4,13 +4,16 @@ Trapezium::Trapezium() {
 	cout << str_measure_type;
 	cout << "1. Area" << endl;
 	cout << "2. perimeter" << endl;
-	cout << "3" << exit_str;
+	cout << "3" << previous_step;
+	cout << "4" << exit_str;
 	cout << input; cin >> WhichShape;
 	if (WhichShape == 1)
 		this->ATrapezium();
 	else if (WhichShape == 2)
 		this->PTrapezium();
-	else if (WhichShape == 3) {
+    else if (WhichShape == 3)
+		Shape_2D();
+	else if (WhichShape == 4) {
 		cout << console_message;
 		getchar();
 	} else {
@@ -24,13 +27,9 @@ void Trapezium::ATrapezium() {
 	cout << Text_height; cin >> height;
 	cout << "base1: "; cin >> base1;
 	cout << "base2: "; cin >> base2;
-	Exh.check_if_typed_string();
-	if ((base1 <= 0.0 && base2 <= 0.0) || (base1 <= 0.0 || base2 <= 0.0))
+	Exh.check_if_typed_string(false);
+	if (Exh.check_three_conditions(base1, base2, height))
 		cout << Exh.error_message;
-
-	else if (diagonal <= 0.0)
-		cout << Exh.error_message;
-
 	else
 		cout << output << (base1 + base2) / 2 * height << endl << endl;
 	Shape_2D();
@@ -43,13 +42,9 @@ void Trapezium::PTrapezium() {
 	cout << "Side_B: "; cin >> SideB;
 	cout << "Side_C: "; cin >> SideC;
 	cout << "Side_D: "; cin >> SideD;
-	Exh.check_if_typed_string();
-	if ((SideA <= 0.0 && SideB <= 0.0) || (SideA <= 0.0 || SideB <= 0.0))
+	Exh.check_if_typed_string(false);
+	if (Exh.check_four_conditions(SideA, SideB, SideC, SideD))
 		cout << Exh.error_message;
-
-	else if ((SideC <= 0.0 && SideD <= 0.0) || (SideC <= 0.0 || SideD <= 0.0))
-		cout << Exh.error_message;
-
 	else
 		cout << output << SideA + SideB + SideC + SideD << endl << endl;
 	Shape_2D();

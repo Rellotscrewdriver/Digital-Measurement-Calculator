@@ -5,7 +5,8 @@ Sphere::Sphere() {
 	cout << "1. Surface Area" << endl;
 	cout << "2. Volume" << endl;
 	cout << "3. Hemisphere" << endl;
-	cout << "4" << exit_str;
+	cout << "4" << previous_step;
+	cout << "5" << exit_str;
 	cin >> WhichShape;
 	if (WhichShape == 1)
 		this->SASphere();
@@ -13,7 +14,9 @@ Sphere::Sphere() {
 		this->VSphere();
 	else if (WhichShape == 3)
 		Hemisphere();
-	else if (WhichShape == 4) {
+	else if (WhichShape == 4)
+        Shape_3D();
+	else if (WhichShape == 5) {
 		cout << console_message;
 		getchar();
 	} else {
@@ -25,8 +28,8 @@ Sphere::Sphere() {
 void Sphere::SASphere() {
 	cout << "specify the radius" << input;
 	cin >> Radius;
-	Exh.check_if_typed_string();
-	if (Radius <= 0.0)
+	Exh.check_if_typed_string(true);
+	if (Exh.check_one_condiiton(Radius))
 		cout << Exh.error_message;
 	else
 		cout << 4 * pi * Radius * Radius << endl << endl;
@@ -36,8 +39,8 @@ void Sphere::SASphere() {
 void Sphere::VSphere() {
 	cout << "specify the radius" << input;
 	cin >> Radius;
-	Exh.check_if_typed_string();
-	if (Radius <= 0.0)
+	Exh.check_if_typed_string(true);
+	if (Exh.check_one_condiiton(Radius))
 		cout << Exh.error_message;
 	else
 		cout << output << 4 / 3 * pi * Radius * (Radius * Radius * Radius) << endl << endl;

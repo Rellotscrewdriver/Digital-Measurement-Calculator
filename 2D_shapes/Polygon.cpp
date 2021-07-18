@@ -4,14 +4,17 @@ Polygon::Polygon() {
 	cout << str_measure_type;
 	cout << "1. Area" << endl;
 	cout << "2. perimeter" << endl;
-	cout << "3" << exit_str;
+	cout << "3" << previous_step;
+	cout << "4" << exit_str;
 	cout << input;
 	cin >> WhichShape;
 	if (WhichShape == 1)
 		this->APolygon();
 	else if (WhichShape == 2)
 		this->PPolygon();
-	else if (WhichShape == 3) {
+    else if (WhichShape == 3)
+		Shape_2D();
+	else if (WhichShape == 4) {
 		cout << console_message;
 		getchar();
 	} else {
@@ -25,8 +28,8 @@ void Polygon::APolygon() {
 	cout << "Perimeter: "; cin >> Radius;
 	cout << "Specify the apothem: " << endl;
 	cout << "apothem: "; cin >> apothem;
-	Exh.check_if_typed_string();
-	if (Radius <= 0.0 || apothem <= 0.0 || (Radius <= 0.0 && apothem <= 0.0))
+	Exh.check_if_typed_string(false);
+	if (Exh.check_two_conditions(Radius, apothem))
 		cout << Exh.error_message;
 	else
 		cout << output << half * Radius * apothem << endl << endl;
@@ -37,21 +40,28 @@ void Polygon::PPolygon() {
 	cout << "Enter the Number of Sides: " << endl;
 	cin >> side;
 
-    if(side <= 0 || side > 10){
+    if(Exh.check_one_condiiton(side) || side > 10){
         cout << Exh.error_message;
     }
-
+    Exh.check_if_typed_string(false);
+    bool isnegative = false;
 	float answer;
 	for (int a = 1; a <= side; a++) {
 		cout << "side " << a << ": ";
 		cin >> number_of_sides[a];
 
-		Exh.check_if_typed_string();
-		if (number_of_sides[a] <= 0.0)
+		Exh.check_if_typed_string(false);
+		if (Exh.check_one_condiiton(number_of_sides[a]) ){
 			cout << Exh.error_message;
-		else
+			isnegative = true;
+            break;
+		} else
             answer += number_of_sides[a];
 	}
+
+	if(!isnegative){
         cout << output << answer << endl << endl;
+	}
+
 	Shape_2D();
 }

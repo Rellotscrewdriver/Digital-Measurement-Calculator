@@ -5,7 +5,8 @@ Hemisphere::Hemisphere() {
 	cout << "1. Curved Surface Area" << endl;
 	cout << "2. Total Surface Area" << endl;
 	cout << "3. Volume" << endl;
-	cout << "4" << exit_str;
+	cout << "4" << previous_step;
+	cout << "5" << exit_str;
 	cin >> WhichShape;
 	if (WhichShape == 1)
 		this->CSAHemisphere();
@@ -13,7 +14,9 @@ Hemisphere::Hemisphere() {
 		this->TSAHemisphere();
 	else if (WhichShape == 3)
 		this->VHemisphere();
-	else if (WhichShape == 4) {
+	else if (WhichShape == 4)
+        Shape_3D();
+	else if (WhichShape == 5) {
 		cout << console_message;
 		getchar();
 	} else {
@@ -25,8 +28,8 @@ Hemisphere::Hemisphere() {
 void Hemisphere::CSAHemisphere() {
 	cout << "Specify the radius to find the Curved Surface area of hemisphere: ";
 	cout << Text_radius; cin >> Radius;
-	Exh.check_if_typed_string();
-	if (Radius <= 0.0)
+	Exh.check_if_typed_string(true);
+	if (Exh.check_one_condiiton(Radius))
 		cout << Exh.error_message;
 	else
 		cout << output << 2 * pi * (Radius * Radius) << endl << endl;
@@ -35,8 +38,8 @@ void Hemisphere::CSAHemisphere() {
 void Hemisphere::TSAHemisphere() {
 	cout << "Specify the radius to find the Total Surface Area of hemisphere: ";
 	cout << Text_radius; cin >> Radius;
-	Exh.check_if_typed_string();
-	if (Radius <= 0.0)
+	Exh.check_if_typed_string(true);
+	if (Exh.check_one_condiiton(Radius))
 		cout << Exh.error_message;
 	else
 		cout << output << 3 * pi * (Radius * Radius) << endl << endl;
@@ -45,7 +48,7 @@ void Hemisphere::TSAHemisphere() {
 void Hemisphere::VHemisphere() {
 	cout << "Specify the radius to find the volume of hemisphere: ";
 	cout << Text_radius; cin >> Radius;
-	Exh.check_if_typed_string();
+	Exh.check_if_typed_string(true);
 	if (Radius <= 0.0)
 		cout << Exh.error_message;
 	else
