@@ -27,8 +27,8 @@ void Cone::CSACone() {
 	cout << Text_radius;
 	cin >> Radius;
 	cin >> length;
-	Exh.check_if_typed_string();
-	if ((Radius <= 0.0 && length <= 0.0) || (length <= 0.0 || Radius <= 0.0))
+	Exh.check_if_typed_string(true);
+	if (Exh.check_two_conditions(Radius, length))
 		cout << Exh.error_message;
 	else
 		cout << "Output:" << pi * Radius * length << endl << endl;
@@ -38,8 +38,8 @@ void Cone::CSACone() {
 void Cone::TSACone() {
 	cin >> Radius;
 	cin >> slant_height;
-	Exh.check_if_typed_string();
-	if ((Radius <= 0.0 && slant_height <= 0.0) || (slant_height <= 0.0 || Radius <= 0.0))
+	Exh.check_if_typed_string(true);
+	if (Exh.check_two_conditions(Radius, slant_height))
 		cout << Exh.error_message;
 	else
 		cout << pi * Radius * (slant_height * Radius) << endl << endl;
@@ -49,8 +49,8 @@ void Cone::TSACone() {
 void Cone::VCone() {
 	cin >> Radius;
 	cin >> height;
-	Exh.check_if_typed_string();
-	if ((Radius <= 0.0 && height <= 0.0) || (height <= 0.0 || Radius <= 0.0))
+	Exh.check_if_typed_string(true);
+	if (Exh.check_two_conditions(Radius, height))
 		cout << Exh.error_message;
 	else
 		cout << 1 / 3 * pi * (Radius * Radius) * height << endl << endl;

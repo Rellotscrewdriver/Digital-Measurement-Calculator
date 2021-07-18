@@ -22,8 +22,8 @@ Square::Square() {
 void Square::Psquare() {
 	cout << "Specify one side of square to find out the perimeter " << endl;
 	cout << input; cin >> side;
-	Exh.check_if_typed_string();
-	if (side <= 0.0)
+	Exh.check_if_typed_string(false);
+	if (Exh.check_one_condiiton(side))
 		cout << Exh.error_message;
 
 	else
@@ -34,8 +34,8 @@ void Square::Psquare() {
 void Square::Asquare() {
 	cout << "Specify one side of square to find out it's perimeter" << endl;
 	cout << input; cin >> side;
-	Exh.check_if_typed_string();
-	if (side <= 0.0)
+	Exh.check_if_typed_string(false);
+	if (Exh.check_one_condiiton(side))
 		cout << Exh.error_message;
 
 	else

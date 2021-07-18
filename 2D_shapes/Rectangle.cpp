@@ -23,8 +23,8 @@ void Rectangle::PRectangle() {
 	cout << "Specify the width and height for perimeter" << endl;
 	cout << Text_length; cin >> length;
 	cout << Text_width; cin >> width;
-	Exh.check_if_typed_string();
-	if ((height <= 0.0 && width <= 0.0) || (height <= 0.0 || width <= 0.0))
+	Exh.check_if_typed_string(false);
+	if (Exh.check_two_conditions(length, width))
 		cout << Exh.error_message;
 	else
 		cout << output << 2 * (length + width) << endl << endl;
@@ -35,8 +35,8 @@ void Rectangle::ARectangle() {
 	cout << "Specify the width and height for area respectively" << endl;
 	cout << Text_height; cin >> height;
 	cout << Text_width; cin >> width;
-	Exh.check_if_typed_string();
-	if ((height <= 0.0 && width <= 0.0) || (height <= 0.0 || width <= 0.0))
+	Exh.check_if_typed_string(false);
+	if (Exh.check_two_conditions(height, width))
 		cout << Exh.error_message;
 	else
 		cout << output << height * width << endl << endl;

@@ -31,10 +31,8 @@ void Cuboid::SACuboid() {
 	cout << Text_length;
 	cin >> length;
 	cout << endl;
-	Exh.check_if_typed_string();
-	if ((width <= 0.0 && height <= 0.0) || (height <= 0.0 || width <= 0.0))
-		cout << Exh.error_message;
-	else if (length <= 0.0)
+	Exh.check_if_typed_string(true);
+	if(Exh.check_three_conditions(width, height, length))
 		cout << Exh.error_message;
 	else
 		cout << 2 * ((length * width) + (width * height) + (height * length)) << endl << endl;
@@ -49,10 +47,8 @@ void Cuboid::VCuboid() {
 	cin >> height;
 	cout << Text_length;
 	cin >> length;
-	Exh.check_if_typed_string();
-	if ((width <= 0.0 && height <= 0.0) || (height <= 0.0 || width <= 0.0))
-		cout << Exh.error_message;
-	else if (length <= 0.0)
+	Exh.check_if_typed_string(true);
+	if (Exh.check_three_conditions(length, width, height))
 		cout << Exh.error_message;
 	else
 		cout << length * height * width << endl << endl;

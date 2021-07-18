@@ -22,10 +22,9 @@ Circle::Circle() {
 void Circle::ACircle() {
 	cout << "Specify the radius to find the area of circle " << endl;
 	cout << Text_radius; cin >> Radius;
-	Exh.check_if_typed_string();
-	if (Radius <= 0.0)
+	Exh.check_if_typed_string(false);
+	if (Exh.check_one_condiiton(Radius))
 		cout << Exh.error_message;
-
 	else
 		cout << output << Pi * (2 * Radius) << endl << endl;
 	Shape_2D();
@@ -34,8 +33,8 @@ void Circle::ACircle() {
 void Circle::PCircle() {
 	cout << "Specify the radius to find the perimeter of circle " << endl;
 	cout << Text_radius; cin >> Radius;
-	Exh.check_if_typed_string();
-	if (Radius <= 0.0)
+	Exh.check_if_typed_string(false);
+	if (Exh.check_one_condiiton(Radius))
 		cout << Exh.error_message;
 
 	else
