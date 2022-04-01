@@ -5,16 +5,7 @@
 
 
 Shape_2D::Shape_2D() {
-	cout << "Enter any 2D shape respectively" << endl;
-	cout << "1. Square \n";
-	cout << "2. Rectangle \n";
-	cout << "3. Parallelogram \n";
-	cout << "4. Circle \n";
-	cout << "5. Quadrilateral \n";
-	cout << "6. Trapezium \n";
-	cout << "7. Polygon \n";
-	cout << "8" << switch_to_3D;
-	cout << "9" << exit_str;
+    list_2D_shapes();
 	cout << input; cin >> WhichShape;
 	cout << endl;
 	switch (WhichShape) {
