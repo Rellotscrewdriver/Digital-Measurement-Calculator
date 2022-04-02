@@ -12,3 +12,6 @@
 
 #Plain Text File
 *.txt
+
+#backup file
+*.bak

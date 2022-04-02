@@ -1,12 +1,19 @@
-#include "../declarations.h"
+#ifndef DISPLAY_H
+#define DISPLAY_H
 
+#include "../declarations.h"
 
 class Display {
 public:
 	string dimensional;
-	int WhichShape;
+	
 	int Measurement_Type;
 	string Shape_Name;
+
+	const string exit_str = ". exit the program\n";
+    const string switch_to_3D = ". switch to 3D\n";
+    const string switch_to_2D = ". Switch to 2D\n";
+
 
     void enter_dimension();
 	void select_dimension();
@@ -19,3 +26,5 @@ public:
 private:
 
 };
+
+#endif

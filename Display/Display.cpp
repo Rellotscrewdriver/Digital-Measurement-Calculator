@@ -5,6 +5,7 @@
 
 #define NEWLINE cout << "\n";
 
+
 bool Display::dimension_compare2D(string parameter){
     return parameter == "2d" || parameter == "2D";
 }
@@ -40,8 +41,15 @@ void Display::select_dimension(){
 }
 
 void Display::list_2D_Shapes(){
-    cout << "Enter any 2D shape respectively\n";
-    cout << "1. Square \n2. Rectangle \n3. Parallelogram \n4. Circle \n5. Quadrilateral \n6. Trapezium \n7. Polygon \n";
-    cout << "8" << switch_to_3D;
-    cout << "9" << exit_str << endl;
+    cout << "Enter any 2D shape respectively\n" 
+		 << "1. Square \n2. Rectangle \n3. Parallelogram \n4. Circle \n5. Quadrilateral \n6. Trapezium \n7. Polygon \n" 
+	     << "8" << switch_to_3D 
+		 << "9" << exit_str << endl;
+}
+
+void Display::list_3D_Shapes(){
+	cout << "Enter any 3D shape respectively\n"
+		 << "1. Cube \n2. Cuboid \n3. Sphere \n4. Hemisphere \n5. Cone \n6. Cylinder \n"
+	     << "7" << switch_to_2D
+         << "8" << exit_str << endl;
 }

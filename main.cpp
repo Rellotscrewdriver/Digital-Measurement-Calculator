@@ -5,6 +5,3 @@ int main() {
     display.enter_dimension();
 	return 0;
 }
-
-
-

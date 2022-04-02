@@ -3,11 +3,17 @@
 
 #include "../declarations.h"
 #include "../exception_handling.h"
+#include "../Display/Display.h"
 
 class Shape_3D : public declarations {
 public:
+    Display dis;
+	int WhichShape3D;
     bool is3D = true;
 	Shape_3D();
+	void Shape_order_3D();
+	void measurement_type_1();
+	void measurement_type_2();
 	Exception_Handling Exh;
 };
 
