@@ -10,15 +10,18 @@ using namespace std;
 
 class declarations {
 public:
-	//this variable is responsible for taking input
+	//these variables are responsible for taking input
 	int WhichShape;
+	int Measurement_Type;
+	string dimensional;
+	
 	string shape;
 	const string input = "Input: ";
 	const string output = "Output: ";
 	const string exit_str = ". exit the program\n";
 	const string console_message = "Press any key to continue...";
 	const string str_measure_type = "Enter the measure type\n";
-
+    const string previous_step = ". Previous step\n";
 protected:
     //these data types were changed from double to float due to less precision thus saving some memory
 	float length;
@@ -37,7 +40,7 @@ protected:
 	float slant_height;
 	float apothem;
 
-    string previous_step = ". Previous step\n";
+
 
 	string Text_radius = "radius: ";
 	string Text_width = "width: ";
