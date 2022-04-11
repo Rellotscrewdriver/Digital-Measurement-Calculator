@@ -28,11 +28,14 @@ bool Exception_Handling::check_one_condiiton(float FirstCondition){
 }
 
 bool Exception_Handling::check_two_conditions(float FirstCondition, float SecondCondition) {
-    return (FirstCondition <= LIMIT && SecondCondition <= LIMIT) || (FirstCondition <= LIMIT || SecondCondition <= LIMIT);
+    return (FirstCondition <= LIMIT && SecondCondition <= LIMIT)
+    || (FirstCondition <= LIMIT || SecondCondition <= LIMIT);
 }
 
 bool Exception_Handling::check_three_conditions(float FirstCondition, float SecondCondition, float ThirdCondition) {
-    return (FirstCondition <= LIMIT && SecondCondition <= LIMIT) || (FirstCondition <= LIMIT || SecondCondition <= LIMIT) || (ThirdCondition <= LIMIT);
+    return (FirstCondition <= LIMIT && SecondCondition <= LIMIT)
+     || (FirstCondition <= LIMIT || SecondCondition <= LIMIT)
+     || (ThirdCondition <= LIMIT);
 }
 
 bool Exception_Handling::check_four_conditions(float FirstCondition, float SecondCondition, float ThirdCondition, float FourthCondition) {

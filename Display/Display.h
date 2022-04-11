@@ -5,7 +5,7 @@
 
 class Display {
 public:
-	
+
 	declarations var;
 	string Shape_Name;
 
@@ -18,7 +18,7 @@ public:
     bool user_typed_exit(string parameter);
 
     void enter_dimension();
-	void select_dimension();
+	void select_dimension(string dimensional);
     void list_2D_Shapes_text();
     void list_3D_Shapes_text();
 	void measurement_type_2D_text();
