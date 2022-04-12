@@ -68,12 +68,12 @@ void Shape_2D::measurement_type(){
 	switch(Measurement_Type){
 		case 1:
 			Measurement_Name = "Area";
-            Parameter("2D");
+            Parameter("2D", WhichShape, Measurement_Type);
 		break;
 
 		case 2:
 			Measurement_Name = "Perimeter";
-			Parameter("2D");
+			Parameter("2D", WhichShape, Measurement_Type);
 		break;
 
 		case 3:

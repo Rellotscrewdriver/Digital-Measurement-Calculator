@@ -47,10 +47,10 @@
 class Parameter
 {
     public:
-		Parameter(string dimension);
+		Parameter(string dimension, int Shape, int measure_type);
 
-		void filter_2D_Shapes();
-		void filter_3D_Shapes();
+		void filter_2D_Shapes(int Which_2D_Shape);
+		void filter_3D_Shapes(int Which_3D_Shape);
 		void filter_measurement_type();
 
 		double first_parameter;
@@ -72,6 +72,7 @@ class Parameter
         declarations dec;
         Exception_Handling Exh;
         Display dis;
+        int Shape_Value;
 };
 
 #endif // PARAMETER_H

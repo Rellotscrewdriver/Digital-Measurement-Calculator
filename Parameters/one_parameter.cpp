@@ -16,7 +16,7 @@ void Parameter::one_parameter_2D(){
 		Exh.check_if_typed_string(false);
 		one_parameter_2D();
 	}
-	//dis.select_dimension("2D");
+	dis.select_dimension("2D");
     cout << endl << endl;
 }
 

@@ -68,12 +68,12 @@ void Shape_3D::measurement_type_1(){
 
 	switch(Measurement_Type){
 		case 1:
-            Parameter("3D");
+            Parameter("3D", WhichShape, Measurement_Type);
 			Measurement_Name = "Surface Area";
 		break;
 
 		case 2:
-			Parameter("3D");
+			Parameter("3D", WhichShape, Measurement_Type);
 			Measurement_Name = "Volume";
 		break;
 
