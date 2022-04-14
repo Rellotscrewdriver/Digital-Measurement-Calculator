@@ -1,7 +1,6 @@
 #include "Shape_2D.h"
 #include "../3D_shapes/Shape_3D.h"
 #include "../declarations.h"
-#include "parameter.h"
 #include "../exception_handling.h"
 
 Shape_2D::Shape_2D() {
@@ -52,7 +51,7 @@ void Shape_2D::Shape_order_2D(){
 		break;
 
 		case 9:
-			getwchar();
+			getchar();
 		break;
 
 		default:
@@ -61,19 +60,21 @@ void Shape_2D::Shape_order_2D(){
 		break;
 	}
 }
+
 void Shape_2D::measurement_type(){
+    Parameter para;
     dis.measurement_type_2D_text();
 	cin >> Measurement_Type;
 
 	switch(Measurement_Type){
 		case 1:
 			Measurement_Name = "Area";
-            Parameter("2D", WhichShape, Measurement_Type);
+            para.filter_2D_Shapes(WhichShape, Measurement_Type);
 		break;
 
 		case 2:
 			Measurement_Name = "Perimeter";
-			Parameter("2D", WhichShape, Measurement_Type);
+			para.filter_2D_Shapes(WhichShape, Measurement_Type);
 		break;
 
 		case 3:

@@ -5,6 +5,7 @@
 #include "../declarations.h"
 #include "../exception_handling.h"
 #include "../Display/Display.h"
+#include "parameter.h"
 
 class Shape_3D : public declarations {
 public:
@@ -26,57 +27,43 @@ public:
     V = Volume
 */
 
-class Cube : public declarations {
+class Cube {
 public:
-	Cube(double Side);
 	double SACube(double Side);
 	double VCube(double Side);
-	Exception_Handling Exh;
 };
 
-class Cuboid : public declarations {
+class Cuboid {
 public:
-	Cuboid(double Width, double Height, double Depth);
 	double SACuboid(double Width, double Height, double Depth);
 	double VCuboid(double Width, double Height, double Depth);
-	Exception_Handling Exh;
 };
 
-class Hemisphere : public declarations {
+class Hemisphere {
 public:
-	Hemisphere(double Radius);
 	double CSAHemisphere(double Radius);
 	double TSAHemisphere(double Radius);
-	Exception_Handling Exh;
 	double VHemisphere(double Radius);
 };
 
-class Sphere : public declarations {
+class Sphere {
 public:
-	Sphere(double Radius);
 	double SASphere(double Radius);
 	double VSphere(double Radius);
-	Exception_Handling Exh;
 };
 
-class Cone : public declarations {
+class Cone {
 public:
-	Cone(double Radius, double Height);
 	double CSACone(double Radius, double Height);
 	double TSACone(double Radius, double Height);
 	double VCone(double Radius, double Height);
-	Exception_Handling Exh;
 };
 
-class Cylinder : public declarations {
+class Cylinder {
 public:
-	Cylinder(double Radius, double Height);
 	double CSACylinder(double Radius, double Height);
 	double TSACylinder(double Radius, double Height);
 	double VCylinder(double Radius, double Height);
-	Exception_Handling Exh;
 };
-
-
 
 #endif

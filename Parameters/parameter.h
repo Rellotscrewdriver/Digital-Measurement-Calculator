@@ -44,19 +44,20 @@
 
 ************************************************************/
 
-class Parameter
-{
+class Parameter{
     public:
-		Parameter(string dimension, int Shape, int measure_type);
 
-		void filter_2D_Shapes(int Which_2D_Shape);
-		void filter_3D_Shapes(int Which_3D_Shape);
-		void filter_measurement_type();
+		void filter_2D_Shapes(int Which_2D_Shape, int measuretype);
+		void filter_3D_Shapes(int Which_3D_Shape, int measuretype);
+		void filter_measurement_type2D(double Area, double Perimeter);
+        void filter_measurement_type3D1(double Surface_Area, double Volume);
+        void filter_measurement_type3D2(double Curved_Surface_Area, double Total_Surface_Area, double Volume);
 
 		double first_parameter;
 		double second_parameter;
 		double third_parameter;
 		double fourth_parameter;
+
 
 		void one_parameter_2D();
 		void two_parameters_2D();
@@ -67,12 +68,12 @@ class Parameter
 		void two_parameters_3D();
 		void three_parameters_3D();
 
-
     private:
         declarations dec;
         Exception_Handling Exh;
         Display dis;
         int Shape_Value;
+        int MeasureType;
 };
 
 #endif // PARAMETER_H

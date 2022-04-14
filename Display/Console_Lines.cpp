@@ -38,6 +38,7 @@ void Display::measurement_type2_3D_text(){
 		 << "2. Total Surface Area\n"
 		 << "3. Volume\n"
 		 << "4" << var.previous_step
-		 << "5" << exit_str;
+		 << "5" << exit_str
+		 << var.input;
 }
 

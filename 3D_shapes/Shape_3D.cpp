@@ -63,17 +63,18 @@ void Shape_3D::Shape_order_3D(){
 
 void Shape_3D::measurement_type_1(){
     Display dis;
+    Parameter para;
     dis.measurement_type1_3D_text();
 	cin >> Measurement_Type;
 
 	switch(Measurement_Type){
 		case 1:
-            Parameter("3D", WhichShape, Measurement_Type);
+            para.filter_3D_Shapes(WhichShape, Measurement_Type);
 			Measurement_Name = "Surface Area";
 		break;
 
 		case 2:
-			Parameter("3D", WhichShape, Measurement_Type);
+			para.filter_3D_Shapes(WhichShape, Measurement_Type);
 			Measurement_Name = "Volume";
 		break;
 
@@ -94,23 +95,24 @@ void Shape_3D::measurement_type_1(){
 
 void Shape_3D::measurement_type_2(){
     Display dis;
+    Parameter para;
 	dis.measurement_type2_3D_text();
 	cin >> Measurement_Type;
 
 	switch(Measurement_Type){
 		case 1:
 			Measurement_Name = "Curved Surface Area";
-			//parameter();
+			para.filter_3D_Shapes(WhichShape, Measurement_Type);
 		break;
 
 		case 2:
 			Measurement_Name = "Total Surface Area";
-			//parameter();
+			para.filter_3D_Shapes(WhichShape, Measurement_Type);
 		break;
 
 		case 3:
 			Measurement_Name = "Volume";
-			//parameter();
+			para.filter_3D_Shapes(WhichShape, Measurement_Type);
 		break;
 
 		case 4:
