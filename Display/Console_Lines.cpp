@@ -15,30 +15,30 @@ void Display::list_3D_Shapes_text(){
 }
 
 void Display::measurement_type_2D_text(){
-    cout << var.str_measure_type
+    cout << str_measure_type
 		 << "1. Area\n"
 		 << "2. perimeter\n"
-		 << "3" << var.previous_step
+		 << "3" << previous_step
 		 << "4" << exit_str
-		 << var.input;
+		 << input;
 }
 
 void Display::measurement_type1_3D_text(){
-	cout << var.str_measure_type
+	cout << str_measure_type
 	     << "1. Surface Area"
 	     << "2. Volume"
-	     << "3" << var.previous_step
+	     << "3" << previous_step
 	     << "4" << exit_str
-	     << var.input;
+	     << input;
 }
 
 void Display::measurement_type2_3D_text(){
-	cout << var.str_measure_type
+	cout << str_measure_type
 		 << "1. Curved Surface Area\n"
 		 << "2. Total Surface Area\n"
 		 << "3. Volume\n"
-		 << "4" << var.previous_step
+		 << "4" << previous_step
 		 << "5" << exit_str
-		 << var.input;
+		 << input;
 }
 

@@ -16,7 +16,6 @@ public:
 	void measurement_type_1();
 	void measurement_type_2();
 	Exception_Handling Exh;
-	declarations var;
 };
 
 /*

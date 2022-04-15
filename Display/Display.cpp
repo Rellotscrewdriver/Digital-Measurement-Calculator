@@ -28,7 +28,7 @@ void Display::select_dimension(string dimensional){
         Shape_3D();
     } else if (user_typed_exit(dimensional)) {
         declarations variables;
-		cout << variables.console_message;
+		cout << console_message;
 		getchar();
 	} else {
         Exception_Handling Exh;

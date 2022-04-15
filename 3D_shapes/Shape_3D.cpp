@@ -6,59 +6,25 @@
 Shape_3D::Shape_3D() {
     Display is;
 	is.list_3D_Shapes_text();
-	cout << input;
+	cout << is.input;
 	cin >> WhichShape;
 	Shape_order_3D();
 }
 
 void Shape_3D::Shape_order_3D(){
     Display dis;
-	switch(WhichShape){
-		case 1:
-			measurement_type_1();
-			ShapeName = "Cube";
-		break;
-
-		case 2:
-			measurement_type_1();
-			ShapeName = "Cuboid";
-		break;
-
-		case 3:
-			measurement_type_1();
-			ShapeName = "Sphere";
-		break;
-
-		case 4:
-			measurement_type_2();
-			ShapeName = "Cylinder";
-		break;
-
-		case 5:
-			measurement_type_2();
-			ShapeName = "Hemisphere";
-		break;
-
-		case 6:
-			measurement_type_2();
-			ShapeName = "Cone";
-		break;
-
-		case 7:
-			dis.select_dimension("2D");
-		break;
-
-		case 8:
-			getchar();
-		break;
-
-		default:
-			Exh.check_if_typed_string_and_invaild_number();
-			Shape_3D();
-		break;
-
-	}
-
+    if(WhichShape <= 3 && WhichShape >= 1){
+        measurement_type_1();
+    } else if(WhichShape >= 4 && WhichShape <= 6){
+        measurement_type_2();
+    } else if (WhichShape == 7){
+        dis.select_dimension("2D");
+    } else if(WhichShape == 8){
+        getchar();
+    } else {
+        Exh.check_if_typed_string_and_invaild_number();
+        Shape_3D();
+    }
 }
 
 void Shape_3D::measurement_type_1(){
@@ -108,7 +74,7 @@ void Shape_3D::measurement_type_2(){
 		case 2:
 			Measurement_Name = "Total Surface Area";
 			para.filter_3D_Shapes(WhichShape, Measurement_Type);
-		break;
+        break;
 
 		case 3:
 			Measurement_Name = "Volume";

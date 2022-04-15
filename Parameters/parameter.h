@@ -33,15 +33,15 @@
     one parameter
 	1. Cube: SA: 1 V: 1
     3. Sphere: SA: 1 V: 1
+	4. Hemisphere: CSA: 1 TSA: 1 V: 1
 
 	two parameters
-	4. Cynlinder: CSA: 2 TSA: 2 V: 2
-    6. Cone: CSA: 2 TSA: 2 V: 2
+	6. Cynlinder: CSA: 2 TSA: 2 V: 2
+    5. Cone: CSA: 2 TSA: 2 V: 2
 
-	special parameters
+	three parameters
 	2. Cuboid: SA: 3 V: 3
-    5. Hemisphere: CSA: 1 TSA: 1 V: 1
-
+    
 ************************************************************/
 
 class Parameter{
@@ -50,10 +50,15 @@ class Parameter{
 		void filter_2D_Shapes(int Which_2D_Shape, int measuretype);
 		void filter_3D_Shapes(int Which_3D_Shape, int measuretype);
 		void filter_measurement_type2D(double Area, double Perimeter);
-        void filter_measurement_type3D1(double Surface_Area, double Volume);
-        void filter_measurement_type3D2(double Curved_Surface_Area, double Total_Surface_Area, double Volume);
+        void filter_measurement_type3D(double Surface_Area, double Volume);
+        void filter_measurement_type3D(double Curved_Surface_Area, double Total_Surface_Area, double Volume);
+        string filter_measurement_name2D();
+        string filter_measurement_name3D();
 
-		double first_parameter;
+        string Shape_Name;
+        string Measurement_Name;
+
+        double first_parameter;
 		double second_parameter;
 		double third_parameter;
 		double fourth_parameter;

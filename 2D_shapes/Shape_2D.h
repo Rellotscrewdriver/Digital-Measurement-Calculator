@@ -8,12 +8,12 @@
 
 class Shape_2D : public declarations {
 public:
-    Display dis;
 	Shape_2D();
 	void Shape_order_2D();
 	void measurement_type();
+
+	Display dis;
 	Exception_Handling Exh;
-	declarations var;
 };
 
 /*
