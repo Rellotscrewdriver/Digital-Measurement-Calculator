@@ -61,11 +61,11 @@ class Polygon : public declarations {
 public:
 	Exception_Handling Exh;
 	bool isnegative = false;
-	float answer;
-	int number_of_sides[10];
+	double answer;
+	double number_of_sides[10];
 
 	double APolygon(double Radius, double Apothem);
-	double PPolygon(double side);
+	void PPolygon(double side);
 };
 
 #endif // SHAPE_2D_H

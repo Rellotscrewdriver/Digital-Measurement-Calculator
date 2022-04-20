@@ -57,21 +57,21 @@ class Parameter{
 
         string Shape_Name;
         string Measurement_Name;
-
+		string dimension;
+		bool is3D;
         double first_parameter;
 		double second_parameter;
 		double third_parameter;
 		double fourth_parameter;
 
 
-		void one_parameter_2D();
-		void two_parameters_2D();
-		void three_four_parameters_2D();
+		void one_parameter();
+		void two_parameters();
+		void three_parameters();
+		void three_four_parameters();
 		void Special();
 
-		void one_parameter_3D();
-		void two_parameters_3D();
-		void three_parameters_3D();
+		
 
     private:
         declarations dec;

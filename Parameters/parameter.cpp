@@ -3,41 +3,46 @@
 void Parameter::filter_2D_Shapes(int Which_2D_Shape, int measuretype){
     Shape_Value = Which_2D_Shape;
     MeasureType = measuretype;
-
+	dimension = "2D";
+	is3D = false;
 	switch(Which_2D_Shape){
 		case 1:
 			Shape_Name = "square";
-			one_parameter_2D();
+			one_parameter();
 		break;
 
 		case 2:
 			Shape_Name = "rectangle";
-			two_parameters_2D();
+			two_parameters();
 		break;
 
 		case 3:
 			Shape_Name = "parallelogram";
-			two_parameters_2D();
+			two_parameters();
 		break;
 
 		case 4:
 			Shape_Name = "circle";
-			one_parameter_2D();
+			one_parameter();
 		break;
 
 		case 5:
 			Shape_Name = "quadrilateral";
-			three_four_parameters_2D();
+			three_four_parameters();
 		break;
 
 		case 6:
 			Shape_Name = "trapezium";
-			three_four_parameters_2D();
+			three_four_parameters();
 		break;
 
 		case 7:
 			Shape_Name = "polygon";
-			Special();
+			if(measuretype == 1){
+				two_parameters();
+			} else {
+				Special();
+			}
 		break;
 	}
 }
@@ -45,63 +50,65 @@ void Parameter::filter_2D_Shapes(int Which_2D_Shape, int measuretype){
 void Parameter::filter_3D_Shapes(int Which_3D_Shape, int measuretype){
     Shape_Value = Which_3D_Shape;
     MeasureType = measuretype;
+	dimension = "3D";
+	is3D = true;
 		switch(Which_3D_Shape){
 		case 1:
 			Shape_Name = "cube";
-			one_parameter_3D();
+			one_parameter();
 		break;
 
 		case 2:
 			Shape_Name = "cuboid";
-			three_parameters_3D();
+			three_parameters();
 		break;
 
 		case 3:
 			Shape_Name = "sphere";
-			one_parameter_3D();
+			one_parameter();
 		break;
 
 		case 4:
 			Shape_Name = "hemisphere";
-			one_parameter_3D();
+			one_parameter();
 		break;
 
 		case 5:
 			Shape_Name = "cone";
-			two_parameters_3D();
+			two_parameters();
 		break;
 
 		case 6:
             Shape_Name = "cylinder";
-            two_parameters_3D();
+            two_parameters();
 		break;
     }
 }
 
 void Parameter::filter_measurement_type2D(double Area, double Perimeter){
-            if(MeasureType == 1){
-                cout << "Output: " << Area << "\n\n";
-            } else if(MeasureType == 2){
-                cout << "Output: " << Perimeter << "\n\n";
-            }
+	if(MeasureType == 1){
+		cout << "Output: " << Area << "\n\n";
+    } else if(MeasureType == 2){
+		cout << "Output: " << Perimeter << "\n\n";
+	}
 }
 
 void Parameter::filter_measurement_type3D(double Surface_Area, double Volume){
-            if(MeasureType == 1){
-                cout << "Output: " << Surface_Area << "\n\n";
-            } else if(MeasureType == 2){
-                cout << "Output: " << Volume << "\n\n";
-            }
+	if(MeasureType == 1){
+		cout << "Output: " << Surface_Area << "\n\n";
+	} else if(MeasureType == 2){
+        cout << "Output: " << Volume << "\n\n";
+	}
 }
 
 void Parameter::filter_measurement_type3D(double Curved_Surface_Area, double Total_Surface_Area, double Volume){
-            if(MeasureType == 1){
-                cout << "Output: " << Curved_Surface_Area << "\n\n";
-            } else if(MeasureType == 2){
-                cout << "Output: " << Total_Surface_Area << "\n\n";
-            } else if(MeasureType == 3){
-                cout << "Output: " << Volume << "\n\n";
-            }
+	if(MeasureType == 1){
+		cout << "Output: " << Curved_Surface_Area << "\n\n";
+	} else if(MeasureType == 2){
+		cout << "Output: " << Total_Surface_Area << "\n\n";
+	} else if(MeasureType == 3){
+		cout << "Output: " << Volume << "\n\n";
+    }
 }
 
 string Parameter::filter_measurement_name2D(){
@@ -109,6 +116,8 @@ string Parameter::filter_measurement_name2D(){
         return "area";
     } else if(MeasureType == 2){
         return "perimeter";
+    } else {
+        return "Unknown Parameter";
     }
 }
 

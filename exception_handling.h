@@ -7,7 +7,7 @@ class Exception_Handling : public declarations {
 public:
 	void check_if_typed_string(bool checkifshapeis3D);
 	void check_if_typed_string_and_invaild_number();
-	string error_message = "Inputs Can't be Negative or Zero\n\n";
+	string error_message = "Inputs Can't be Negative or Zero\n";
 
     bool check_one_condiiton(float FirstCondition);
     bool check_two_conditions(float FirstCondition, float SecondCondition);

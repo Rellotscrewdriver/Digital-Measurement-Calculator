@@ -53,9 +53,9 @@ public:
 
 class Cone {
 public:
-	double CSACone(double Radius, double Height);
-	double TSACone(double Radius, double Height);
-	double VCone(double Radius, double Height);
+	double CSACone(double Radius, double Slant_Height);
+	double TSACone(double Radius, double Slant_Height);
+	double VCone(double Radius, double Slant_Height);
 };
 
 class Cylinder {

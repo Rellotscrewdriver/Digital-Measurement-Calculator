@@ -17,8 +17,8 @@ bool Display::user_typed_exit(string parameter){
 
 void Display::enter_dimension(){
 	cout << "Enter The Dimension: ";
-	cin >> var.dimensional;
-    select_dimension(var.dimensional);
+	cin >> dimensional;
+    select_dimension(dimensional);
 }
 
 void Display::select_dimension(string dimensional){
@@ -27,7 +27,6 @@ void Display::select_dimension(string dimensional){
     } else if(dimension_compare3D(dimensional)){
         Shape_3D();
     } else if (user_typed_exit(dimensional)) {
-        declarations variables;
 		cout << console_message;
 		getchar();
 	} else {

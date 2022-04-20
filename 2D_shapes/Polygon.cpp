@@ -5,14 +5,16 @@ double Polygon::APolygon(double Radius, double Apothem) {
 	return half * Radius * Apothem;
 }
 
-double Polygon::PPolygon(double side) {
-	for (int a = 1; a <= side; a++) {
-		cout << "side " << a << ": ";
-		cin >> number_of_sides[a];
+void Polygon::PPolygon(double side) {
+
+	for (int i = 1; i <= side; i++) {
+		isnegative = false;
+		cout << "Side " << i << ": ";
+		cin >> number_of_sides[i];
 
 		Exh.check_if_typed_string(false);
-		if (!Exh.check_one_condiiton(number_of_sides[a]) ){
-			answer += number_of_sides[a];
+		if (!Exh.check_one_condiiton(number_of_sides[i]) ){
+			answer += number_of_sides[i];
 		} else {
 			cout << Exh.error_message;
 			isnegative = true;
@@ -21,8 +23,6 @@ double Polygon::PPolygon(double side) {
 	}
 
 	if(!isnegative){
-        return answer;
-	} else {
-        return 0;
+        cout << "Output: " << answer << endl;
 	}
 }
