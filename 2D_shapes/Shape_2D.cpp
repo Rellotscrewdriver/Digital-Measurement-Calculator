@@ -13,9 +13,9 @@ void Shape_2D::Shape_order_2D(){
 
     if(WhichShape >= 1 && WhichShape <= 7){
         measurement_type();
-	} else if(WhichShape == 8){
+	} else if(WhichShape == 11){
 		dis.select_dimension("3D");
-	} else if(WhichShape == 9){
+	} else if(WhichShape == 12){
 		getchar();
 	} else {
             Exh.check_if_typed_string_and_invaild_number();
@@ -40,11 +40,11 @@ void Shape_2D::measurement_type(){
 			para.filter_2D_Shapes(WhichShape, Measurement_Type);
 		break;
 
-		case 3:
+		case 6:
 			Shape_2D();
 		break;
 
-		case 4:
+		case 7:
 			getchar();
 		break;
 

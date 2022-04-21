@@ -17,9 +17,9 @@ void Shape_3D::Shape_order_3D(){
         measurement_type_1();
     } else if(WhichShape >= 4 && WhichShape <= 6){
         measurement_type_2();
-    } else if (WhichShape == 7){
+    } else if (WhichShape == 11){
         dis.select_dimension("2D");
-    } else if(WhichShape == 8){
+    } else if(WhichShape == 12){
         getchar();
     } else {
         Exh.check_if_typed_string_and_invaild_number();
@@ -44,17 +44,18 @@ void Shape_3D::measurement_type_1(){
 			Measurement_Name = "Volume";
 		break;
 
-		case 3:
+		case 6:
 			Shape_3D();
 		break;
 
-		case 4:
+		case 7:
 			getchar();
 		break;
 
 		default:
 			Exh.check_if_typed_string_and_invaild_number();
 			Shape_3D();
+        break;
 	}
 
 }
@@ -81,16 +82,17 @@ void Shape_3D::measurement_type_2(){
 			para.filter_3D_Shapes(WhichShape, Measurement_Type);
 		break;
 
-		case 4:
+		case 6:
 			dis.select_dimension("2D");
 		break;
 
-		case 5:
+		case 7:
 			getchar();
 		break;
 
 		default:
 			Exh.check_if_typed_string_and_invaild_number();
 			Shape_3D();
+        break;
 	}
 }
