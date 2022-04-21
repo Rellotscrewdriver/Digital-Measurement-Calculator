@@ -2,7 +2,7 @@
 
 void Parameter::Special(){
 	unsigned int NoOfSides;
-	cout << "Enter the Number of Sides: ";
+	cout << "Enter the Number of Sides(should not be more than 10): ";
     cin >> NoOfSides;
     Exh.check_if_typed_string(false);
 

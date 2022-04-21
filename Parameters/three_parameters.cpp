@@ -8,8 +8,8 @@ Quadrilateral quad;
 		//area
 		cout << "Specify three parameters of " << Shape_Name << " to find it's " << filter_measurement_name2D() << endl;
         cout << dis.three_parameters_text(Shape_Value); cin >> first_parameter;
-        cout << "Base1: "; cin >> second_parameter;
-        cout << "Base2: "; cin >> third_parameter;
+        cout << "Input First Base: "; cin >> second_parameter;
+        cout << "Input Second Base: "; cin >> third_parameter;
         Exh.check_if_typed_string(false);
 
         if (Exh.check_three_conditions(first_parameter, second_parameter, third_parameter)){
@@ -23,10 +23,10 @@ Quadrilateral quad;
 	} else {
 		//perimeter
 	    cout << "Specify four parameters of " << Shape_Name << " to find it's " << filter_measurement_name2D() << endl;
-        cout << "SideA: "; cin >> first_parameter;
-        cout << "SideB: "; cin >> second_parameter;
-        cout << "SideC: "; cin >> third_parameter;
-        cout << "SideD: "; cin >> fourth_parameter;
+        cout << "Input First Side: "; cin >> first_parameter;
+        cout << "Input Second Side: "; cin >> second_parameter;
+        cout << "Input Third Side: "; cin >> third_parameter;
+        cout << "Input Fourth Side: "; cin >> fourth_parameter;
         Exh.check_if_typed_string(false);
 
         if (Exh.check_four_conditions(first_parameter, second_parameter, third_parameter, fourth_parameter)){
@@ -42,9 +42,9 @@ Quadrilateral quad;
 
 void Parameter::three_parameters(){
 	cout << "Specify three parameters of " << Shape_Name << " to find it's " << filter_measurement_name3D() << endl;
-    cout << "Length: "; cin >> first_parameter;
-    cout << "Width: "; cin >> second_parameter;
-    cout << "Depth(or Height): "; cin >> third_parameter;
+    cout << "Input Length: "; cin >> first_parameter;
+    cout << "Input Width: "; cin >> second_parameter;
+    cout << "Input Depth(or Height): "; cin >> third_parameter;
     Exh.check_if_typed_string(true);
 
     if (Exh.check_three_conditions(first_parameter, second_parameter, third_parameter)){

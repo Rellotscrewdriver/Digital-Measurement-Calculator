@@ -44,32 +44,32 @@ void Display::measurement_type2_3D_text(){
 
 string Display::one_parameter_text(int ShapeNum){
 	if(dimension_compare2D("2D") && ShapeNum == 1 || dimension_compare3D("3D") && ShapeNum == 1){
-		return "One Side: ";
+		return "Input one side of square: ";
     } else if(dimension_compare2D("2D") || dimension_compare3D("3D") && ShapeNum == 4){
-		return "Radius: ";
+		return "Input radius: ";
     } else if(dimension_compare3D("3D") && ShapeNum == 3){
-		return "Radius: ";
+		return "Input radius: ";
 	}
 }
 
 string Display::two_parameters_text(int ShapeNum, int input_step){
      if(dimension_compare3D("3D") && ShapeNum == 5 || ShapeNum == 6 || ShapeNum == 7){
 		 if(input_step == 1){
-			return "Radius: ";
+			return "Input radius: ";
 		 } else if(input_step == 2 && ShapeNum == 6){
-			return "Height: ";
+			return "Input height: ";
 		 } else if(input_step == 2 && ShapeNum == 7){
-			return "Apothem: ";
+			return "Input apothem: ";
 		 } else if(input_step == 2){
-			return "Slant_Height: ";
+			return "Input slant_Height: ";
 		 }
      } else if(dimension_compare2D("2D") && ShapeNum == 2 || ShapeNum == 3){
 		if(input_step == 1 && ShapeNum == 2){
-			return "Length: ";
+			return "Input length: ";
 		} else if(input_step == 1){
-			return "Height: ";
+			return "Input height: ";
 		} else if(input_step == 2){
-			return "Width: ";
+			return "Input width: ";
 		} else {
 			return "Unknown parameter";
 		}
@@ -77,6 +77,7 @@ string Display::two_parameters_text(int ShapeNum, int input_step){
 }
 
 /*
+I bet that someone will ask "Why not make a common function for input_step
 that concept did not work as I prototyped for two_parameters_text()
 if anyone's wondering why not make a common function not to write everything twice(WET)
 for input_step
@@ -93,8 +94,8 @@ string Display::step_input(string sddf, int step){
 
 string Display::three_parameters_text(int ShapeNum){
 	if(ShapeNum == 5){
-		return "Diagonal: ";
+		return "Input diagonal: ";
 	} else {
-		return "Height: ";
+		return "Input height: ";
 	}
 }
