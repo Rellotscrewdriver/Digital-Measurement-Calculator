@@ -4,9 +4,9 @@
 #include "parameter.h"
 
 Shape_3D::Shape_3D() {
-    Display is;
-	is.list_3D_Shapes_text();
-	cout << is.input;
+    Display dis;
+	dis.list_3D_Shapes_text();
+	cout << dis.input;
 	cin >> WhichShape;
 	Shape_order_3D();
 }
@@ -20,6 +20,7 @@ void Shape_3D::Shape_order_3D(){
     } else if (WhichShape == 11){
         dis.select_dimension("2D");
     } else if(WhichShape == 12){
+        cout << dis.console_message;
         getchar();
     } else {
         Exh.check_if_typed_string_and_invaild_number();
@@ -49,6 +50,7 @@ void Shape_3D::measurement_type_1(){
 		break;
 
 		case 7:
+            cout << dis.console_message;
 			getchar();
 		break;
 
@@ -83,10 +85,11 @@ void Shape_3D::measurement_type_2(){
 		break;
 
 		case 6:
-			dis.select_dimension("2D");
+			Shape_3D();
 		break;
 
 		case 7:
+            cout << dis.console_message;
 			getchar();
 		break;
 

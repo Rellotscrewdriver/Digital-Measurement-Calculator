@@ -14,6 +14,7 @@ Quadrilateral quad;
 
         if (Exh.check_three_conditions(first_parameter, second_parameter, third_parameter)){
             cout << Exh.error_message;
+            three_four_parameters();
         } else if (Shape_Value == 6){
             cout << dis.output << crap.ATrapezium(first_parameter, second_parameter, third_parameter) << endl;
         } else if (Shape_Value == 5){
@@ -31,6 +32,7 @@ Quadrilateral quad;
 
         if (Exh.check_four_conditions(first_parameter, second_parameter, third_parameter, fourth_parameter)){
             cout << Exh.error_message;
+            three_four_parameters();
         } else if (Shape_Value == 5){
             cout << dis.output << quad.PQuadrilateral(first_parameter, second_parameter, third_parameter, fourth_parameter) << endl;
         } else if (Shape_Value == 6){
@@ -49,6 +51,7 @@ void Parameter::three_parameters(){
 
     if (Exh.check_three_conditions(first_parameter, second_parameter, third_parameter)){
 		cout << Exh.error_message;
+		three_parameters();
     } else if (Shape_Value == 2){
 		Cuboid cupuon;
 		filter_measurement_type3D(cupuon.SACuboid(first_parameter, second_parameter, third_parameter), cupuon.VCuboid(first_parameter, second_parameter, third_parameter));

@@ -9,6 +9,7 @@ void Parameter::one_parameter(){
 
 	if (Exh.check_one_condiiton(first_parameter)){
 		cout << Exh.error_message;
+		one_parameter();
     } else if (Shape_Value == 1 && dimension == "2D"){
         Square sqrt;
         filter_measurement_type2D(sqrt.Asquare(first_parameter), sqrt.Psquare(first_parameter));

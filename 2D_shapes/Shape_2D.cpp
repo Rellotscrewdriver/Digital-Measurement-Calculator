@@ -16,6 +16,7 @@ void Shape_2D::Shape_order_2D(){
 	} else if(WhichShape == 11){
 		dis.select_dimension("3D");
 	} else if(WhichShape == 12){
+        cout << dis.console_message;
 		getchar();
 	} else {
             Exh.check_if_typed_string_and_invaild_number();
@@ -45,6 +46,7 @@ void Shape_2D::measurement_type(){
 		break;
 
 		case 7:
+		    cout << dis.console_message;
 			getchar();
 		break;
 

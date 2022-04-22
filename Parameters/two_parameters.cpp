@@ -8,6 +8,7 @@ void Parameter::two_parameters(){
 
         if (Exh.check_two_conditions(first_parameter, second_parameter)){
             cout << Exh.error_message;
+            two_parameters();
         } else if (Shape_Value == 2 && dimension == "2D"){
             Rectangle get_rekt;
             filter_measurement_type2D(get_rekt.ARectangle(first_parameter, second_parameter), get_rekt.PRectangle(first_parameter, second_parameter));
