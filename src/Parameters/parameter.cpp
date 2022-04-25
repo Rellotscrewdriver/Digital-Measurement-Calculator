@@ -44,6 +44,15 @@ void Parameter::filter_2D_Shapes(int Which_2D_Shape, int measuretype){
 				Special();
 			}
 		break;
+
+		case 8:
+            Shape_Name = "Triangle";
+            if(measuretype == 1){
+                Triangle trio;
+                trio.filter_area_of_triangle();
+            } else {
+                three_parameters();
+            }
 	}
 }
 
@@ -122,6 +131,8 @@ string Parameter::filter_measurement_name2D(){
 }
 
 string Parameter::filter_measurement_name3D(){
+    cout << "MeasureType : Shape_Value" << MeasureType << " : " << Shape_Value;
+
     if(MeasureType == 1 && Shape_Value >= 1 && Shape_Value <= 3){
         return "surface area";
     } else if(MeasureType == 2 && Shape_Value >= 1 && Shape_Value <= 3){
@@ -132,6 +143,10 @@ string Parameter::filter_measurement_name3D(){
         return "total surface area";
     } else if(MeasureType == 3 && Shape_Value >= 4 && Shape_Value <= 6){
         return "volume";
+    } else if(MeasureType == 2 && Shape_Value == 8){
+        return "perimeter";
+    } else if(MeasureType == 1){
+        return "area";
     }
 }
 

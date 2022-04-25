@@ -11,7 +11,7 @@ Shape_2D::Shape_2D() {
 
 void Shape_2D::Shape_order_2D(){
 
-    if(WhichShape >= 1 && WhichShape <= 7){
+    if(WhichShape >= 1 && WhichShape <= 8){
         measurement_type();
 	} else if(WhichShape == 11){
 		dis.select_dimension("3D");

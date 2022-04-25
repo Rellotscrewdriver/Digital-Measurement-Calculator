@@ -24,6 +24,13 @@ void Parameter::two_parameters(){
         } else if (Shape_Value == 5 && dimension == "3D"){
             Cone cone;
             filter_measurement_type3D(cone.CSACone(first_parameter, second_parameter), cone.TSACone(first_parameter, second_parameter), cone.VCone(first_parameter, second_parameter));
-        }
-		dis.select_dimension(dimension);
+        } else if(Shape_Value == 16){
+            Triangle trio;
+            cout << dis.output << trio.ATriangle(first_parameter, second_parameter) << endl;
+        } else if(Shape_Value == 18){
+            Triangle trio;
+            cout << dis.output << trio.AofITriangle(first_parameter, second_parameter) << endl;
+        } else {}
+
+        dis.select_dimension(dimension);
 }

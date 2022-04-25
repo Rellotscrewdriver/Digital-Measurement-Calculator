@@ -5,21 +5,19 @@
 #include "../declarations.h"
 #include "../exception_handling.h"
 #include "../Display/Display.h"
+#include "../Parameters/parameter.h"
 
 class Shape_2D : public declarations {
 public:
 	Shape_2D();
 	void Shape_order_2D();
 	void measurement_type();
-
+    void measurement_type_triangle();
 	Display dis;
 	Exception_Handling Exh;
 };
 
-/*
-    A = Area
-    P = Perimeter
-*/
+// A = Area, P = Perimeter
 
 class Square {
 public:
@@ -66,6 +64,18 @@ public:
 
 	double APolygon(double Radius, double Apothem);
 	void PPolygon(double side);
+};
+
+class Triangle {
+public:
+    double side_perimeter;
+    // E = equilateral, I = isosceles, HF = heron's formula
+    void filter_area_of_triangle();
+	double ATriangle(double base, double height);
+	double AofETriangle(double Side);
+    double AofITriangle(double SideA, double SideB);
+    double AHFTriangle(double SideA, double SideB, double SideC);
+	double PTriangle(double SideA, double SideB, double SideC);
 };
 
 #endif // SHAPE_2D_H

@@ -3,11 +3,10 @@
 void Parameter::three_four_parameters(){
 Trapezium crap;
 Quadrilateral quad;
-
 	if(MeasureType == 1){
 		//area
 		cout << "Specify three parameters of " << Shape_Name << " to find it's " << filter_measurement_name2D() << endl;
-        cout << dis.three_parameters_text(Shape_Value); cin >> first_parameter;
+        cout << dis.three_four_parameters_text(Shape_Value); cin >> first_parameter;
         cout << "Input First Base: "; cin >> second_parameter;
         cout << "Input Second Base: "; cin >> third_parameter;
         Exh.check_if_typed_string(false);
@@ -44,10 +43,10 @@ Quadrilateral quad;
 
 void Parameter::three_parameters(){
 	cout << "Specify three parameters of " << Shape_Name << " to find it's " << filter_measurement_name3D() << endl;
-    cout << "Input Length: "; cin >> first_parameter;
-    cout << "Input Width: "; cin >> second_parameter;
-    cout << "Input Depth(or Height): "; cin >> third_parameter;
-    Exh.check_if_typed_string(true);
+    cout << dis.three_parameters_text(Shape_Value , 1); cin >> first_parameter;
+    cout << dis.three_parameters_text(Shape_Value , 2); cin >> second_parameter;
+    cout << dis.three_parameters_text(Shape_Value , 3); cin >> third_parameter;
+    Exh.check_if_typed_string(is3D);
 
     if (Exh.check_three_conditions(first_parameter, second_parameter, third_parameter)){
 		cout << Exh.error_message;
@@ -55,8 +54,14 @@ void Parameter::three_parameters(){
     } else if (Shape_Value == 2){
 		Cuboid cupuon;
 		filter_measurement_type3D(cupuon.SACuboid(first_parameter, second_parameter, third_parameter), cupuon.VCuboid(first_parameter, second_parameter, third_parameter));
+    } else if(Shape_Value == 8){
+        Triangle trio;
+        filter_measurement_type2D(trio.AHFTriangle(first_parameter, second_parameter, third_parameter), trio.PTriangle(first_parameter, second_parameter, third_parameter));
+    } else if(Shape_Value == 19){
+        Triangle trio;
+        cout << dis.output << trio.AHFTriangle(first_parameter, second_parameter, third_parameter);
     }
 
-    dis.select_dimension("3D");
+    dis.select_dimension(dimension);
 }
 

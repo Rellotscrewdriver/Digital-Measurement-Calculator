@@ -41,7 +41,7 @@
 
 	three parameters
 	2. Cuboid: SA: 3 V: 3
-    
+
 ************************************************************/
 
 class Parameter{
@@ -70,8 +70,8 @@ class Parameter{
 		void three_parameters();
 		void three_four_parameters();
 		void Special();
+        void Special_Triangle(int dsd);
 
-		
 
     private:
         declarations dec;

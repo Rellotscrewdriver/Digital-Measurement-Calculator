@@ -25,6 +25,9 @@ void Parameter::one_parameter(){
     } else if (Shape_Value == 4 && dimension == "3D"){
         Hemisphere half_brain;
         filter_measurement_type3D(half_brain.CSAHemisphere(first_parameter), half_brain.TSAHemisphere(first_parameter), half_brain.VHemisphere(first_parameter));
+    } else {
+        Triangle trio;
+        cout << dis.output << trio.AofETriangle(first_parameter);
     }
 	dis.select_dimension(dimension);
 }

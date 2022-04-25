@@ -5,7 +5,7 @@
 #include "../declarations.h"
 #include "../exception_handling.h"
 #include "../Display/Display.h"
-#include "parameter.h"
+#include "../Parameters/parameter.h"
 
 class Shape_3D : public declarations {
 public:
