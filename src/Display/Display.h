@@ -17,18 +17,12 @@ public:
 	const string str_measure_type = "\nEnter the measure type\n";
     const string previous_step = " Previous step ";
 
-    string triangle = "Triangle";
-    string Equilateral_triangle = "Equilateral Triangle";
-    string Isosceles_triangle = "Isosceles Triangle";
-    string herons_triangle = "Triangle with three sides";
-    //
 	bool dimension_compare2D(string parameter);
     bool dimension_compare3D(string parameter);
     bool user_typed_exit(string parameter);
 
     void enter_dimension();
 	void select_dimension(string dimensional);
-
 
     void list_2D_Shapes_text();
     void list_3D_Shapes_text();

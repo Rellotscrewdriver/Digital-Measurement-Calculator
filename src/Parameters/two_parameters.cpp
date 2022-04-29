@@ -1,13 +1,15 @@
 #include "parameter.h"
 
 void Parameter::two_parameters(){
-	cout << "Specify two parameters of " << Shape_Name << " to find it's " << filter_measurement_name2D() << endl;
+    Handle_Exception H_Exp;
+
+	cout << "Specify two parameters of " << Shape_Name << " to find it's " << filter_measurement_name() << endl;
     cout << dis.two_parameters_text(Shape_Value, 1); cin >> first_parameter;
 	cout << dis.two_parameters_text(Shape_Value, 2); cin >> second_parameter;
-    Exh.check_if_typed_string(is3D);
+    H_Exp.check_if_user_entered_string_and_shape_3D(is_3D);
 
-        if (Exh.check_two_conditions(first_parameter, second_parameter)){
-            cout << Exh.error_message;
+        if (H_Exp.check_two_conditions(first_parameter, second_parameter)){
+            cout << H_Exp.negative_number_error_message;
             two_parameters();
         } else if (Shape_Value == 2 && dimension == "2D"){
             Rectangle get_rekt;

@@ -1,14 +1,16 @@
 #include "parameter.h"
 #include "../2D_shapes/Shape_2D.h"
 
+Handle_Exception H_Exp;
+
 void Parameter::one_parameter(){
-	cout << "Specify one parameter of " << Shape_Name << " to find it's " << filter_measurement_name2D() << endl;
+	cout << "Specify one parameter of " << Shape_Name << " to find it's " << filter_measurement_name() << endl;
     cout << dis.one_parameter_text(Shape_Value); cin >> first_parameter;
 
-    Exh.check_if_typed_string(is3D);
+    H_Exp.check_if_user_entered_string_and_shape_3D(is_3D);
 
-	if (Exh.check_one_condiiton(first_parameter)){
-		cout << Exh.error_message;
+	if (H_Exp.check_one_condition(first_parameter)){
+		cout << H_Exp.negative_number_error_message;
 		one_parameter();
     } else if (Shape_Value == 1 && dimension == "2D"){
         Square sqrt;

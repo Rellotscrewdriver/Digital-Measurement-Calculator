@@ -1,5 +1,5 @@
 #include "display.h"
-#include "../exception_handling.h"
+#include "../Handle_Exception/Handle_Exception.h"
 #include "../2D_shapes/Shape_2D.h"
 #include "../3D_shapes/Shape_3D.h"
 
@@ -30,8 +30,8 @@ void Display::select_dimension(string dimensional){
 		cout << console_message;
 		getchar();
 	} else {
-        Exception_Handling Exh;
-        Exh.check_if_typed_string_and_invaild_number();
+        Handle_Exception  H_Exp;
+        H_Exp.check_if_user_entered_string_or_invaild_number();
         enter_dimension();
 	}
 }

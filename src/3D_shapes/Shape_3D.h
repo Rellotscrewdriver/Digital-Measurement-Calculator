@@ -1,21 +1,21 @@
-#ifndef SHAPE_3D_H
-#define SHAPE_3D_H
+#pragma once
 #define PI 3.14
 
-#include "../declarations.h"
-#include "../exception_handling.h"
+#include "../Handle_Exception/Handle_Exception.h"
 #include "../Display/Display.h"
 #include "../Parameters/parameter.h"
 
-class Shape_3D : public declarations {
+class Shape_3D {
 public:
-	int WhichShape3D;
-    bool is3D = true;
+    int Which_Shape;
+    int Measurement_Type;
+    string Measurement_Name;
+	int Which_Shape_3D;
+    bool is_3D = true;
 	Shape_3D();
 	void Shape_order_3D();
 	void measurement_type_1();
 	void measurement_type_2();
-	Exception_Handling Exh;
 };
 
 /*
@@ -65,4 +65,3 @@ public:
 	double VCylinder(double Radius, double Height);
 };
 
-#endif

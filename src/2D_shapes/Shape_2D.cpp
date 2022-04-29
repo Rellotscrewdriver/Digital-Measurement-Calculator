@@ -1,7 +1,6 @@
-#include "Shape_2D.h"
+#include "../2D_shapes/Shape_2D.h"
 #include "../3D_shapes/Shape_3D.h"
-#include "../declarations.h"
-#include "../exception_handling.h"
+#include "../Display/Display.h"
 
 Shape_2D::Shape_2D() {
     dis.list_2D_Shapes_text();
@@ -10,7 +9,6 @@ Shape_2D::Shape_2D() {
 }
 
 void Shape_2D::Shape_order_2D(){
-
     if(WhichShape >= 1 && WhichShape <= 8){
         measurement_type();
 	} else if(WhichShape == 11){
@@ -19,7 +17,8 @@ void Shape_2D::Shape_order_2D(){
         cout << dis.console_message;
 		getchar();
 	} else {
-            Exh.check_if_typed_string_and_invaild_number();
+            Handle_Exception H_Exp;
+            H_Exp.check_if_user_entered_string_or_invaild_number();
 			Shape_2D();
 	}
 
@@ -51,7 +50,8 @@ void Shape_2D::measurement_type(){
 		break;
 
 		default:
-			Exh.check_if_typed_string_and_invaild_number();
+		    Handle_Exception H_Exp;
+            H_Exp.check_if_user_entered_string_or_invaild_number();
 			Shape_2D();
 		break;
 	}

@@ -24,7 +24,14 @@ void Display::measurement_type_2D_text(){
 }
 
 void Display::measurement_type_triangle_text(){
-
+    cout << "\nChoose which type of area you wanna calculate\n"
+    << "[1] Area of Triangle (whether it's sides are equal or not)\n"
+    << "[2] Area of Equilateral Triangle\n"
+    << "[3] Area of Isosceles Triangle\n"
+    << "[4] Area of Scalene Triangle(uses heron's formula)\n"
+    << "[5] Pre-Previous Step\t"
+    << "[6] Exit the Program\n"
+    << output;
 }
 
 void Display::measurement_type1_3D_text(){

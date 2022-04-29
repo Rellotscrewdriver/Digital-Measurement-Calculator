@@ -1,11 +1,11 @@
-#ifndef PARAMETER_H
-#define PARAMETER_H
+#pragma once
+#define NEWLINE "/n/n"
 
-#include "../Display/Display.h"
-#include "../declarations.h"
-#include "../exception_handling.h"
+#include "../Handle_Exception/Handle_Exception.h"
 #include "../2D_shapes/Shape_2D.h"
 #include "../3D_shapes/Shape_3D.h"
+#include "../Display/Display.h"
+
 
 /**********************************************************
     2D_Shape Parameters (P = Perimeter, A = Area)
@@ -24,6 +24,7 @@
 
 	special parameters
 	7. Polygon: A: 2 P: 10
+    8. Triangle: A: 1. 2 2. 1 3. 2 4. 3 P: 3
 
 ***********************************************************/
 
@@ -45,40 +46,39 @@
 ************************************************************/
 
 class Parameter{
-    public:
+public:
 
-		void filter_2D_Shapes(int Which_2D_Shape, int measuretype);
-		void filter_3D_Shapes(int Which_3D_Shape, int measuretype);
-		void filter_measurement_type2D(double Area, double Perimeter);
-        void filter_measurement_type3D(double Surface_Area, double Volume);
-        void filter_measurement_type3D(double Curved_Surface_Area, double Total_Surface_Area, double Volume);
-        string filter_measurement_name2D();
-        string filter_measurement_name3D();
+		void filter_2D_Shapes(int Which_2D_Shape, int measure_type);
+		void filter_3D_Shapes(int Which_3D_Shape, int measure_type);
+        void Special_Triangle(int Which_Type_Area);
+
+private:
+
+        Display dis;
+        int Shape_Value;
+        int Measure_Type;
+
+        string filter_measurement_name();
 
         string Shape_Name;
         string Measurement_Name;
 		string dimension;
-		bool is3D;
+
+		bool is_3D;
+
         double first_parameter;
 		double second_parameter;
 		double third_parameter;
 		double fourth_parameter;
 
+        void filter_measurement_type2D(double Area, double Perimeter);
+        void filter_measurement_type3D(double Surface_Area, double Volume);
+        void filter_measurement_type3D(double Curved_Surface_Area, double Total_Surface_Area, double Volume);
 
 		void one_parameter();
 		void two_parameters();
 		void three_parameters();
 		void three_four_parameters();
 		void Special();
-        void Special_Triangle(int dsd);
 
-
-    private:
-        declarations dec;
-        Exception_Handling Exh;
-        Display dis;
-        int Shape_Value;
-        int MeasureType;
 };
-
-#endif // PARAMETER_H

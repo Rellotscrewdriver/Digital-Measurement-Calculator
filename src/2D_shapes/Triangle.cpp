@@ -1,4 +1,5 @@
 #include "../2D_shapes/Shape_2D.h"
+#include "../Handle_Exception/Handle_Exception.h"
 #include <cmath>
 
 /*
@@ -20,16 +21,10 @@ a + b + c
 */
 
 void Triangle::filter_area_of_triangle(){
+    Display dis;
     Parameter para;
     int Me_t;
-    cout << "\nChoose which type of area you wanna calculate\n"
-    << "[1] Area of Triangle (whether it's sides are equal or not)\n"
-    << "[2] Area of Equilateral Triangle\n"
-    << "[3] Area of Isosceles Triangle\n"
-    << "[4] Area of Scalene Triangle(uses heron's formula)\n"
-    << "[5] Pre-Previous Step\t"
-    << "[6] Exit the Program\n"
-    << "Output: ";
+    dis.measurement_type_triangle_text();
     cin >> Me_t;
 
     if(Me_t <= 4){
@@ -39,8 +34,8 @@ void Triangle::filter_area_of_triangle(){
     } else if(Me_t == 6){
         getchar();
     } else {
-        Exception_Handling exh;
-        exh.check_if_typed_string_and_invaild_number();
+        Handle_Exception H_Exp;
+        H_Exp.check_if_user_entered_string_or_invaild_number();
         filter_area_of_triangle();
     }
 }

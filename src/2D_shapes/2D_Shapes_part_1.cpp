@@ -23,17 +23,17 @@ double Polygon::APolygon(double Radius, double Apothem) {
 }
 
 void Polygon::PPolygon(double side) {
-
+    Handle_Exception H_Exp;
 	for (int i = 1; i <= side; i++) {
 		isnegative = false;
 		cout << "Side " << i << ": ";
 		cin >> number_of_sides[i];
 
-		Exh.check_if_typed_string(false);
-		if (!Exh.check_one_condiiton(number_of_sides[i]) ){
+		H_Exp.check_if_user_entered_string_and_shape_3D(false);
+		if (!H_Exp.check_one_condition(number_of_sides[i]) ){
 			answer += number_of_sides[i];
 		} else {
-			cout << Exh.error_message;
+			cout << H_Exp.negative_number_error_message;
 			isnegative = true;
             break;
 		}
