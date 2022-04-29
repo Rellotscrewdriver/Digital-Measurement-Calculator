@@ -1,0 +1,7 @@
+* = Modified/Changed, + = Feature Added, - = Feature Removed
+
+* Make room to add more shapes in the future
+* Try to remove WET code
++ Add Instructions to the user (issue #4)
++ Add everything that is required for github community standards
++ Add Triangle Shape
