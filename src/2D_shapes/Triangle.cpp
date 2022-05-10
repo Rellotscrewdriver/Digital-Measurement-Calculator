@@ -1,5 +1,5 @@
-#include "../2D_shapes/Shape_2D.h"
-#include "../Handle_Exception/Handle_Exception.h"
+#include "../Include/Shape_2D.h"
+#include "../Include/Handle_Exception.h"
 #include <cmath>
 
 /*

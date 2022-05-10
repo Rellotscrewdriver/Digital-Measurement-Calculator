@@ -1,5 +1,5 @@
-#include "parameter.h"
-#include "../2D_shapes/Shape_2D.h"
+#include "../Include/parameter.h"
+#include "../Include/Shape_2D.h"
 
 Handle_Exception H_Exp;
 

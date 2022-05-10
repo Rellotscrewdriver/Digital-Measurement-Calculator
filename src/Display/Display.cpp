@@ -1,7 +1,7 @@
-#include "display.h"
-#include "../Handle_Exception/Handle_Exception.h"
-#include "../2D_shapes/Shape_2D.h"
-#include "../3D_shapes/Shape_3D.h"
+#include "../Include/Display.h"
+#include "../Include/Handle_Exception.h"
+#include "../Include/Shape_2D.h"
+#include "../Include/Shape_3D.h"
 
 bool Display::dimension_compare2D(string parameter){
     return parameter == "2d" || parameter == "2D";

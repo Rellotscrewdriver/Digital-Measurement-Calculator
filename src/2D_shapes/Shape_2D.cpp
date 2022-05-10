@@ -1,6 +1,6 @@
-#include "../2D_shapes/Shape_2D.h"
-#include "../3D_shapes/Shape_3D.h"
-#include "../Display/Display.h"
+#include "../Include/Shape_2D.h"
+#include "../Include/Shape_3D.h"
+#include "../Include/Display.h"
 
 Shape_2D::Shape_2D() {
     dis.list_2D_Shapes_text();

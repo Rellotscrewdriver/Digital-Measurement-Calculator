@@ -1,4 +1,4 @@
-#include "parameter.h"
+#include "../Include/parameter.h"
 
 void Parameter::three_four_parameters(){
 Handle_Exception H_Exp;

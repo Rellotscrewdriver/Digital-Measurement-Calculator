@@ -1,5 +1,5 @@
-#include "parameter.h"
-#include "../Handle_Exception/Handle_Exception.h"
+#include "../Include/parameter.h"
+#include "../Include/Handle_Exception.h"
 
 void Parameter::Special(){
     Handle_Exception H_Exp;

@@ -1,4 +1,4 @@
-#include "parameter.h"
+#include "../Include/parameter.h"
 
 void Parameter::two_parameters(){
     Handle_Exception H_Exp;
@@ -21,8 +21,8 @@ void Parameter::two_parameters(){
             Polygon polys;
             cout << dis.output << polys.APolygon(first_parameter, second_parameter) << "\n\n";
         } else if (Shape_Value == 6 && dimension == "3D"){
-            Cylinder barrell_roll;
-            filter_measurement_type3D(barrell_roll.CSACylinder(first_parameter, second_parameter), barrell_roll.TSACylinder(first_parameter, second_parameter), barrell_roll.VCylinder(first_parameter, second_parameter));
+            Cylinder do_a_barrell_roll;
+            filter_measurement_type3D(do_a_barrell_roll.CSACylinder(first_parameter, second_parameter), do_a_barrell_roll.TSACylinder(first_parameter, second_parameter), do_a_barrell_roll.VCylinder(first_parameter, second_parameter));
         } else if (Shape_Value == 5 && dimension == "3D"){
             Cone cone;
             filter_measurement_type3D(cone.CSACone(first_parameter, second_parameter), cone.TSACone(first_parameter, second_parameter), cone.VCone(first_parameter, second_parameter));

@@ -1,7 +1,7 @@
-#include "Shape_3D.h"
-#include "../2D_shapes/Shape_2D.h"
-#include "../Display/Display.h"
-#include "../Parameters/parameter.h"
+#include "../Include/Shape_3D.h"
+#include "../Include/Shape_2D.h"
+#include "../Include/Display.h"
+#include "../Include/parameter.h"
 
 Shape_3D::Shape_3D() {
     Display dis;
