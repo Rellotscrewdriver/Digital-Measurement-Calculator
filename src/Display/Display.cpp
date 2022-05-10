@@ -2,6 +2,30 @@
 #include "../Include/Handle_Exception.h"
 #include "../Include/Shape_2D.h"
 #include "../Include/Shape_3D.h"
+#include "../version.h"
+
+void Display::horizontal_rule(char symbol, int NoofNumbers){
+    for(int i = 1; i <= NoofNumbers; i++){
+        cout << symbol;
+    }
+    cout << endl;
+}
+
+void Display::Welcome_Message(){
+    cout << "+++++++++++++++Owner Contact Details+++++++++++++++++\n"
+    << "Discord: https://discord.com/users/481829350749110293\n";
+    horizontal_rule('-', 53);
+    cout << "Hello There! :) \n"
+    << "Welcome to the SMC "
+    << version::FULLVERSION_STRING[0] << "." << version::FULLVERSION_STRING[1] << " " << version::STATUS
+    << "\nReleased on " << version::RELEASE_DATE
+    << "\nthis software can calculate 15 different types of shapes!\n"
+    << "Ranging from their areas, curved surface area, volume and much more!\n"
+    << "follow the instructions below to get started\n"
+    << "as you need to feed three things: dimension, which shape and its measurement\n"
+    << "and now it's parameters to get your accurate answer in decimal\n" << endl;
+    horizontal_rule('-', 53);
+}
 
 bool Display::dimension_compare2D(string parameter){
     return parameter == "2d" || parameter == "2D";

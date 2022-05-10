@@ -39,7 +39,7 @@ public:
     /// \param  SecondCondition
     /// \param  ThirdCondition
     /// \param  FourthCondition
-    /// \return true or false depending upon the user entered
+    /// \return true or false depending upon whatever the user entered
     ///
     /// This function checks conditions of different parameters and prints true or false
     /// whatever the output is, the if statement will do accordingly

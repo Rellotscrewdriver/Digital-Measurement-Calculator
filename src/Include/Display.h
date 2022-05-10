@@ -1,6 +1,7 @@
-#pragma once 
+#pragma once
 
 #include "../declarations.h"
+
 
 class Display {
 public:
@@ -17,13 +18,26 @@ public:
     const string previous_step = " Previous step ";
 
     /////////////////////////////////////////////////
+    /// \brief makes a "-----" in the console
+    ///
+    /// \param Choose custom symbol
+    /// \param Number of Rules
+    /////////////////////////////////////////////////
+    void horizontal_rule(char symbol, int NoofNumbers);
+
+    /////////////////////////////////////////////////
+    /// \brief Shows a Welcome Message
+    /////////////////////////////////////////////////
+    void Welcome_Message();
+
+    /////////////////////////////////////////////////
     /// \brief compares whatever the user has input
     ///
     /// \param 2D or 3D or e/exit
     /// \return true or false depending upon user input
     ///
     /// these functions compare whatever the user has input
-    /// they are usually used in select dimension to find out whether 
+    /// they are usually used in select dimension to find out whether
     /// the user has inputted the right parameter in enter_dimension()
     /////////////////////////////////////////////////
 	bool dimension_compare2D(string parameter);
@@ -31,7 +45,7 @@ public:
     bool user_typed_exit(string parameter);
 
     /////////////////////////////////////////////////
-    /// \brief this function asks the user to input 2d or 3d dimension 
+    /// \brief this function asks the user to input 2d or 3d dimension
     /////////////////////////////////////////////////
     void enter_dimension();
 
@@ -43,7 +57,7 @@ public:
 	void select_dimension(string dimensional);
 
     /////////////////////////////////////////////////
-    /// \brief text list which outputs in the console 
+    /// \brief text list which outputs in the console
     /////////////////////////////////////////////////
     void list_2D_Shapes_text();
     void list_3D_Shapes_text();
@@ -58,10 +72,10 @@ public:
     /// \param Shape Number
     /// \param Input Step
     /// \return string which directs user to input. Eg-: "Input Radius: "
-    /// 
-    /// these functions tell user to input appropriate parameters in the console  
+    ///
+    /// these functions tell user to input appropriate parameters in the console
     /// like "Input Radius" of Sphere, Circle or Whatever the user has inputted
-    /// before. then it checks the shape number if there's only one parameter 
+    /// before. then it checks the shape number if there's only one parameter
     /// or else it will take input step which is done when the user inputs another parameter
     /// Eg-: "Input Length: " if the user types an appropriate input
     /// then it will proceed to show "Input Height: "
@@ -70,8 +84,5 @@ public:
     string two_parameters_text(int ShapeNum, int input_step);
     string three_parameters_text(int ShapeNum, int input_step);
     string three_four_parameters_text(int ShapeNum);
-    string triangle_special(int ShapeNum, int input_step); 
-
-private:
-
+    string triangle_special(int ShapeNum, int input_step);
 };

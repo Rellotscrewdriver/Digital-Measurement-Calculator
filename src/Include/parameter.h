@@ -8,6 +8,7 @@
 
 
 /**********************************************************
+
     2D_Shape Parameters (P = Perimeter, A = Area)
 
 	one paramter
@@ -26,9 +27,8 @@
 	7. Polygon: A: 2 P: 10
     8. Triangle: A: 1. 2 2. 1 3. 2 4. 3 P: 3
 
-***********************************************************/
+*************************************************************
 
-/***********************************************************
 	3D_Shape Parameters (SA = Surface Area, V = Volume, CSA = Curved Surface Area, TSA = Total Surface Area)
 
     one parameter
