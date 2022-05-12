@@ -1,5 +1,5 @@
 #include "Include/Display.h"
-#include "version.h"
+#include "Include/version.h"
 
 int main() {
     Display display;

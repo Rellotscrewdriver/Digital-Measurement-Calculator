@@ -2,7 +2,7 @@
 #include "../Include/Handle_Exception.h"
 #include "../Include/Shape_2D.h"
 #include "../Include/Shape_3D.h"
-#include "../version.h"
+#include "../Include/version.h"
 
 void Display::horizontal_rule(char symbol, int NoofNumbers){
     for(int i = 1; i <= NoofNumbers; i++){
@@ -13,7 +13,7 @@ void Display::horizontal_rule(char symbol, int NoofNumbers){
 
 void Display::Welcome_Message(){
     cout << "+++++++++++++++Owner Contact Details+++++++++++++++++\n"
-    << "Discord: https://discord.com/users/481829350749110293\n";
+    << "Discord: https://discord.gg/33zXgmzWhm\n";
     horizontal_rule('-', 53);
     cout << "Hello There! :) \n"
     << "Welcome to the SMC "

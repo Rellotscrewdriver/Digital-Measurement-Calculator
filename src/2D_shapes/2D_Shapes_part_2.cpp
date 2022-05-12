@@ -16,7 +16,7 @@ double Square::Asquare(double side) {
 	return side * side;
 }
 
-double Trapezium::ATrapezium(double base1, double base2, double height) {
+double Trapezium::ATrapezium(double height, double base1, double base2) {
 	return (base1 + base2) / 2 * height;
 }
 

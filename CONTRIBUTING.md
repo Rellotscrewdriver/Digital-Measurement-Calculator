@@ -247,7 +247,7 @@ enum Days {
 
 use an Underscore (_) for long names
 it is optional to start with Upper case letter
-eg: Expection_handling, manly_name
+eg- Expection_handling, manly_name
 
 ### a. Type names and namespaces
 
@@ -361,12 +361,11 @@ string error_message;
 3. Capitalize the subject line
 4. Do not end the subject line with a period
 5. Use the imperative mood in the subject line (it's like you're ordering the program to do something (e.g. "Don't create temporary substrings")
-6. Wrap the body at 72 characters
-7. Use the body to explain what and why vs. how
-8. If commit fixes a reported issue, mention it in the message body (e.g. `Closes #4.`)
+6. Use the body to explain what and why vs. how
+7. If commit fixes a reported issue, mention it in the message body (e.g. `Closes #4.`)
 
 ## 9. Not covered above
 
 If something isn't covered above, just follow the same style the file you are editing has.
 *This guide is not exhaustive and the style for a particular piece of code not specified here will be determined by project members on code review.*
-Credits to qbit_torrent's code guildlines (link to qbit_torrents repo)
+Credits to qbit_torrent's code guildlines https://github.com/qbittorrent/qBittorrent

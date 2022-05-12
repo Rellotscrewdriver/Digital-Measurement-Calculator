@@ -1,7 +1,6 @@
 #include "../Include/parameter.h"
 
 void Parameter::filter_measurement_type2D(double Area, double Perimeter){
-
 	if(Measure_Type == 1){
 		cout << "Output: " << Area << NEWLINE;
 	} else if(Measure_Type == 2){

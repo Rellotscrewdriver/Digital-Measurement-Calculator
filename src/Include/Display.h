@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../declarations.h"
+#include "../Include/declarations.h"
 
 
 class Display {

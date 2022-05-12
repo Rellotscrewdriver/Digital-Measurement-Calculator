@@ -10,8 +10,5 @@
 # Executables
 *.exe
 
-#Plain Text File
-*.txt
-
 #backup file
 *.bak

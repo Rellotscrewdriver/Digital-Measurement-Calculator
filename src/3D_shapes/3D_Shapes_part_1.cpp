@@ -8,12 +8,12 @@ double Sphere::VSphere(double Radius) {
     return 4 / 3 * PI * Radius * (Radius * Radius * Radius);
 }
 
-double Cuboid::SACuboid(double Width, double Height, double Depth) {
-    return 2 * ((Depth * Width) + (Width * Height) + (Height * Depth));
+double Cuboid::SACuboid(double Length, double Width, double Depth) {
+    return 2 * ((Length * Width) + (Width * Depth) + (Length * Depth));
 }
 
-double Cuboid::VCuboid(double Width, double Height, double Depth) {
-    return Depth * Height * Width;
+double Cuboid::VCuboid(double Length, double Width, double Depth) {
+    return Length * Width * Depth;
 }
 
 double Cube::SACube(double Side) {

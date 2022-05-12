@@ -1,7 +1,7 @@
 #pragma once
 #define PI 3.14
 
-#include "../declarations.h"
+#include "../Include/declarations.h"
 #include "../Include/Handle_Exception.h"
 #include "../Include/Display.h"
 #include "../Include/parameter.h"

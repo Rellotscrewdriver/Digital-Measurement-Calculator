@@ -59,8 +59,8 @@ public:
 
 class Cuboid {
 public:
-	double SACuboid(double Width, double Height, double Depth);
-	double VCuboid(double Width, double Height, double Depth);
+	double SACuboid(double Length, double Width, double Depth);
+	double VCuboid(double Length, double Width, double Depth);
 };
 
 class Hemisphere {

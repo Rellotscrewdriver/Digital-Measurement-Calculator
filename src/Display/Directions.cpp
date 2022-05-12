@@ -2,7 +2,11 @@
 
 string Display::one_parameter_text(int ShapeNum){
     if(ShapeNum == 1){
-        return "Input one side of square: ";
+        if(dimension_compare2D(dimensional)){
+            return "Input one side of square: ";
+        } else {
+            return "Input one side of cube: ";
+        }
     } else if(ShapeNum == 4 || ShapeNum == 3){
         return "Input radius: ";
     } else if(ShapeNum == 17){
@@ -39,7 +43,9 @@ string Display::two_parameters_text(int ShapeNum, int input_step){
         } else {
             return "Input second side: ";
         }
-     } else {}
+     } else {
+        return "Unknown parameter";
+     }
 }
 
 string Display::three_parameters_text(int ShapeNum, int input_step){

@@ -58,7 +58,7 @@ Handle_Exception H_Exp;
 		filter_measurement_type3D(cupuon.SACuboid(first_parameter, second_parameter, third_parameter), cupuon.VCuboid(first_parameter, second_parameter, third_parameter));
     } else if(Shape_Value == 8){
         Triangle trio;
-        filter_measurement_type2D(trio.AHFTriangle(first_parameter, second_parameter, third_parameter), trio.PTriangle(first_parameter, second_parameter, third_parameter));
+        filter_measurement_type2D(0 , trio.PTriangle(first_parameter, second_parameter, third_parameter));
     } else if(Shape_Value == 19){
         Triangle trio;
         cout << dis.output << trio.AHFTriangle(first_parameter, second_parameter, third_parameter);
@@ -66,4 +66,3 @@ Handle_Exception H_Exp;
 
     dis.select_dimension(dimension);
 }
-
