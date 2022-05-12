@@ -16,13 +16,11 @@ you need Cmake to make a project on your preferrable IDE, then start Compiling w
 ##  How can I contribute for this project?
 
 We explicitly welcome outside contributors.
-you can read our CODE_OF_CONDUCT for rules</br>
-and CONTRIBUTING for contribution guidelines and coding style
+you can read our <a href="https://github.com/Rellotscrewdriver/Digital-Measurement-Calculator/blob/Remake_Project/CODE_OF_CONDUCT.md">CODE_OF_CONDUCT</a> for rules</br>
+and <a href="https://github.com/Rellotscrewdriver/Digital-Measurement-Calculator/blob/Remake_Project/CONTRIBUTING.md">CONTRIBUTING</a> for contribution guidelines and coding style
 
 ## Screenshots
-
-People usually like to see how it looks before downloading the product. 
-these come from #screenshots from my discord server
+People usually like to see how it looks before downloading the product. <br />these come from #screenshots from my discord server
 <img src="https://cdn.discordapp.com/attachments/968435294460346408/969518910858735646/screenshot2.JPG">
 <img src="https://cdn.discordapp.com/attachments/968435294460346408/969518911093637160/screenshot3.JPG">
 <img src="https://cdn.discordapp.com/attachments/968435294460346408/969518911320100914/screenshot4.JPG">
@@ -33,7 +31,7 @@ these come from #screenshots from my discord server
 ## COPYRIGHT
 
 this project is free to use and distribute as long as you don't claim that you wrote the original software.
-crediting of this project is required when it is modified and/or distributed. goto LICENSE for more details 
+crediting of this project is required when it is modified and/or distributed. goto <a href="https://github.com/Rellotscrewdriver/Digital-Measurement-Calculator/blob/Remake_Project/LICENSE">LICENSE</a> for more details 
 
 ## Contact Information / Help Support
 
