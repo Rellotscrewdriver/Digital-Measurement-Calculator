@@ -133,4 +133,8 @@ private:
 		/// \brief these are used for quadrilateral and trapezium
 		void three_four_parameters();
 		void Special(); /// \brief This is a special function for polygon(perimeter)
+
+		void Sum_Solution();
+		void Shape_finder2D_Area(int ShapeNum);
+		void Shape_finder2D_Perimeter(int ShapeNum);
 };

@@ -2,10 +2,14 @@
 
 void Parameter::filter_measurement_type2D(double Area, double Perimeter){
 	if(Measure_Type == 1){
-		cout << "Output: " << Area << NEWLINE;
+        cout << "= " << Area << NEWLINE;
+		cout << "\nHence, Answer: " << Area << NEWLINE;
 	} else if(Measure_Type == 2){
-        cout << "Output: " << Perimeter << NEWLINE;
-	}
+        cout << "= " << Perimeter << NEWLINE;
+		cout << "\nHence, Answer: " << Perimeter << NEWLINE;
+	} else {
+        
+    }
 }
 void Parameter::filter_measurement_type3D(double Surface_Area, double Volume){
 	if(Measure_Type == 1){
