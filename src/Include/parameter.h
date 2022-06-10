@@ -5,7 +5,7 @@
 #include "../Include/Shape_2D.h"
 #include "../Include/Shape_3D.h"
 #include "../Include/Display.h"
-
+#include "../Include/Solution.h"
 
 /**********************************************************
 
@@ -134,7 +134,9 @@ private:
 		void three_four_parameters();
 		void Special(); /// \brief This is a special function for polygon(perimeter)
 
-		void Sum_Solution();
-		void Shape_finder2D_Area(int ShapeNum);
-		void Shape_finder2D_Perimeter(int ShapeNum);
+
+		friend class Solution;
+		void Sum_Solution2d();
+		void Sum_Solution3d();
+		void Sum_Solution3d_2();
 };
