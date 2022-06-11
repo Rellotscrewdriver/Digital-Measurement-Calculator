@@ -16,8 +16,10 @@ Quadrilateral quad;
             cout << H_Exp.negative_number_error_message;
             three_four_parameters();
         } else if (Shape_Value == 6){
+            Sum_Solution2d();
             cout << dis.output << crap.ATrapezium(first_parameter, second_parameter, third_parameter) << endl;
         } else if (Shape_Value == 5){
+            Sum_Solution2d();
             cout << dis.output << quad.AQuadrilateral(first_parameter, second_parameter, third_parameter) << endl;
         }
 			dis.select_dimension("2D");
@@ -34,8 +36,10 @@ Quadrilateral quad;
             cout << H_Exp.negative_number_error_message;
             three_four_parameters();
         } else if (Shape_Value == 5){
+            Sum_Solution2d();
             cout << dis.output << quad.PQuadrilateral(first_parameter, second_parameter, third_parameter, fourth_parameter) << endl;
         } else if (Shape_Value == 6){
+            Sum_Solution2d();
             cout << dis.output << crap.PTrapezium(first_parameter, second_parameter, third_parameter, fourth_parameter) << endl;
         }
 			dis.select_dimension("2D");
@@ -55,12 +59,15 @@ Handle_Exception H_Exp;
 		three_parameters();
     } else if (Shape_Value == 2){
 		Cuboid cupuon;
+        Sum_Solution3d();
 		filter_measurement_type3D(cupuon.SACuboid(first_parameter, second_parameter, third_parameter), cupuon.VCuboid(first_parameter, second_parameter, third_parameter));
     } else if(Shape_Value == 8){
         Triangle trio;
+        Sum_Solution2d();
         filter_measurement_type2D(0 , trio.PTriangle(first_parameter, second_parameter, third_parameter));
     } else if(Shape_Value == 19){
         Triangle trio;
+        Sum_Solution2d();
         cout << dis.output << trio.AHFTriangle(first_parameter, second_parameter, third_parameter);
     }
 

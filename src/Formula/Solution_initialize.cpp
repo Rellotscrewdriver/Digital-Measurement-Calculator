@@ -9,12 +9,12 @@ sol.third_para  = third_parameter;
 sol.fourth_para = fourth_parameter;
 
 
-    if(Measure_Type == 1 && dimension == "2D"){
+    if(Measure_Type == 1){
         sol.Shape_finder2D_Area(Shape_Value);
-    } else if(Measure_Type == 2 && dimension == "2D"){
+    } else if(Measure_Type == 2){
         sol.Shape_finder2D_Perimeter(Shape_Value);
     } else if(Shape_Value >= 16){
-        sol.Triangle(Shape_Value);
+        sol.TriangleArea(Shape_Value);
     }
 }
 
@@ -25,7 +25,7 @@ sol.second_para = second_parameter;
 sol.third_para  = third_parameter;
 sol.fourth_para = fourth_parameter;
 
-    if(Measure_Type == 1 && dimension == "3D"){
+    if(Measure_Type == 1){
         sol.Shape_finder3D_Surface_Area(Shape_Value);
     } else {
         sol.Shape_finder3D_Volume(Shape_Value);
@@ -39,44 +39,64 @@ sol.second_para = second_parameter;
 sol.third_para  = third_parameter;
 sol.fourth_para = fourth_parameter;
 
-    if(Measure_Type == 1 && dimension == "3D"){
+    if(Measure_Type == 1){
         sol.Shape_finder3D_Curved_Surface_Area(Shape_Value);
-    } else if(Measure_Type == 1 && dimension == "3D"){
+    } else if(Measure_Type == 2){
         sol.Shape_finder3D_Total_Surface_Area(Shape_Value);
     } else {
         sol.Shape_finder3D_Volume(Shape_Value);
     }
 }
 
-void Solution::Triangle(int ShapeNum){
+void Solution::TriangleArea(int ShapeNum){
     Parameter sol;
 
     if(ShapeNum == 16){
-        TriangleAofE(sol.first_parameter);
+        TriangleA();
     } else if(ShapeNum == 17){
-
+        TriangleAofE();
     } else if(ShapeNum == 18){
-
+        TriangleAofI();
     } else {
-
+        TriangleAHF();
     }
 }
 
 void Solution::Shape_finder2D_Area(int ShapeNum){
 
     if(ShapeNum == 1){
-        SqrtA();
+        SquareA();
     } else if(ShapeNum == 4){
         CircleA();
-    } 
+    } else if(ShapeNum == 2){
+        RectangleA();
+    } else if(ShapeNum == 3){
+        ParallelogramA();
+    } else if(ShapeNum == 5){
+        QuadrilateralA();
+    } else if(ShapeNum == 6){
+        TrapeziumA();
+    } else if(ShapeNum == 7){
+        PolygonA();
+    }
 }
 
 void Solution::Shape_finder2D_Perimeter(int ShapeNum){
 
     if(ShapeNum == 1){
-        SqrtP();
+        SquareP();
     } else if(ShapeNum == 4){
         CircleP();
+    } else if(ShapeNum == 2){
+        RectangleP();
+    } else if(ShapeNum == 3){
+        ParallelogramP();
+    } else if(ShapeNum == 5){
+        QuadrilateralA();
+    } else if(ShapeNum == 6){
+        TrapeziumA();
+    } else {
+        TriangleP();
     }
 }
 
@@ -84,9 +104,11 @@ void Solution::Shape_finder3D_Surface_Area(int ShapeNum){
     Parameter sol;
     
     if(ShapeNum == 1){
-        CubeSA(sol.first_parameter);
+        CubeSA();
     } else if(ShapeNum == 3){
-        SphereSA(sol.first_parameter);
+        SphereSA();
+    } else {
+        CuboidSA();
     }
 }
 
@@ -94,11 +116,17 @@ void Solution::Shape_finder3D_Volume(int ShapeNum){
     Parameter sol;
     
     if(ShapeNum == 1){
-        CubeV(sol.first_parameter);
+        CubeV();
     } else if(ShapeNum == 3){
-        SphereV(sol.first_parameter);
+        SphereV();
     } else if(ShapeNum == 4){
-        HemisphereV(sol.first_parameter);
+        HemisphereV();
+    } else if(ShapeNum == 5){
+        ConeV();
+    } else if(ShapeNum == 6){
+        CylinderV();
+    } else {
+        CuboidV();
     }
 }
 
@@ -106,9 +134,11 @@ void Solution::Shape_finder3D_Total_Surface_Area(int ShapeNum){
     Parameter sol;
     
     if(ShapeNum == 4){
-        HemisphereTSA(sol.first_parameter);
-    } else if(ShapeNum == 23){
-        CircleP();
+        HemisphereTSA();
+    } else if(ShapeNum == 5){
+        ConeTSA();
+    } else if(ShapeNum == 6){
+        CylinderTSA();
     }
 }
 
@@ -116,8 +146,10 @@ void Solution::Shape_finder3D_Curved_Surface_Area(int ShapeNum){
     Parameter sol;
     
     if(ShapeNum == 4){
-        HemisphereCSA(sol.first_parameter);
-    } else if(ShapeNum == 22){
-        CircleP();
+        HemisphereCSA();
+    } else if(ShapeNum == 5){
+        ConeCSA();
+    } else if(ShapeNum == 6){
+        CylinderCSA();
     }
 }

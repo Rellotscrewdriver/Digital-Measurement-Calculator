@@ -13,31 +13,64 @@ public:
 	double fourth_para;
 
 	void Shape_finder2D_Area(int ShapeNum);
-
 	void Shape_finder2D_Perimeter(int ShapeNum);
-	void Triangle(int ShapeNum);
+	void TriangleArea(int ShapeNum);
 
 	void Shape_finder3D_Surface_Area(int ShapeNum);
 	void Shape_finder3D_Volume(int ShapeNum);
 	void Shape_finder3D_Total_Surface_Area(int ShapeNum);
 	void Shape_finder3D_Curved_Surface_Area(int ShapeNum);
 
-	void SqrtA();
-	void SqrtP();
+private:
+	//2D Shapes
+	void SquareA();
+	void SquareP();
 
 	void CircleP();
 	void CircleA();
 
-	void CubeSA(double first);
-	void CubeV(double first);
+	void RectangleA();
+	void RectangleP();
 
-	void SphereSA(double first);
-	void SphereV(double first);
+	void ParallelogramA();
+	void ParallelogramP();
 
-	void HemisphereTSA(double first);
-	void HemisphereCSA(double first);
-	void HemisphereV(double first);
+	void PolygonA();
 
-	void TriangleAofE(double first);
+	void TrapeziumA();
+	void QuadrilateralA();
+
+	void TrapeziumP();
+	void QuadrilateralP();
+
+	//3D Shapes
+	void CubeSA();
+	void CubeV();
+
+	void SphereSA();
+	void SphereV();
+
+	void CuboidSA();
+	void CuboidV();
+
+	//3D 2 Shapes
+	void HemisphereTSA();
+	void HemisphereCSA();
+	void HemisphereV();
+
+	void CylinderCSA();
+	void CylinderTSA();
+	void CylinderV();
+	
+	void ConeCSA();
+	void ConeTSA();
+	void ConeV();
+
+	//triangle
+	void TriangleAofE();
+	void TriangleA();
+	void TriangleAHF();
+	void TriangleAofI();
+	void TriangleP();
 };
 
