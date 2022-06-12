@@ -7,6 +7,7 @@
 
 class Solution {
 public:
+	int rand_god = rand() % 3;
 	double first_para;
 	double second_para;
 	double third_para;

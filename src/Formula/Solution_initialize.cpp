@@ -7,7 +7,7 @@ sol.first_para  = first_parameter;
 sol.second_para = second_parameter;
 sol.third_para  = third_parameter;
 sol.fourth_para = fourth_parameter;
-
+sol.rand_god = rand() % 3;
 
     if(Measure_Type == 1){
         sol.Shape_finder2D_Area(Shape_Value);
@@ -24,6 +24,7 @@ sol.first_para  = first_parameter;
 sol.second_para = second_parameter;
 sol.third_para  = third_parameter;
 sol.fourth_para = fourth_parameter;
+sol.rand_god = rand() % 3;
 
     if(Measure_Type == 1){
         sol.Shape_finder3D_Surface_Area(Shape_Value);
@@ -38,6 +39,7 @@ sol.first_para  = first_parameter;
 sol.second_para = second_parameter;
 sol.third_para  = third_parameter;
 sol.fourth_para = fourth_parameter;
+sol.rand_god = rand() % 3;
 
     if(Measure_Type == 1){
         sol.Shape_finder3D_Curved_Surface_Area(Shape_Value);
