@@ -2,30 +2,35 @@
 
 void Parameter::filter_measurement_type2D(double Area, double Perimeter){
 	if(Measure_Type == 1){
-        cout << "= " << Area << NEWLINE;
-		cout << "\nHence, Answer: " << Area << NEWLINE;
+        cout << EQUAL << Area << NEWLINE;
+		cout << ANSWER << Area << NEWLINE;
 	} else if(Measure_Type == 2){
-        cout << "= " << Perimeter << NEWLINE;
-		cout << "\nHence, Answer: " << Perimeter << NEWLINE;
+        cout << EQUAL << Perimeter << NEWLINE;
+		cout << ANSWER << Perimeter << NEWLINE;
 	} else {
         
     }
 }
 void Parameter::filter_measurement_type3D(double Surface_Area, double Volume){
 	if(Measure_Type == 1){
-		cout << "Output: " << Surface_Area << NEWLINE;
+        cout << EQUAL << Surface_Area << NEWLINE;
+		cout << ANSWER << Surface_Area << NEWLINE;
 	} else if(Measure_Type == 2){
-        cout << "Output: " << Volume << NEWLINE;
+        cout << EQUAL << Volume << NEWLINE;
+        cout << ANSWER << Volume << NEWLINE;
 	}
 }
 
 void Parameter::filter_measurement_type3D(double Curved_Surface_Area, double Total_Surface_Area, double Volume){
 	if(Measure_Type == 1){
-		cout << "Output: " << Curved_Surface_Area << NEWLINE;
+        cout << EQUAL << Curved_Surface_Area << NEWLINE;
+		cout << ANSWER << Curved_Surface_Area << NEWLINE;
 	} else if(Measure_Type == 2){
-		cout << "Output: " << Total_Surface_Area << NEWLINE;
+        cout << EQUAL << Total_Surface_Area << NEWLINE;
+		cout << ANSWER << Total_Surface_Area << NEWLINE;
 	} else if(Measure_Type == 3){
-		cout << "Output: " << Volume << NEWLINE;
+        cout << EQUAL << Volume << NEWLINE;
+		cout << ANSWER << Volume << NEWLINE;
     }
 }
 

@@ -1,5 +1,7 @@
 #pragma once
-#define NEWLINE "\n\n"
+#define NEWLINE "\n"
+#define EQUAL "= "
+#define ANSWER "\n\nHence, The Answer is "
 
 #include "../Include/Handle_Exception.h"
 #include "../Include/Shape_2D.h"

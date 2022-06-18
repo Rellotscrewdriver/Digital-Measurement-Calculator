@@ -7,7 +7,6 @@
 
 class Solution {
 public:
-	int rand_god = rand() % 3;
 	double first_para;
 	double second_para;
 	double third_para;
@@ -15,13 +14,20 @@ public:
 
 	void Shape_finder2D_Area(int ShapeNum);
 	void Shape_finder2D_Perimeter(int ShapeNum);
-	void TriangleArea(int ShapeNum);
 
 	void Shape_finder3D_Surface_Area(int ShapeNum);
 	void Shape_finder3D_Volume(int ShapeNum);
 	void Shape_finder3D_Total_Surface_Area(int ShapeNum);
 	void Shape_finder3D_Curved_Surface_Area(int ShapeNum);
 
+	// template <typename RS>
+	// RS Rand_Situation(RS if_situ, RS else_sit){
+	// 	if(rand_god == 1){
+	// 		if_situ;
+	// 	} else {
+ // 			else_sit;
+	// 	}
+	// }
 private:
 	//2D Shapes
 	void SquareA();

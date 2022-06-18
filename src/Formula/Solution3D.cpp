@@ -1,32 +1,64 @@
 #include "../Include/Solution.h"
 
-void Solution::CubeSA(){
-    cout << FORMULA  << "6 * (Side * Side)" << endl;
-    cout << SOLUTION;
-    cout << "= 6 * (" << first_para << " * " << first_para << ")\n";
-    cout << "= 6 * " << first_para * first_para << endl;
+void Solution::Shape_finder3D_Surface_Area(int ShapeNum){
+    Parameter sol;
+    
+    if(ShapeNum == 1){
+        CubeSA();
+    } else if(ShapeNum == 3){
+        SphereSA();
+    } else {
+        CuboidSA();
+    }
+}
+//TODO: finish their solutions and formulas
+void Solution::Shape_finder3D_Volume(int ShapeNum){
+    Parameter sol;
+    
+    if(ShapeNum == 1){
+        CubeV();
+    } else if(ShapeNum == 3){
+        SphereV();
+    } else if(ShapeNum == 4){
+        HemisphereV();
+    } else if(ShapeNum == 5){
+        ConeV();
+    } else if(ShapeNum == 6){
+        CylinderV();
+    } else {
+        CuboidV();
+    }
 }
 
-/* TODO: how about I make multiple approaches to solve the question? 
-    like first_para * (first_para * first_para)
-    or (first_para * first_para) * first_para
-    through a random number
-   UPDATE: I tested it and it works! but it will be very long so I think it's best to have each shape in it's own file
-*/
-void Solution::CubeV(){
-    cout << FORMULA  << "Side * Side * Side" << endl;
-    cout << SOLUTION;
-    cout << "= " << first_para << " * " << first_para << " * " << first_para << "\n";
-    cout << "= " << first_para << " * " << first_para * first_para << "\n";
+void Solution::Shape_finder3D_Total_Surface_Area(int ShapeNum){
+    Parameter sol;
+    
+    if(ShapeNum == 4){
+        HemisphereTSA();
+    } else if(ShapeNum == 5){
+        ConeTSA();
+    } else if(ShapeNum == 6){
+        CylinderTSA();
+    }
 }
 
-void Solution::SphereSA(){
-    cout << FORMULA  << "4 * PI * Radius * Radius" << endl;
-    cout << SOLUTION;
-    cout << "= 4 * PI * " << first_para << " * " << first_para << endl;
-    cout << "= 4 * PI * " << first_para * first_para << endl;
-    cout << "= 4 * " << 3.14 * first_para * first_para << endl;
+void Solution::Shape_finder3D_Curved_Surface_Area(int ShapeNum){
+    Parameter sol;
+    
+    if(ShapeNum == 4){
+        HemisphereCSA();
+    } else if(ShapeNum == 5){
+        ConeCSA();
+    } else if(ShapeNum == 6){
+        CylinderCSA();
+    }
 }
+
+
+/*LEFTOVER: I had to ditch the idea of multiple approaches to solve the question since 
+it will make the code very unreable, I couldn't find anyway to solve this
+also, it will take a very long time to make them as I need to think their approaches of each and every shape
+int rand_god = rand() % 3;
 
 void Solution::SphereV(){
     cout << FORMULA  << "4 * PI * Radius * (Radius * Radius * Radius)" << endl;
@@ -50,12 +82,4 @@ void Solution::SphereV(){
         cout << "4 * PI * " << first_para * first_para * first_para << "\n";
         cout << "4 * " << 3.14 * first_para * first_para * first_para << "\n";
     }
-}
-
-void Solution::CuboidSA(){
-    cout << "Solution class member called" << endl;
-}
-
-void Solution::CuboidV(){
-    cout << "Solution class member called" << endl;
-}
+}*/

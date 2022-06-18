@@ -61,3 +61,62 @@ double Triangle::PTriangle(double SideA, double SideB, double SideC){
     return SideA + SideB + SideC;
 }
 
+void Solution::TriangleAHF(){
+    double side_perimeter = first_para + second_para + third_para / 2;
+    cout << "Side_Perimeter: " << "(SideA + SideB + SideC) / 2\n";
+    cout << FORMULA << "v/side_perimeter  * (side_perimeter - SideA) * (side_perimeter - SideB) * (side_perimeter - SideC)\n";
+    cout << SOLUTION;
+    cout << "= " << "( " << first_para << " + " << second_para << " + " << third_para << ") / 2\n";
+    cout << "= " << "( " << first_para + second_para << " + " << third_para << ") / 2\n";
+    cout << "= " << "( " << first_para + second_para + third_para << ") / 2\n";
+    cout << "= " << side_perimeter << "\n";
+    cout << "= v/(" << side_perimeter << " * (" << side_perimeter << " - " << first_para << ")) * (" 
+    << side_perimeter << " - " << second_para << ") * (" 
+    << side_perimeter << " - " << third_para << ")\n";
+    cout << "= v/(" << side_perimeter << " * (" << side_perimeter << " - " << first_para << ")) * (" 
+    << side_perimeter << " - " << second_para << ") * (" 
+    << side_perimeter - third_para << ")\n"; 
+    cout << "= v/(" << side_perimeter << " * (" << side_perimeter << " - " << first_para << ")) * (" 
+    << side_perimeter - second_para << ") * (" 
+    << side_perimeter - third_para << ")\n"; 
+    cout << "= v/(" << side_perimeter << " * (" << side_perimeter - first_para << ")) * (" 
+    << side_perimeter - second_para << ") * (" 
+    << side_perimeter - third_para << ")\n"; 
+    cout << "= v/(" << side_perimeter << " * (" << side_perimeter - first_para * side_perimeter - second_para 
+    << ") * (" << side_perimeter - third_para << ")\n"; 
+    cout << "= v/(" << side_perimeter << " * (" << side_perimeter - first_para * side_perimeter - second_para * side_perimeter - third_para << ")\n"; 
+    cout << "= v/(" << side_perimeter * side_perimeter - first_para * side_perimeter - second_para * side_perimeter - third_para << ")\n"; 
+}
+
+void Solution::TriangleAofE(){
+    cout << FORMULA << "(sqrt(3) / 4) * Side * Side\n";
+    cout << SOLUTION;
+    cout << "= v/(3) / 4" << " * " << first_para << " * " << first_para << "\n";
+    cout << "= v/(3) / 4" << " * " << first_para * first_para << "\n";
+    cout << "= v/(3)" << " * " << first_para * first_para * 4 << "\n";
+}
+
+void Solution::TriangleA(){
+    cout << FORMULA << "0.5 * base * height\n";
+    cout << SOLUTION;
+    cout << "= " << 0.5 << " * " << first_para << " * " << second_para << "\n";
+    cout << "= " << 0.5 << " * " << first_para * second_para << "\n";
+}
+
+void Solution::TriangleAofI(){
+    cout << FORMULA << "(1 / 4) * SideB * sqrt((4 * SideA * SideA - SideB * SideB))\n";
+    cout << SOLUTION;
+    cout << "= (1 / 4) * " << second_para << " * v/(4 * " << first_para << " * " << first_para << " - " << second_para << " * " << second_para << "))\n"; 
+    cout << "= (1 / 4) * " << second_para << " * v/(4 * " << first_para << " * " << first_para << " - " << second_para * second_para << "))\n"; 
+    cout << "= (1 / 4) * " << second_para << " * v/(4 * " << first_para * first_para << " - " << second_para * second_para << "))\n"; 
+    cout << "= (1 / 4) * " << second_para << " * v/(4 * " << first_para * first_para - second_para * second_para << "))\n"; 
+    cout << "= (1 / 4) * " << second_para << " * v/(" << 4 * first_para * first_para - second_para * second_para << ")\n"; 
+    cout << "= " << (1 / 4) * second_para << " * v/(" << 4 * first_para * first_para - second_para * second_para << ")\n"; 
+}
+
+void Solution::TriangleP(){
+    cout << FORMULA << "SideA + SideB + SideC\n";
+    cout << SOLUTION;
+    cout << "= " << first_para << " + " << second_para << " + " << third_para << "\n";
+    cout << "= " << first_para << " + " << second_para + third_para << "\n";
+}

@@ -69,10 +69,10 @@ string Display::three_parameters_text(int ShapeNum, int input_step){
 }
 
 /*
-I bet that someone will ask "Why not make a common function for input_step?"
+LEFTOVER: I bet that someone will ask "Why not make a common function for input_step?"
 that concept did not work as I prototyped for two_parameters_text()
 as idk how it will work or someone knows the solution for it
-here's the leftovers:
+here's the leftover:
 
 string Display::two_parameters_text(int ShapeNum, int input_step){
      if(ShapeNum == 5 || ShapeNum == 6 || ShapeNum == 7 || ShapeNum == 16){

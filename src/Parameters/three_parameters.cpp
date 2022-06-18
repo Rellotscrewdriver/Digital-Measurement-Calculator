@@ -17,10 +17,12 @@ Quadrilateral quad;
             three_four_parameters();
         } else if (Shape_Value == 6){
             Sum_Solution2d();
-            cout << dis.output << crap.ATrapezium(first_parameter, second_parameter, third_parameter) << endl;
+            cout << EQUAL << crap.ATrapezium(first_parameter, second_parameter, third_parameter) << endl;
+            cout << ANSWER << crap.ATrapezium(first_parameter, second_parameter, third_parameter) << endl;
         } else if (Shape_Value == 5){
             Sum_Solution2d();
-            cout << dis.output << quad.AQuadrilateral(first_parameter, second_parameter, third_parameter) << endl;
+            cout << EQUAL << crap.ATrapezium(first_parameter, second_parameter, third_parameter) << endl;
+            cout << ANSWER << quad.AQuadrilateral(first_parameter, second_parameter, third_parameter) << endl;
         }
 			dis.select_dimension("2D");
 	} else {
@@ -37,10 +39,12 @@ Quadrilateral quad;
             three_four_parameters();
         } else if (Shape_Value == 5){
             Sum_Solution2d();
-            cout << dis.output << quad.PQuadrilateral(first_parameter, second_parameter, third_parameter, fourth_parameter) << endl;
+            cout << EQUAL << quad.PQuadrilateral(first_parameter, second_parameter, third_parameter, fourth_parameter) << endl;
+            cout << ANSWER << quad.PQuadrilateral(first_parameter, second_parameter, third_parameter, fourth_parameter) << endl;
         } else if (Shape_Value == 6){
             Sum_Solution2d();
-            cout << dis.output << crap.PTrapezium(first_parameter, second_parameter, third_parameter, fourth_parameter) << endl;
+            cout << EQUAL << crap.PTrapezium(first_parameter, second_parameter, third_parameter, fourth_parameter) << endl;
+            cout << ANSWER << crap.PTrapezium(first_parameter, second_parameter, third_parameter, fourth_parameter) << endl;
         }
 			dis.select_dimension("2D");
 	}
@@ -68,7 +72,8 @@ Handle_Exception H_Exp;
     } else if(Shape_Value == 19){
         Triangle trio;
         Sum_Solution2d();
-        cout << dis.output << trio.AHFTriangle(first_parameter, second_parameter, third_parameter);
+        cout << EQUAL << trio.AHFTriangle(first_parameter, second_parameter, third_parameter) << "/n/n";
+        cout << ANSWER << trio.AHFTriangle(first_parameter, second_parameter, third_parameter) << endl;
     }
 
     dis.select_dimension(dimension);

@@ -22,7 +22,8 @@ void Parameter::two_parameters(){
         } else if (Shape_Value == 7 && dimension == "2D"){
             Polygon polys;
             Sum_Solution2d();
-            cout << dis.output << polys.APolygon(first_parameter, second_parameter) << "\n\n";
+            cout << EQUAL << polys.APolygon(first_parameter, second_parameter) << "\n\n";
+            cout << ANSWER << polys.APolygon(first_parameter, second_parameter) << "\n\n";
         } else if (Shape_Value == 6 && dimension == "3D"){
             Cylinder do_a_barrell_roll;
             Sum_Solution3d_2();
@@ -34,11 +35,13 @@ void Parameter::two_parameters(){
         } else if(Shape_Value == 16){
             Triangle trio;
             Sum_Solution2d();
-            cout << dis.output << trio.ATriangle(first_parameter, second_parameter) << endl;
+            cout << EQUAL << trio.ATriangle(first_parameter, second_parameter) << "/n/n";
+            cout << ANSWER << trio.ATriangle(first_parameter, second_parameter) << endl;
         } else if(Shape_Value == 18){
             Triangle trio;
             Sum_Solution2d();
-            cout << dis.output << trio.AofITriangle(first_parameter, second_parameter) << endl;
+            cout << EQUAL << trio.AofITriangle(first_parameter, second_parameter) << "/n/n";
+            cout << ANSWER << trio.AofITriangle(first_parameter, second_parameter) << endl;
         } else {}
 
         dis.select_dimension(dimension);

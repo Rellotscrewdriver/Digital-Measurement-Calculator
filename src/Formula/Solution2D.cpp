@@ -1,87 +1,47 @@
 #include "../Include/Solution.h"
 
-//TODO: finish their solutions and formulas
+void Solution::Shape_finder2D_Area(int ShapeNum){
 
-void Solution::SquareA(){
-    cout << FORMULA << "4 * side" << endl;
-    cout << SOLUTION;
-    cout << "= 4 * " << first_para << endl;
+    if(ShapeNum == 1){
+        SquareA();
+    } else if(ShapeNum == 4){
+        CircleA();
+    } else if(ShapeNum == 2){
+        RectangleA();
+    } else if(ShapeNum == 3){
+        ParallelogramA();
+    } else if(ShapeNum == 5){
+        QuadrilateralA();
+    } else if(ShapeNum == 6){
+        TrapeziumA();
+    } else if(ShapeNum == 7){
+        PolygonA();
+    } else if(ShapeNum == 16){
+        TriangleA();
+    } else if(ShapeNum == 17){
+        TriangleAofE();
+    } else if(ShapeNum == 18){
+        TriangleAofI();
+    } else {
+        TriangleAHF();
+    }
 }
 
-void Solution::SquareP(){
-    cout << FORMULA  << "side * side" << endl;
-    cout << SOLUTION;
-    cout << "= " << first_para << " * " << first_para << endl;
-}
+void Solution::Shape_finder2D_Perimeter(int ShapeNum){
 
-void Solution::CircleP(){
-    cout << FORMULA  << "2 * pi * r" << endl;
-    cout << SOLUTION;
-    cout << "= 2 * PI * " << first_para << "\n";
-    cout << "= 2 * " << first_para * 3.14 << endl;
-}
-
-void Solution::CircleA(){
-    cout << FORMULA  << "pi * r * r" << endl;
-    cout << SOLUTION;
-    cout << "= PI * " << first_para << " * " << first_para << endl;
-    cout << "= PI * " << first_para * first_para << endl;
-}
-
-void Solution::RectangleA(){
-    cout << "Solution class member called" << endl;
-}
-
-void Solution::RectangleP(){
-    cout << "Solution class member called" << endl;
-}
-
-void Solution::ParallelogramA(){
-    cout << "Solution class member called" << endl;
-}
-
-void Solution::ParallelogramP(){
-    cout << "Solution class member called" << endl;
-}
-
-void Solution::QuadrilateralA(){
-    cout << "Solution class member called" << endl;
-}
-
-void Solution::QuadrilateralP(){
-    cout << "Solution class member called" << endl;
-}
-
-void Solution::TrapeziumA(){
-    cout << "Solution class member called" << endl;
-}
-
-void Solution::TrapeziumP(){
-    cout << "Solution class member called" << endl;
-}
-
-void Solution::PolygonA(){
-    cout << "Solution class member called" << endl;
-}
-
-void Solution::TriangleAHF(){
-    cout << "Solution class member called" << endl;
-}
-
-void Solution::TriangleAofE(){
-    cout << FORMULA << "(sqrt(3) / 4) * Side * Side\n";
-    cout << SOLUTION;
-    cout << "= " << first_para;
-}
-
-void Solution::TriangleA(){
-    cout << "Solution class member called" << endl;
-}
-
-void Solution::TriangleAofI(){
-    cout << "Solution class member called" << endl;
-}
-
-void Solution::TriangleP(){
-    cout << "Solution class member called" << endl;
+    if(ShapeNum == 1){
+        SquareP();
+    } else if(ShapeNum == 4){
+        CircleP();
+    } else if(ShapeNum == 2){
+        RectangleP();
+    } else if(ShapeNum == 3){
+        ParallelogramP();
+    } else if(ShapeNum == 5){
+        QuadrilateralP();
+    } else if(ShapeNum == 6){
+        TrapeziumP();
+    } else {
+        TriangleP();
+    }
 }

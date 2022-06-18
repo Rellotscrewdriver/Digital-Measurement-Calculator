@@ -5,8 +5,8 @@ namespace version {
     static const char RELEASE_DATE[] = "15 / 5 / 2022";
 
 	//Software Status
-	static const char STATUS[] =  "Alpha Debug";
-	static const char STATUS_SHORT[] =  "ad";
+	static const char STATUS[] =  "Debug";
+	static const char STATUS_SHORT[] =  "d";
 
 	//Semantic Version Type
 	static const long MAJOR_CHANGE  = 2;
@@ -14,5 +14,5 @@ namespace version {
 	static const long PATCH  = 0;
 
 	//Miscellaneous Version Types
-	static const char FULLVERSION_STRING [] = "210";
+	static const char FULLVERSION_STRING [] = "2.1.0";
 }

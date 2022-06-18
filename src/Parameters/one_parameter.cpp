@@ -35,7 +35,8 @@ void Parameter::one_parameter(){
     } else {
         Triangle trio;
         Sum_Solution2d();
-        cout << dis.output << trio.AofETriangle(first_parameter);
+        cout << EQUAL << trio.AofETriangle(first_parameter);
+        cout << ANSWER << trio.AofETriangle(first_parameter);
     }
 	dis.select_dimension(dimension);
 }
