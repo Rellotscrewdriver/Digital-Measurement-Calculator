@@ -7,8 +7,8 @@ double Polygon::APolygon(double Radius, double Apothem) {
 
 void Polygon::PPolygon(double side) {
     Handle_Exception H_Exp;
-    
-    cout << FORMULA  << "combined sides + another side...\n";
+
+    cout << FORMULA  << "combined sides + another side...\n\n";
 
 	for (int i = 1; i <= side; i++) {
 		isnegative = false;
@@ -16,8 +16,10 @@ void Polygon::PPolygon(double side) {
 		cin >> number_of_sides[i];
 
 		H_Exp.check_if_user_entered_string_and_shape_3D(false);
-
 		if (!H_Exp.check_one_condition(number_of_sides[i]) ){
+			if(i > 1){
+				cout << "= " << answer << " + " << number_of_sides[i] << "\n\n";
+			}
 			answer += number_of_sides[i];
 		} else {
 			cout << H_Exp.negative_number_error_message;
@@ -27,7 +29,8 @@ void Polygon::PPolygon(double side) {
 	}
 
 	if(!isnegative){
-        cout << "The answer is " << answer << endl;
+		cout << "= " << answer << endl;
+        cout << "\n\nHence, the answer is " << answer << endl;
 	}
 }
 
