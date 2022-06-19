@@ -6,8 +6,14 @@ Handle_Exception H_Exp;
 void Parameter::one_parameter(){
 	cout << "Specify one parameter of " << Shape_Name << " to find it's " << filter_measurement_name() << endl;
     cout << dis.one_parameter_text(Shape_Value); cin >> first_parameter;
-
     H_Exp.check_if_user_entered_string_and_shape_3D(is_3D);
+    
+    //LOG
+    std::ofstream fs;
+    fs.open("Log.txt", ios::app);
+    fs << "You find " << filter_measurement_name() << " of " << Shape_Name << "\n";
+    fs << dis.Log_one_parameter_text(Shape_Value) << first_parameter;
+    fs.close();
 
 	if (H_Exp.check_one_condition(first_parameter)){
 		cout << H_Exp.negative_number_error_message;
@@ -22,8 +28,8 @@ void Parameter::one_parameter(){
         Cube cuba;
         filter_measurement_type3D(cuba.SACube(first_parameter), cuba.VCube(first_parameter));
     } else if (Shape_Value == 3 && dimension == "3D"){
-        Sphere speed;
-        filter_measurement_type3D(speed.SASphere(first_parameter), speed.VSphere(first_parameter));
+        Sphere GasGASGASSSSSS;
+        filter_measurement_type3D(GasGASGASSSSSS.SASphere(first_parameter), GasGASGASSSSSS.VSphere(first_parameter));
     } else if (Shape_Value == 4 && dimension == "3D"){
         Hemisphere half_brain;
         filter_measurement_type3D(half_brain.CSAHemisphere(first_parameter), half_brain.TSAHemisphere(first_parameter), half_brain.VHemisphere(first_parameter));
@@ -31,5 +37,6 @@ void Parameter::one_parameter(){
         Triangle trio;
         cout << dis.output << trio.AofETriangle(first_parameter);
     }
+
 	dis.select_dimension(dimension);
 }

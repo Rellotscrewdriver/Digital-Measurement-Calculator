@@ -1,17 +1,35 @@
 #include "../Include/parameter.h"
+#include "../FileLog/file-log.h"
+   
+std::ofstream fs;
 
 void Parameter::filter_measurement_type2D(double Area, double Perimeter){
-	if(Measure_Type == 1){
+    fs.open("Log.txt", ios::app);
+    
+    if(Measure_Type == 1){
 		cout << "Output: " << Area << NEWLINE;
+        fs << "\n\nThe Answer was " << Area << endl;
+        fs << "====================================================" << endl;
+        fs.close();
 	} else if(Measure_Type == 2){
         cout << "Output: " << Perimeter << NEWLINE;
+        fs << "\n\nThe Answer was " << Perimeter << endl;
+        fs << "====================================================" << endl;
+        fs.close();
 	}
+
 }
 void Parameter::filter_measurement_type3D(double Surface_Area, double Volume){
+fs.open("Log.txt", ios::app);
+
 	if(Measure_Type == 1){
 		cout << "Output: " << Surface_Area << NEWLINE;
+        fs << "\n\nThe Answer was " << Surface_Area << endl;
+        fs.close();
 	} else if(Measure_Type == 2){
         cout << "Output: " << Volume << NEWLINE;
+        fs << "\n\nThe Answer was " << Volume << endl;
+        fs.close();
 	}
 }
 

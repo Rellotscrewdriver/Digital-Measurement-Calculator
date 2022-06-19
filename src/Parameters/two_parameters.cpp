@@ -2,11 +2,19 @@
 
 void Parameter::two_parameters(){
     Handle_Exception H_Exp;
-
+    
 	cout << "Specify two parameters of " << Shape_Name << " to find it's " << filter_measurement_name() << endl;
     cout << dis.two_parameters_text(Shape_Value, 1); cin >> first_parameter;
 	cout << dis.two_parameters_text(Shape_Value, 2); cin >> second_parameter;
     H_Exp.check_if_user_entered_string_and_shape_3D(is_3D);
+    
+    //LOG
+    std::ofstream fs;
+    fs.open("Log.txt", ios::app);
+    fs << "You find " << filter_measurement_name() << " of " << Shape_Name << "\n";
+    fs << dis.Log_two_parameters_text(Shape_Value, 1) << first_parameter << "\n";
+    fs << dis.Log_two_parameters_text(Shape_Value, 2) << second_parameter;
+    fs.close();
 
         if (H_Exp.check_two_conditions(first_parameter, second_parameter)){
             cout << H_Exp.negative_number_error_message;
@@ -33,6 +41,5 @@ void Parameter::two_parameters(){
             Triangle trio;
             cout << dis.output << trio.AofITriangle(first_parameter, second_parameter) << endl;
         } else {}
-
         dis.select_dimension(dimension);
 }
