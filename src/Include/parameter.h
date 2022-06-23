@@ -5,7 +5,7 @@
 #include "../Include/Shape_2D.h"
 #include "../Include/Shape_3D.h"
 #include "../Include/Display.h"
-#include "../FileLog/file-log.h"
+#include "../Include/file-log.h"
 
 
 /**********************************************************
@@ -89,6 +89,7 @@ private:
         string Shape_Name;
         string Measurement_Name;
 		string dimension;
+		File_Log fil;
 
 		bool is_3D;
 

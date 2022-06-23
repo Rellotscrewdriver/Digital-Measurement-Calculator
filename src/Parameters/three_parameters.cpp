@@ -4,6 +4,8 @@ void Parameter::three_four_parameters(){
 Handle_Exception H_Exp;
 Trapezium crap;
 Quadrilateral quad;
+std::ofstream fs;
+
 	if(Measure_Type == 1){
 		//area
 		cout << "Specify three parameters of " << Shape_Name << " to find it's " << filter_measurement_name() << endl;
@@ -12,13 +14,27 @@ Quadrilateral quad;
         cout << "Input Second Base: "; cin >> third_parameter;
         H_Exp.check_if_user_entered_string_and_shape_3D(false);
 
+
+        fs.open("Log.txt", ios::app);
+        fs << "You find " << filter_measurement_name() << " of " << Shape_Name << "\n";
+        fs << dis.Log_three_four_parameters_text(Shape_Value) << first_parameter;
+        fs << "\nInput First Base: " << second_parameter;
+        fs << "\nInput Second Base: " << third_parameter;
+        
+
         if (H_Exp.check_three_conditions(first_parameter, second_parameter, third_parameter)){
             cout << H_Exp.negative_number_error_message;
             three_four_parameters();
         } else if (Shape_Value == 6){
             cout << dis.output << crap.ATrapezium(first_parameter, second_parameter, third_parameter) << endl;
+            fs << "\n\nThe Answer was " << crap.ATrapezium(first_parameter, second_parameter, third_parameter) << endl;
+            fs << "======================================================\n";
+            fs.close();
         } else if (Shape_Value == 5){
             cout << dis.output << quad.AQuadrilateral(first_parameter, second_parameter, third_parameter) << endl;
+            fs << "\n\nThe Answer was " << quad.AQuadrilateral(first_parameter, second_parameter, third_parameter) << endl;
+            fs << "======================================================\n";
+            fs.close();
         }
 			dis.select_dimension("2D");
 	} else {
@@ -30,13 +46,26 @@ Quadrilateral quad;
         cout << "Input Fourth Side: "; cin >> fourth_parameter;
         H_Exp.check_if_user_entered_string_and_shape_3D(false);
 
+        fs.open("Log.txt", ios::app);
+        fs << "You find " << filter_measurement_name() << " of " << Shape_Name << "\n";
+        fs << "Input First Side: " << first_parameter;
+        fs << "\nInput Second Side: " << second_parameter;
+        fs << "\nInput Third Side: " << third_parameter;
+        fs << "\nInput Fourth Side: " << fourth_parameter;
+
         if (H_Exp.check_four_conditions(first_parameter, second_parameter, third_parameter, fourth_parameter)){
             cout << H_Exp.negative_number_error_message;
             three_four_parameters();
         } else if (Shape_Value == 5){
             cout << dis.output << quad.PQuadrilateral(first_parameter, second_parameter, third_parameter, fourth_parameter) << endl;
+            fs << "\n\nThe Answer was " << quad.PQuadrilateral(first_parameter, second_parameter, third_parameter, fourth_parameter) << endl;
+            fs << "======================================================\n";
+            fs.close();
         } else if (Shape_Value == 6){
             cout << dis.output << crap.PTrapezium(first_parameter, second_parameter, third_parameter, fourth_parameter) << endl;
+            fs << "\n\nThe Answer was " << crap.PTrapezium(first_parameter, second_parameter, third_parameter, fourth_parameter) << endl;
+            fs << "======================================================\n";
+            fs.close();
         }
 			dis.select_dimension("2D");
 	}
@@ -49,6 +78,14 @@ Handle_Exception H_Exp;
     cout << dis.three_parameters_text(Shape_Value , 2); cin >> second_parameter;
     cout << dis.three_parameters_text(Shape_Value , 3); cin >> third_parameter;
     H_Exp.check_if_user_entered_string_and_shape_3D(is_3D);
+
+    std::ofstream fs;
+    fs.open("Log.txt", ios::app);
+    fs << "You find " << filter_measurement_name() << " of " << Shape_Name << "\n";
+    fs << dis.Log_three_parameters_text(Shape_Value , 1) << first_parameter << endl;
+    fs << dis.Log_three_parameters_text(Shape_Value , 2) << second_parameter << endl;
+    fs << dis.Log_three_parameters_text(Shape_Value , 3) << third_parameter;
+    fs.close();
 
     if (H_Exp.check_three_conditions(first_parameter, second_parameter, third_parameter)){
 		cout << H_Exp.negative_number_error_message;

@@ -8,11 +8,9 @@ public:
     tm *ltm = localtime(&now);
 
     void FileLog();
-    void horizontal_line();
-    void end_program_line();
+    void horizontal_line(int number_of_symbol, string symbol);
     void current_time();
     string show_AM_PM();
-    int show_twelve_hour_time();
-    int show_zero_min();
-    int show_zero_sec();
+    void show_hour_time();
+    void show_zero(int number_needed_zero);
 };

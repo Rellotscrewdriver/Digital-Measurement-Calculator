@@ -1,5 +1,5 @@
 #include "Include/Display.h"
-#include "FileLog/file-log.h"
+#include "Include/file-log.h"
 
 int main() {
     Display display;
@@ -7,6 +7,6 @@ int main() {
     fil.FileLog();
     display.Welcome_Message();
     display.enter_dimension();
-    fil.end_program_line();
+    fil.horizontal_line(98, "-");
 	return 0;
 }

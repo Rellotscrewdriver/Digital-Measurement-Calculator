@@ -1,5 +1,4 @@
 #include "../Include/parameter.h"
-#include "../FileLog/file-log.h"
    
 std::ofstream fs;
 
@@ -9,12 +8,12 @@ void Parameter::filter_measurement_type2D(double Area, double Perimeter){
     if(Measure_Type == 1){
 		cout << "Output: " << Area << NEWLINE;
         fs << "\n\nThe Answer was " << Area << endl;
-        fs << "====================================================" << endl;
+        fil.horizontal_line(54, "=");
         fs.close();
 	} else if(Measure_Type == 2){
         cout << "Output: " << Perimeter << NEWLINE;
         fs << "\n\nThe Answer was " << Perimeter << endl;
-        fs << "====================================================" << endl;
+        fil.horizontal_line(54, "=");
         fs.close();
 	}
 
@@ -25,21 +24,34 @@ fs.open("Log.txt", ios::app);
 	if(Measure_Type == 1){
 		cout << "Output: " << Surface_Area << NEWLINE;
         fs << "\n\nThe Answer was " << Surface_Area << endl;
+        fil.horizontal_line(54, "=");
         fs.close();
 	} else if(Measure_Type == 2){
         cout << "Output: " << Volume << NEWLINE;
         fs << "\n\nThe Answer was " << Volume << endl;
+        fil.horizontal_line(54, "=");
         fs.close();
 	}
 }
 
 void Parameter::filter_measurement_type3D(double Curved_Surface_Area, double Total_Surface_Area, double Volume){
+fs.open("Log.txt", ios::app);
+
 	if(Measure_Type == 1){
 		cout << "Output: " << Curved_Surface_Area << NEWLINE;
+        fs << "\n\nThe Answer was " << Curved_Surface_Area << endl;
+        fil.horizontal_line(54, "=");
+        fs.close();
 	} else if(Measure_Type == 2){
 		cout << "Output: " << Total_Surface_Area << NEWLINE;
+        fs << "\n\nThe Answer was " << Total_Surface_Area << endl;
+        fil.horizontal_line(54, "=");
+        fs.close();
 	} else if(Measure_Type == 3){
 		cout << "Output: " << Volume << NEWLINE;
+        fs << "\n\nThe Answer was " << Volume << endl;
+        fil.horizontal_line(53, "=");
+        fs.close();        
     }
 }
 

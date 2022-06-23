@@ -8,6 +8,12 @@ void Parameter::Special(){
     cin >> No_Of_Sides;
     H_Exp.check_if_user_entered_string_and_shape_3D(false);
 
+    std::ofstream fs;
+    fs.open("Log.txt", ios::app);
+    fs << "You find perimeter of Polygon" << "\n";
+    fs << "Number Of Sides: " << No_Of_Sides;
+    fs.close();
+
     if(H_Exp.check_one_condition(No_Of_Sides)){
         cout << H_Exp.negative_number_error_message;
         Special();

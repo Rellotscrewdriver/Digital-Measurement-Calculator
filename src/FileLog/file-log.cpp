@@ -1,36 +1,35 @@
-#include "file-log.h"
+#include "../Include/file-log.h"
 
 void File_Log::FileLog(){
     //happens in file
     fs.open("Log.txt", ios::app);
-    horizontal_line();
+    horizontal_line(54, "=");
     current_time();
-    horizontal_line();
+    horizontal_line(54, "=");
     fs.close();
 }
 
-void File_Log::horizontal_line(){
-    for(int a = 1; a <= 53; a++){
-        fs << "=";
+void File_Log::horizontal_line(int number_of_symbol, string symbol){
+    for(int a = 1; a <= number_of_symbol; a++){
+        fs << symbol;
     }
     fs << "\n";
 }
 
-void File_Log::end_program_line(){
-    fs.open("Log.txt", ios::app);
-    for(int a = 1; a <= 98; a++){
-        fs << "-";
-    }
-    fs << "\n";   
-    fs.close();   
-}
-
 void File_Log::current_time(){
-    fs << "Session Opened: ";
-    fs << ltm->tm_mday << "/" << 1 + ltm->tm_mon << "/" << 1900 + ltm->tm_year;
-    fs << " " << show_twelve_hour_time() << ":";
-    fs << show_zero_min() << ":";
-    fs << show_zero_sec();
+    fs << "        Session Opened: ";
+    //shows the current date
+    show_zero(ltm->tm_mday);
+    fs << "/";
+    show_zero(1 + ltm->tm_mon);
+    fs << "/" << 1900 + ltm->tm_year << " ";
+
+    //shows the current time
+    show_hour_time(); 
+    fs << ":";
+    show_zero(ltm->tm_min); 
+    fs << ":";
+    show_zero(ltm->tm_sec);
     fs << " " << show_AM_PM() << endl;
 }
 
@@ -42,27 +41,19 @@ string File_Log::show_AM_PM(){
     }
 }
 
-int File_Log::show_twelve_hour_time(){
+void File_Log::show_hour_time(){
     if(ltm->tm_hour >= 13){
-        return ltm->tm_hour - 12; 
+        show_zero(ltm->tm_hour - 12);            
     } else {
-        return ltm->tm_hour;
+        show_zero(ltm->tm_hour);             
     }
 }
 
-//TODO: find a way to show zero when the time & date is less than 10 like 09, 01
-int File_Log::show_zero_min(){
-    if(ltm->tm_min < 10){
-        return 0 + ltm->tm_min; 
+//This is best I could do without doing conversion which can take a lot of performance
+void File_Log::show_zero(int number_needed_zero){
+    if(number_needed_zero < 10){
+        fs << "0" << number_needed_zero; 
     } else {
-        return ltm->tm_min;
-    }
-}
-
-int File_Log::show_zero_sec(){
-    if(ltm->tm_sec < 10){
-        return ltm->tm_sec; 
-    } else {
-        return ltm->tm_sec;
+        fs << number_needed_zero;
     }
 }
