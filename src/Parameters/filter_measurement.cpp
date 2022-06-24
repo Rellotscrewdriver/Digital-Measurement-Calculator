@@ -1,57 +1,55 @@
 #include "../Include/parameter.h"
    
-std::ofstream fs;
-
 void Parameter::filter_measurement_type2D(double Area, double Perimeter){
-    fs.open("Log.txt", ios::app);
+Log.open("Log.txt", ios::app);
     
     if(Measure_Type == 1){
 		cout << "Output: " << Area << NEWLINE;
-        fs << "\n\nThe Answer was " << Area << endl;
-        fil.horizontal_line(54, "=");
-        fs.close();
+        Log << "\n\nThe Answer was " << Area << endl;
+        hr.horizontal_line(54, "=");
 	} else if(Measure_Type == 2){
         cout << "Output: " << Perimeter << NEWLINE;
-        fs << "\n\nThe Answer was " << Perimeter << endl;
-        fil.horizontal_line(54, "=");
-        fs.close();
+        Log << "\n\nThe Answer was " << Perimeter << endl;
+        hr.horizontal_line(54, "=");
 	}
 
+Log.close();
 }
+
 void Parameter::filter_measurement_type3D(double Surface_Area, double Volume){
-fs.open("Log.txt", ios::app);
+Log.open("Log.txt", ios::app);
 
 	if(Measure_Type == 1){
 		cout << "Output: " << Surface_Area << NEWLINE;
-        fs << "\n\nThe Answer was " << Surface_Area << endl;
-        fil.horizontal_line(54, "=");
-        fs.close();
+        Log << "\n\nThe Answer was " << Surface_Area << endl;
+        hr.horizontal_line(54, "=");
+        Log.close();
 	} else if(Measure_Type == 2){
         cout << "Output: " << Volume << NEWLINE;
-        fs << "\n\nThe Answer was " << Volume << endl;
-        fil.horizontal_line(54, "=");
-        fs.close();
+        Log << "\n\nThe Answer was " << Volume << endl;
+        hr.horizontal_line(54, "=");
+        Log.close();
 	}
 }
 
 void Parameter::filter_measurement_type3D(double Curved_Surface_Area, double Total_Surface_Area, double Volume){
-fs.open("Log.txt", ios::app);
+Log.open("Log.txt", ios::app);
 
 	if(Measure_Type == 1){
 		cout << "Output: " << Curved_Surface_Area << NEWLINE;
-        fs << "\n\nThe Answer was " << Curved_Surface_Area << endl;
-        fil.horizontal_line(54, "=");
-        fs.close();
+        Log << "\n\nThe Answer was " << Curved_Surface_Area << endl;
+        hr.horizontal_line(54, "=");
+        Log.close();
 	} else if(Measure_Type == 2){
 		cout << "Output: " << Total_Surface_Area << NEWLINE;
-        fs << "\n\nThe Answer was " << Total_Surface_Area << endl;
-        fil.horizontal_line(54, "=");
-        fs.close();
+        Log << "\n\nThe Answer was " << Total_Surface_Area << endl;
+        hr.horizontal_line(54, "=");
+        Log.close();
 	} else if(Measure_Type == 3){
 		cout << "Output: " << Volume << NEWLINE;
-        fs << "\n\nThe Answer was " << Volume << endl;
-        fil.horizontal_line(53, "=");
-        fs.close();        
+        Log << "\n\nThe Answer was " << Volume << endl;
+        hr.horizontal_line(54, "=");
+        Log.close();        
     }
 }
 

@@ -89,7 +89,8 @@ private:
         string Shape_Name;
         string Measurement_Name;
 		string dimension;
-		File_Log fil;
+		File_Log hr;
+		std::ofstream Log;
 
 		bool is_3D;
 

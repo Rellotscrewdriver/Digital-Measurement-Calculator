@@ -1,13 +1,11 @@
 #include "../Include/Display.h"
 
 string Display::Log_one_parameter_text(int ShapeNum){
-    if(ShapeNum == 1){
-        return "one side: ";
+    if(ShapeNum == 1 || ShapeNum == 17){
+        return "One side: ";
     } else if(ShapeNum == 4 || ShapeNum == 3){
         return "Radius: ";
-    } else if(ShapeNum == 17){
-        return "Triangle: ";
-    }
+    } else {}
 }
 
 string Display::Log_two_parameters_text(int ShapeNum, int input_step){
@@ -22,7 +20,7 @@ string Display::Log_two_parameters_text(int ShapeNum, int input_step){
             return "Slant_Height: ";
          } else if(input_step == 1){
             return "Radius: ";
-         }
+         } else {}
      } else if(ShapeNum == 2 || ShapeNum == 3){
         if(input_step == 1 && ShapeNum == 2){
             return "Length: ";
@@ -52,7 +50,7 @@ string Display::Log_three_parameters_text(int ShapeNum, int input_step){
             return "Width: ";
         } else if(input_step == 3){
             return "Depth(or Height): ";
-        }
+        } else {}
     } else if(ShapeNum == 8 || ShapeNum == 19){
         if(input_step == 1){
             return "First side: ";
@@ -60,8 +58,8 @@ string Display::Log_three_parameters_text(int ShapeNum, int input_step){
             return "Second side: ";
         } else if(input_step == 3){
             return "Third side: ";
-        }
-    }
+        } else {}
+    }  else {}
 }
 
 string Display::Log_three_four_parameters_text(int ShapeNum){

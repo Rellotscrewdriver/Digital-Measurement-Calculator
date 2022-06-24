@@ -7,13 +7,11 @@ void Parameter::one_parameter(){
 	cout << "Specify one parameter of " << Shape_Name << " to find it's " << filter_measurement_name() << endl;
     cout << dis.one_parameter_text(Shape_Value); cin >> first_parameter;
     H_Exp.check_if_user_entered_string_and_shape_3D(is_3D);
-    
-    //LOG
-    std::ofstream fs;
-    fs.open("Log.txt", ios::app);
-    fs << "You find " << filter_measurement_name() << " of " << Shape_Name << "\n";
-    fs << dis.Log_one_parameter_text(Shape_Value) << first_parameter;
-    fs.close();
+
+    Log.open("Log.txt", ios::app);
+    Log << "You tried to find the " << filter_measurement_name() << " of " << Shape_Name << "\n";
+    Log << dis.Log_one_parameter_text(Shape_Value) << first_parameter;
+    Log.close();
 
 	if (H_Exp.check_one_condition(first_parameter)){
 		cout << H_Exp.negative_number_error_message;
@@ -35,7 +33,7 @@ void Parameter::one_parameter(){
         filter_measurement_type3D(half_brain.CSAHemisphere(first_parameter), half_brain.TSAHemisphere(first_parameter), half_brain.VHemisphere(first_parameter));
     } else {
         Triangle trio;
-        cout << dis.output << trio.AofETriangle(first_parameter);
+        filter_measurement_type2D(trio.AofETriangle(first_parameter), 010101010011);
     }
 
 	dis.select_dimension(dimension);

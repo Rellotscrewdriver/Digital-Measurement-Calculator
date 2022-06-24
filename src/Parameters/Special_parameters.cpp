@@ -4,15 +4,15 @@
 void Parameter::Special(){
     Handle_Exception H_Exp;
 	unsigned int No_Of_Sides;
+    //TODO: Increase the number of sides to 20
 	cout << "Enter the Number of Sides(should not be more than 10): ";
     cin >> No_Of_Sides;
     H_Exp.check_if_user_entered_string_and_shape_3D(false);
 
-    std::ofstream fs;
-    fs.open("Log.txt", ios::app);
-    fs << "You find perimeter of Polygon" << "\n";
-    fs << "Number Of Sides: " << No_Of_Sides;
-    fs.close();
+    Log.open("Log.txt", ios::app);
+    Log << "You find perimeter of Polygon" << "\n";
+    Log << "Number Of Sides: " << No_Of_Sides;
+    Log.close();
 
     if(H_Exp.check_one_condition(No_Of_Sides)){
         cout << H_Exp.negative_number_error_message;
@@ -22,6 +22,7 @@ void Parameter::Special(){
 		Special();
 	} else if (Shape_Value == 7){
 		Polygon poly;
+        Log << "you choose to enter " << No_Of_Sides << " sides\n";
         poly.PPolygon(No_Of_Sides);
     }
 	dis.select_dimension("2D");
