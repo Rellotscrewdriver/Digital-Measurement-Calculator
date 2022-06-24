@@ -9,7 +9,7 @@ double Trapezium::PTrapezium(double SideA, double SideB, double SideC, double Si
 	return SideA + SideB + SideC + SideD;
 }
 
-void Solution::TrapeziumA(){
+void Solution::Sol_TrapeziumA(){
     cout << FORMULA << "2 * height / (base1 + base2)\n";
     cout << SOLUTION;
     cout << "= 2 * " << first_para << " / (" << second_para << " + " << third_para << ")\n"; 
@@ -17,7 +17,7 @@ void Solution::TrapeziumA(){
     cout << "= " << 2 * first_para << " / " << second_para + third_para << "\n";   
 }
 
-void Solution::TrapeziumP(){
+void Solution::Sol_TrapeziumP(){
     cout << FORMULA << "Side1 + Side2 + Side3 + Side4\n";
     cout << SOLUTION;
     cout << "= " <<first_para << " + " << second_para << " + " << third_para << " + " << fourth_para << "\n";

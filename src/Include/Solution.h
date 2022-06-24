@@ -12,72 +12,70 @@ public:
 	double third_para;
 	double fourth_para;
 
+	/////////////////////////////////////////////////
+    /// \brief finds the shape to find it's solution
+    /////////////////////////////////////////////////
 	void Shape_finder2D_Area(int ShapeNum);
 	void Shape_finder2D_Perimeter(int ShapeNum);
-
 	void Shape_finder3D_Surface_Area(int ShapeNum);
 	void Shape_finder3D_Volume(int ShapeNum);
 	void Shape_finder3D_Total_Surface_Area(int ShapeNum);
 	void Shape_finder3D_Curved_Surface_Area(int ShapeNum);
 
-	// template <typename RS>
-	// RS Rand_Situation(RS if_situ, RS else_sit){
-	// 	if(rand_god == 1){
-	// 		if_situ;
-	// 	} else {
- // 			else_sit;
-	// 	}
-	// }
 private:
+	/////////////////////////////////////////////////
+    /// \brief these functions are responsible for displaying solutions
+    /////////////////////////////////////////////////
+
 	//2D Shapes
-	void SquareA();
-	void SquareP();
+	void Sol_SquareA();
+	void Sol_SquareP();
 
-	void CircleP();
-	void CircleA();
+	void Sol_CircleP();
+	void Sol_CircleA();
 
-	void RectangleA();
-	void RectangleP();
+	void Sol_RectangleA();
+	void Sol_RectangleP();
 
-	void ParallelogramA();
-	void ParallelogramP();
+	void Sol_ParallelogramA();
+	void Sol_ParallelogramP();
 
-	void PolygonA();
+	void Sol_PolygonA();
 
-	void TrapeziumA();
-	void QuadrilateralA();
+	void Sol_TrapeziumA();
+	void Sol_QuadrilateralA();
 
-	void TrapeziumP();
-	void QuadrilateralP();
+	void Sol_TrapeziumP();
+	void Sol_QuadrilateralP();
 
 	//3D Shapes
-	void CubeSA();
-	void CubeV();
+	void Sol_CubeSA();
+	void Sol_CubeV();
 
-	void SphereSA();
-	void SphereV();
+	void Sol_SphereSA();
+	void Sol_SphereV();
 
-	void CuboidSA();
-	void CuboidV();
+	void Sol_CuboidSA();
+	void Sol_CuboidV();
 
 	//3D 2 Shapes
-	void HemisphereTSA();
-	void HemisphereCSA();
-	void HemisphereV();
+	void Sol_HemisphereTSA();
+	void Sol_HemisphereCSA();
+	void Sol_HemisphereV();
 
-	void CylinderCSA();
-	void CylinderTSA();
-	void CylinderV();
+	void Sol_CylinderCSA();
+	void Sol_CylinderTSA();
+	void Sol_CylinderV();
 	
-	void ConeCSA();
-	void ConeTSA();
-	void ConeV();
+	void Sol_ConeCSA();
+	void Sol_ConeTSA();
+	void Sol_ConeV();
 
 	//triangle
-	void TriangleAofE();
-	void TriangleA();
-	void TriangleAHF();
-	void TriangleAofI();
-	void TriangleP();
+	void Sol_TriangleAofE();
+	void Sol_TriangleA();
+	void Sol_TriangleAHF();
+	void Sol_TriangleAofI();
+	void Sol_TriangleP();
 };
 

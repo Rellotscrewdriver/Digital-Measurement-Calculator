@@ -9,7 +9,7 @@ double Cuboid::VCuboid(double Length, double Width, double Depth) {
     return Length * Width * Depth;
 }
 
-void Solution::CuboidSA(){
+void Solution::Sol_CuboidSA(){
     cout << FORMULA << "2 * ((length * width) + (width * depth) + (length * depth))\n";
     cout << SOLUTION;
     cout << "= 2 * ((" << first_para << " * " << second_para 
@@ -25,7 +25,7 @@ void Solution::CuboidSA(){
     cout << "= 2 * " << first_para * second_para + second_para * third_para + first_para * third_para << endl;
 }
 
-void Solution::CuboidV(){
+void Solution::Sol_CuboidV(){
     cout << FORMULA << "length * width * depth\n";
     cout << SOLUTION;
     cout << "= " << first_para << " * " << second_para << " * " << third_para << "\n";

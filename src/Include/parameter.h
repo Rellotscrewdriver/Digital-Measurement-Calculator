@@ -136,8 +136,14 @@ private:
 		void three_four_parameters();
 		void Special(); /// \brief This is a special function for polygon(perimeter)
 
-
 		friend class Solution;
+
+		/////////////////////////////////////////////////
+    	/// \brief these functions are used to find the measurement type
+    	///
+    	///	these functions are used to find the measurement type 
+    	/// in order to find the solution 
+    	/////////////////////////////////////////////////
 		void Sum_Solution2d();
 		void Sum_Solution3d();
 		void Sum_Solution3d_2();

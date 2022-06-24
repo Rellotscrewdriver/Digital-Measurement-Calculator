@@ -34,7 +34,7 @@ void Polygon::PPolygon(double side) {
 	}
 }
 
-void Solution::PolygonA(){
+void Solution::Sol_PolygonA(){
 	cout << FORMULA  << "Radius * Apothem\n";
    	cout << SOLUTION;
 	cout << "= 0.5 * " << first_para << " * " << second_para << "\n"; 

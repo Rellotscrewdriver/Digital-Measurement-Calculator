@@ -13,7 +13,7 @@ double Cylinder::VCylinder(double Radius, double Height) {
     return PI * Radius * Radius * Height;
 }
 
-void Solution::CylinderCSA(){
+void Solution::Sol_CylinderCSA(){
     cout << FORMULA << "2 * PI * Radius * Height \n";
     cout << SOLUTION;
     cout << "= 2 * pi * " << first_para << " * " << second_para << "\n";
@@ -21,7 +21,7 @@ void Solution::CylinderCSA(){
     cout << "= 2 * " << 3.14 * first_para * second_para << endl;
 }
 
-void Solution::CylinderTSA(){
+void Solution::Sol_CylinderTSA(){
     cout << FORMULA << "2 * PI * Radius * (Radius + Height) \n";
     cout << SOLUTION;
     cout << "= 2 * PI * " << first_para << " * (" << first_para << " + " << second_para << ")\n";
@@ -30,7 +30,7 @@ void Solution::CylinderTSA(){
     cout << "= 2 * " << 3.14 * first_para * first_para + second_para << endl;
 }
 
-void Solution::CylinderV(){
+void Solution::Sol_CylinderV(){
     cout << FORMULA << "PI * Radius * Radius * Height \n";
     cout << SOLUTION;
     cout << "= PI * " << first_para << " * " << first_para << " * " << second_para << "\n";

@@ -3,45 +3,45 @@
 void Solution::Shape_finder2D_Area(int ShapeNum){
 
     if(ShapeNum == 1){
-        SquareA();
+        Sol_SquareA();
     } else if(ShapeNum == 4){
-        CircleA();
+        Sol_CircleA();
     } else if(ShapeNum == 2){
-        RectangleA();
+        Sol_RectangleA();
     } else if(ShapeNum == 3){
-        ParallelogramA();
+        Sol_ParallelogramA();
     } else if(ShapeNum == 5){
-        QuadrilateralA();
+        Sol_QuadrilateralA();
     } else if(ShapeNum == 6){
-        TrapeziumA();
+        Sol_TrapeziumA();
     } else if(ShapeNum == 7){
-        PolygonA();
+        Sol_PolygonA();
     } else if(ShapeNum == 16){
-        TriangleA();
+        Sol_TriangleA();
     } else if(ShapeNum == 17){
-        TriangleAofE();
+        Sol_TriangleAofE();
     } else if(ShapeNum == 18){
-        TriangleAofI();
+        Sol_TriangleAofI();
     } else {
-        TriangleAHF();
+        Sol_TriangleAHF();
     }
 }
 
 void Solution::Shape_finder2D_Perimeter(int ShapeNum){
 
     if(ShapeNum == 1){
-        SquareP();
+        Sol_SquareP();
     } else if(ShapeNum == 4){
-        CircleP();
+        Sol_CircleP();
     } else if(ShapeNum == 2){
-        RectangleP();
+        Sol_RectangleP();
     } else if(ShapeNum == 3){
-        ParallelogramP();
+        Sol_ParallelogramP();
     } else if(ShapeNum == 5){
-        QuadrilateralP();
+        Sol_QuadrilateralP();
     } else if(ShapeNum == 6){
-        TrapeziumP();
+        Sol_TrapeziumP();
     } else {
-        TriangleP();
+        Sol_TriangleP();
     }
 }

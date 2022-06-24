@@ -9,7 +9,7 @@ double Sphere::VSphere(double Radius) {
     return 4 / 3 * PI * Radius * (Radius * Radius * Radius);
 }
 
-void Solution::SphereSA(){
+void Solution::Sol_SphereSA(){
     cout << FORMULA  << "4 * PI * Radius * Radius" << endl;
     cout << SOLUTION;
     cout << "= 4 * PI * " << first_para << " * " << first_para << "\n";
@@ -17,7 +17,7 @@ void Solution::SphereSA(){
     cout << "= 4 * " << 3.14 * first_para * first_para << endl;
 }
 
-void Solution::SphereV(){
+void Solution::Sol_SphereV(){
     cout << FORMULA  << "4 * PI * Radius * (Radius * Radius * Radius)\n";
     cout << SOLUTION;
     cout << "= 4 * PI * (" << first_para << " * " << first_para << " * " << first_para << ")\n";

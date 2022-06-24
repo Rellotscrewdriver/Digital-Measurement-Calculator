@@ -4,11 +4,11 @@ void Solution::Shape_finder3D_Surface_Area(int ShapeNum){
     Parameter sol;
     
     if(ShapeNum == 1){
-        CubeSA();
+        Sol_CubeSA();
     } else if(ShapeNum == 3){
-        SphereSA();
+        Sol_SphereSA();
     } else {
-        CuboidSA();
+        Sol_CuboidSA();
     }
 }
 //TODO: finish their solutions and formulas
@@ -16,17 +16,17 @@ void Solution::Shape_finder3D_Volume(int ShapeNum){
     Parameter sol;
     
     if(ShapeNum == 1){
-        CubeV();
+        Sol_CubeV();
     } else if(ShapeNum == 3){
-        SphereV();
+        Sol_SphereV();
     } else if(ShapeNum == 4){
-        HemisphereV();
+        Sol_HemisphereV();
     } else if(ShapeNum == 5){
-        ConeV();
+        Sol_ConeV();
     } else if(ShapeNum == 6){
-        CylinderV();
+        Sol_CylinderV();
     } else {
-        CuboidV();
+        Sol_CuboidV();
     }
 }
 
@@ -34,11 +34,11 @@ void Solution::Shape_finder3D_Total_Surface_Area(int ShapeNum){
     Parameter sol;
     
     if(ShapeNum == 4){
-        HemisphereTSA();
+        Sol_HemisphereTSA();
     } else if(ShapeNum == 5){
-        ConeTSA();
+        Sol_ConeTSA();
     } else if(ShapeNum == 6){
-        CylinderTSA();
+        Sol_CylinderTSA();
     }
 }
 
@@ -46,11 +46,11 @@ void Solution::Shape_finder3D_Curved_Surface_Area(int ShapeNum){
     Parameter sol;
     
     if(ShapeNum == 4){
-        HemisphereCSA();
+        Sol_HemisphereCSA();
     } else if(ShapeNum == 5){
-        ConeCSA();
+        Sol_ConeCSA();
     } else if(ShapeNum == 6){
-        CylinderCSA();
+        Sol_CylinderCSA();
     }
 }
 

@@ -9,13 +9,13 @@ double Square::Asquare(double side) {
 	return side * side;
 }
 
-void Solution::SquareA(){
+void Solution::Sol_SquareA(){
 	cout << FORMULA  << "side * side" << endl;
 	cout << SOLUTION;
     cout << "= " << first_para << " * " << first_para << endl;
 }
 
-void Solution::SquareP(){
+void Solution::Sol_SquareP(){
     cout << FORMULA << "4 * one side" << endl;
     cout << SOLUTION;
     cout << "= 4 * " << first_para << endl;
