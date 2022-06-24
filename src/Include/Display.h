@@ -1,12 +1,13 @@
 #pragma once
 
 #include "../Include/declarations.h"
-
+#include "../Include/file-log.h"
 
 class Display {
 public:
 	string Shape_Name;
     string dimensional;
+    std::ofstream Log; 
 
 	const string exit_str = " exit the program\n";
     const string switch_to_3D = " switch to 3D";

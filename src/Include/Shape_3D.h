@@ -4,13 +4,16 @@
 #include "../Include/Handle_Exception.h"
 #include "../Include/Display.h"
 #include "../Include/parameter.h"
+#include "../Include/file-log.h"
 
 class Shape_3D {
 public:
     int Which_Shape;
     int Measurement_Type;
     string Measurement_Name;
-	int Which_Shape_3D;
+	int Which_Shape_3D;    
+    std::ofstream Log; 
+    
     bool is_3D = true;
     /////////////////////////////////////////////////
     /// \brief asks for user the input the 3D shape

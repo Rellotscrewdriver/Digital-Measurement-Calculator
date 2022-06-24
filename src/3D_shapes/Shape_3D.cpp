@@ -21,6 +21,9 @@ void Shape_3D::Shape_order_3D(){
         dis.select_dimension("2D");
     } else if(Which_Shape == 12){
         cout << dis.console_message;
+        Log.open("Log.txt", ios::app);
+        Log << "you selected 3d shapes but you exited it, didn't you like our software?\n";
+		Log.close();
         getchar();
     } else {
         Handle_Exception H_Ex;
@@ -52,6 +55,9 @@ void Shape_3D::measurement_type_1(){
 
 		case 7:
             cout << dis.console_message;
+            Log.open("Log.txt", ios::app);
+        	Log << "you selected 3d shapes but you exited it, didn't you like our software?\n";
+			Log.close();
 			getchar();
 		break;
 
@@ -92,6 +98,9 @@ void Shape_3D::measurement_type_2(){
 
 		case 7:
             cout << dis.console_message;
+            Log.open("Log.txt", ios::app);
+        	Log << "you choosed a shape but quitted it\n\n";
+			Log.close();
 			getchar();
 		break;
 
