@@ -13,7 +13,7 @@ Quadrilateral quad;
         H_Exp.check_if_user_entered_string_and_shape_3D(false);
 
         if (H_Exp.check_three_conditions(first_parameter, second_parameter, third_parameter)){
-            cout << H_Exp.negative_number_error_message;
+            cout << termcolor::bright_red << H_Exp.negative_number_error_message << termcolor::reset;
             three_four_parameters();
         } else if (Shape_Value == 6){
             cout << dis.output << crap.ATrapezium(first_parameter, second_parameter, third_parameter) << endl;
@@ -31,7 +31,7 @@ Quadrilateral quad;
         H_Exp.check_if_user_entered_string_and_shape_3D(false);
 
         if (H_Exp.check_four_conditions(first_parameter, second_parameter, third_parameter, fourth_parameter)){
-            cout << H_Exp.negative_number_error_message;
+            cout << termcolor::bright_red << H_Exp.negative_number_error_message << termcolor::reset;
             three_four_parameters();
         } else if (Shape_Value == 5){
             cout << dis.output << quad.PQuadrilateral(first_parameter, second_parameter, third_parameter, fourth_parameter) << endl;
@@ -51,7 +51,7 @@ Handle_Exception H_Exp;
     H_Exp.check_if_user_entered_string_and_shape_3D(is_3D);
 
     if (H_Exp.check_three_conditions(first_parameter, second_parameter, third_parameter)){
-		cout << H_Exp.negative_number_error_message;
+		cout << termcolor::bright_red << H_Exp.negative_number_error_message << termcolor::reset;
 		three_parameters();
     } else if (Shape_Value == 2){
 		Cuboid cupuon;

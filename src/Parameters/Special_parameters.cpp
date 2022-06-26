@@ -9,14 +9,14 @@ void Parameter::Special(){
     H_Exp.check_if_user_entered_string_and_shape_3D(false);
 
     if(H_Exp.check_one_condition(No_Of_Sides)){
-        cout << H_Exp.negative_number_error_message;
+        cout << termcolor::bright_red << H_Exp.negative_number_error_message << termcolor::reset;
         Special();
 	} else if(No_Of_Sides > 10){
-		cout << "You can't calculate more than 10 sides\n\n";
+		cout << termcolor::bright_red << "You can't calculate more than 10 sides\n\n" << termcolor::reset;
 		Special();
 	} else if (Shape_Value == 7){
-		Polygon poly;
-        poly.PPolygon(No_Of_Sides);
+	   //Polygon porn;
+	   //porn.PPolygon(No_Of_Sides);
     }
 	dis.select_dimension("2D");
 }

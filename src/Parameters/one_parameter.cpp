@@ -10,7 +10,7 @@ void Parameter::one_parameter(){
     H_Exp.check_if_user_entered_string_and_shape_3D(is_3D);
 
 	if (H_Exp.check_one_condition(first_parameter)){
-		cout << H_Exp.negative_number_error_message;
+		cout << termcolor::bright_red << H_Exp.negative_number_error_message << termcolor::reset;
 		one_parameter();
     } else if (Shape_Value == 1 && dimension == "2D"){
         Square sqrt;
