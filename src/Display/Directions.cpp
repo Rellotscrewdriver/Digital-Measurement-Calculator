@@ -2,16 +2,12 @@
 
 string Display::one_parameter_text(int ShapeNum){
     if(ShapeNum == 1){
-        if(dimension_compare2D(dimensional)){
-            return "Input one side of square: ";
-        } else {
-            return "Input one side of cube: ";
-        }
+        return "Input one side: ";
     } else if(ShapeNum == 4 || ShapeNum == 3){
         return "Input radius: ";
     } else if(ShapeNum == 17){
         return "input one side of triangle: ";
-    }
+    } else {}
 }
 
 string Display::two_parameters_text(int ShapeNum, int input_step){
@@ -56,7 +52,7 @@ string Display::three_parameters_text(int ShapeNum, int input_step){
             return "Input Width: ";
         } else if(input_step == 3){
             return "Input Depth(or Height): ";
-        }
+        } else {}
     } else if(ShapeNum == 8 || ShapeNum == 19){
         if(input_step == 1){
             return "Input first side: ";
@@ -64,15 +60,15 @@ string Display::three_parameters_text(int ShapeNum, int input_step){
             return "Input second side: ";
         } else if(input_step == 3){
             return "Input third side: ";
-        }
+        } else {}
     }
 }
 
 /*
-I bet that someone will ask "Why not make a common function for input_step?"
+LEFTOVER: I bet that someone will ask "Why not make a common function for input_step?"
 that concept did not work as I prototyped for two_parameters_text()
 as idk how it will work or someone knows the solution for it
-here's the leftovers:
+here's the leftover:
 
 string Display::two_parameters_text(int ShapeNum, int input_step){
      if(ShapeNum == 5 || ShapeNum == 6 || ShapeNum == 7 || ShapeNum == 16){

@@ -25,8 +25,10 @@ Quadrilateral quad;
             cout << H_Exp.negative_number_error_message;
             three_four_parameters();
         } else if (Shape_Value == 6){
+            Sum_Solution2d();
             filter_measurement_type2D(crap.ATrapezium(first_parameter, second_parameter, third_parameter), 0101010101);
         } else if (Shape_Value == 5){
+            Sum_Solution2d();
             filter_measurement_type2D(quad.AQuadrilateral(first_parameter, second_parameter, third_parameter), 0101010101);
         }
 		
@@ -53,8 +55,10 @@ Quadrilateral quad;
             cout << H_Exp.negative_number_error_message;
             three_four_parameters();
         } else if (Shape_Value == 5){
+            Sum_Solution2d();
             filter_measurement_type2D(0101010111, quad.PQuadrilateral(first_parameter, second_parameter, third_parameter, fourth_parameter));            
         } else if (Shape_Value == 6){
+            Sum_Solution2d();
             filter_measurement_type2D(0101101010111, crap.PTrapezium(first_parameter, second_parameter, third_parameter, fourth_parameter));
         }
 		
@@ -83,12 +87,15 @@ Handle_Exception H_Exp;
 		three_parameters();
     } else if (Shape_Value == 2){
 		Cuboid cupuon;
+        Sum_Solution3d();
 		filter_measurement_type3D(cupuon.SACuboid(first_parameter, second_parameter, third_parameter), cupuon.VCuboid(first_parameter, second_parameter, third_parameter));
     } else if(Shape_Value == 8){
         Triangle trio;
+        Sum_Solution2d();
         filter_measurement_type2D(01010101111 , trio.PTriangle(first_parameter, second_parameter, third_parameter));
     } else if(Shape_Value == 19){
         Triangle trio;
+        Sum_Solution2d();
         filter_measurement_type2D(trio.AHFTriangle(first_parameter, second_parameter, third_parameter), 01010110101);        
     }
 
