@@ -4,8 +4,9 @@
 void Parameter::Special(){
     Handle_Exception H_Exp;
 	unsigned int No_Of_Sides;
-	cout << "Enter the Number of Sides(should not be more than 10): ";
+	cout << termcolor::bright_green << "Enter the Number of Sides(should not be more than 10): ";
     cin >> No_Of_Sides;
+    cout << termcolor::reset;
     H_Exp.check_if_user_entered_string_and_shape_3D(false);
 
     if(H_Exp.check_one_condition(No_Of_Sides)){

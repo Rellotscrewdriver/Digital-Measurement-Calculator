@@ -3,9 +3,10 @@
 void Parameter::two_parameters(){
     Handle_Exception H_Exp;
 
-	cout << "Specify two parameters of " << Shape_Name << " to find it's " << filter_measurement_name() << endl;
-    cout << dis.two_parameters_text(Shape_Value, 1); cin >> first_parameter;
-	cout << dis.two_parameters_text(Shape_Value, 2); cin >> second_parameter;
+	cout << termcolor::bright_green << "Specify two parameters of " << Shape_Name << " to find it's " << filter_measurement_name() << endl;
+    cout << termcolor::bright_white << dis.two_parameters_text(Shape_Value, 1); cin >> first_parameter;
+	cout << termcolor::bright_red << dis.two_parameters_text(Shape_Value, 2); cin >> second_parameter;
+    cout << termcolor::reset;
     H_Exp.check_if_user_entered_string_and_shape_3D(is_3D);
 
         if (H_Exp.check_two_conditions(first_parameter, second_parameter)){
@@ -28,10 +29,10 @@ void Parameter::two_parameters(){
             filter_measurement_type3D(cone.CSACone(first_parameter, second_parameter), cone.TSACone(first_parameter, second_parameter), cone.VCone(first_parameter, second_parameter));
         } else if(Shape_Value == 16){
             Triangle trio;
-            cout << dis.output << trio.ATriangle(first_parameter, second_parameter) << endl;
+            cout << termcolor::bright_yellow << dis.output << trio.ATriangle(first_parameter, second_parameter) << termcolor::reset << endl;
         } else if(Shape_Value == 18){
             Triangle trio;
-            cout << dis.output << trio.AofITriangle(first_parameter, second_parameter) << endl;
+            cout << termcolor::bright_yellow << dis.output << trio.AofITriangle(first_parameter, second_parameter) << termcolor::reset << endl;
         } else {}
 
         dis.select_dimension(dimension);

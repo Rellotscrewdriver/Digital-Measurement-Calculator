@@ -4,9 +4,9 @@
 Handle_Exception H_Exp;
 
 void Parameter::one_parameter(){
-	cout << "Specify one parameter of " << Shape_Name << " to find it's " << filter_measurement_name() << endl;
-    cout << dis.one_parameter_text(Shape_Value); cin >> first_parameter;
-
+	cout << termcolor::bright_green << "Specify one parameter of " << Shape_Name << " to find it's " << filter_measurement_name() << endl;
+    cout << termcolor::bright_white << dis.one_parameter_text(Shape_Value); cin >> first_parameter;
+    cout << termcolor::reset;
     H_Exp.check_if_user_entered_string_and_shape_3D(is_3D);
 
 	if (H_Exp.check_one_condition(first_parameter)){
@@ -29,7 +29,7 @@ void Parameter::one_parameter(){
         filter_measurement_type3D(half_brain.CSAHemisphere(first_parameter), half_brain.TSAHemisphere(first_parameter), half_brain.VHemisphere(first_parameter));
     } else {
         Triangle trio;
-        cout << dis.output << trio.AofETriangle(first_parameter);
+        cout << termcolor::bright_yellow << dis.output << trio.AofETriangle(first_parameter) << termcolor::reset;
     }
 	dis.select_dimension(dimension);
 }

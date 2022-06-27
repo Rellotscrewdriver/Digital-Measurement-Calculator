@@ -45,7 +45,7 @@ bool Display::user_typed_exit(string parameter){
 }
 
 void Display::enter_dimension(){
-	cout << termcolor::bright_blue << "Enter The Dimension: " << termcolor::reset;
+	cout << termcolor::magenta << "Enter The Dimension: " << termcolor::reset;
 	cin >> dimensional;
     select_dimension(dimensional);
 }
