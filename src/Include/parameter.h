@@ -7,7 +7,9 @@
 #include "../Include/Shape_2D.h"
 #include "../Include/Shape_3D.h"
 #include "../Include/Display.h"
+#include "../Include/file-log.h"
 #include "../Include/Solution.h"
+
 
 /**********************************************************
 
@@ -90,6 +92,8 @@ private:
         string Shape_Name;
         string Measurement_Name;
 		string dimension;
+		File_Log hr;
+		std::ofstream Log;
 
 		bool is_3D;
 

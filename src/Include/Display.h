@@ -1,12 +1,13 @@
 #pragma once
 
 #include "../Include/declarations.h"
-
+#include "../Include/file-log.h"
 
 class Display {
 public:
 	string Shape_Name;
     string dimensional;
+    std::ofstream Log; 
 
 	const string exit_str = " exit the program\n";
     const string switch_to_3D = " switch to 3D";
@@ -85,4 +86,19 @@ public:
     string three_parameters_text(int ShapeNum, int input_step);
     string three_four_parameters_text(int ShapeNum);
     string triangle_special(int ShapeNum, int input_step);
+
+    /////////////////////////////////////////////////
+    /// \brief text which stores in Log.txt
+    ///
+    /// \param Shape Number
+    /// \param Input Step
+    /// \return string which directs user to input. Eg-: "Input Radius: "
+    ///
+    /// it's the same as one_parameter
+    /////////////////////////////////////////////////
+    string Log_one_parameter_text(int ShapeNum);
+    string Log_two_parameters_text(int ShapeNum, int input_step);
+    string Log_three_parameters_text(int ShapeNum, int input_step);
+    string Log_three_four_parameters_text(int ShapeNum);
+    string Log_triangle_special(int ShapeNum, int input_step);
 };
