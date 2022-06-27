@@ -2,26 +2,26 @@
 
 void Parameter::filter_measurement_type2D(double Area, double Perimeter){
 	if(Measure_Type == 1){
-		cout << termcolor::bright_yellow << "Output: " << Area << termcolor::reset << NEWLINE;
+		cout << color::yellow << "Output: " << Area << color::reset << NEWLINE;
 	} else if(Measure_Type == 2){
-        cout << termcolor::bright_yellow << "Output: " << Perimeter << termcolor::reset << NEWLINE;
+        cout << color::yellow << "Output: " << Perimeter << color::reset << NEWLINE;
 	}
 }
 void Parameter::filter_measurement_type3D(double Surface_Area, double Volume){
 	if(Measure_Type == 1){
-		cout << termcolor::bright_yellow << "Output: " << Surface_Area << termcolor::reset << NEWLINE;
+		cout << color::yellow << "Output: " << Surface_Area << color::reset << NEWLINE;
 	} else if(Measure_Type == 2){
-        cout << termcolor::bright_yellow << "Output: " << Volume << termcolor::reset << NEWLINE;
+        cout << color::yellow << "Output: " << Volume << color::reset << NEWLINE;
 	}
 }
 
 void Parameter::filter_measurement_type3D(double Curved_Surface_Area, double Total_Surface_Area, double Volume){
 	if(Measure_Type == 1){
-		cout << termcolor::bright_yellow << "Output: " << Curved_Surface_Area << termcolor::reset << NEWLINE;
+		cout << color::yellow << "Output: " << Curved_Surface_Area << color::reset << NEWLINE;
 	} else if(Measure_Type == 2){
-		cout << termcolor::bright_yellow << "Output: " << Total_Surface_Area << termcolor::reset << NEWLINE;
+		cout << color::yellow << "Output: " << Total_Surface_Area << color::reset << NEWLINE;
 	} else if(Measure_Type == 3){
-		cout << termcolor::bright_yellow << "Output: " << Volume << termcolor::reset << NEWLINE;
+		cout << color::yellow << "Output: " << Volume << color::reset << NEWLINE;
     }
 }
 

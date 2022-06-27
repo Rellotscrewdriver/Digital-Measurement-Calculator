@@ -4,16 +4,16 @@
 void Parameter::Special(){
     Handle_Exception H_Exp;
 	unsigned int No_Of_Sides;
-	cout << termcolor::bright_green << "Enter the Number of Sides(should not be more than 10): ";
+	cout << color::green << "Enter the Number of Sides(should not be more than 10): ";
     cin >> No_Of_Sides;
-    cout << termcolor::reset;
+    cout << color::reset;
     H_Exp.check_if_user_entered_string_and_shape_3D(false);
 
     if(H_Exp.check_one_condition(No_Of_Sides)){
-        cout << termcolor::bright_red << H_Exp.negative_number_error_message << termcolor::reset;
+        cout << color::red << H_Exp.negative_number_error_message << color::reset;
         Special();
 	} else if(No_Of_Sides > 10){
-		cout << termcolor::bright_red << "You can't calculate more than 10 sides\n\n" << termcolor::reset;
+		cout << color::red << "You can't calculate more than 10 sides\n\n" << color::reset;
 		Special();
 	} else if (Shape_Value == 7){
 	   //Polygon porn;

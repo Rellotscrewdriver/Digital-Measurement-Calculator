@@ -4,13 +4,13 @@
 Handle_Exception H_Exp;
 
 void Parameter::one_parameter(){
-	cout << termcolor::bright_green << "Specify one parameter of " << Shape_Name << " to find it's " << filter_measurement_name() << endl;
-    cout << termcolor::bright_white << dis.one_parameter_text(Shape_Value); cin >> first_parameter;
-    cout << termcolor::reset;
+	cout << color::green << "Specify one parameter of " << Shape_Name << " to find it's " << filter_measurement_name() << endl;
+    cout << color::white << dis.one_parameter_text(Shape_Value); cin >> first_parameter;
+    cout << color::reset;
     H_Exp.check_if_user_entered_string_and_shape_3D(is_3D);
 
 	if (H_Exp.check_one_condition(first_parameter)){
-		cout << termcolor::bright_red << H_Exp.negative_number_error_message << termcolor::reset;
+		cout << color::red << H_Exp.negative_number_error_message << color::reset;
 		one_parameter();
     } else if (Shape_Value == 1 && dimension == "2D"){
         Square sqrt;
@@ -29,7 +29,7 @@ void Parameter::one_parameter(){
         filter_measurement_type3D(half_brain.CSAHemisphere(first_parameter), half_brain.TSAHemisphere(first_parameter), half_brain.VHemisphere(first_parameter));
     } else {
         Triangle trio;
-        cout << termcolor::bright_yellow << dis.output << trio.AofETriangle(first_parameter) << termcolor::reset;
+        cout << color::yellow << dis.output << trio.AofETriangle(first_parameter) << color::reset;
     }
 	dis.select_dimension(dimension);
 }
