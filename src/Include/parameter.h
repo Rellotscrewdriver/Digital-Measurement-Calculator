@@ -1,11 +1,13 @@
 #pragma once
-#define NEWLINE "\n\n"
+#define NEWLINE "\n"
+#define EQUAL "= "
+#define ANSWER "\n\nHence, The Answer is "
 
 #include "../Include/Handle_Exception.h"
 #include "../Include/Shape_2D.h"
 #include "../Include/Shape_3D.h"
 #include "../Include/Display.h"
-
+#include "../Include/Solution.h"
 
 /**********************************************************
 
@@ -133,4 +135,16 @@ private:
 		/// \brief these are used for quadrilateral and trapezium
 		void three_four_parameters();
 		void Special(); /// \brief This is a special function for polygon(perimeter)
+
+		friend class Solution;
+
+		/////////////////////////////////////////////////
+    	/// \brief these functions are used to find the measurement type
+    	///
+    	///	these functions are used to find the measurement type 
+    	/// in order to find the solution 
+    	/////////////////////////////////////////////////
+		void Sum_Solution2d();
+		void Sum_Solution3d();
+		void Sum_Solution3d_2();
 };

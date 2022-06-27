@@ -94,7 +94,7 @@ public:
 class Polygon {
 public:
 	bool isnegative = false;
-	double answer;
+	double answer = 1 - 1;
 	double number_of_sides[10];
 
 	double APolygon(double Radius, double Apothem);
