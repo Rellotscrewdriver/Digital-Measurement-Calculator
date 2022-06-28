@@ -1,4 +1,5 @@
 #include "Include/Handle_Exception.h"
+
 #define LIMIT 0.0
 
 void Handle_Exception::check_if_user_entered_string_and_shape_3D(bool checkifshapeis3D) {
@@ -15,11 +16,11 @@ void Handle_Exception::check_if_user_entered_string_or_invaild_number(){
 	if (cin.fail()) {
         Stop_buffer_OverFlow();
 	} else
-		cout << invaild_message_invaild_character << endl;
+		cout << color::red << invaild_message_invaild_character << color::reset << endl;
 }
 
 void Handle_Exception::Stop_buffer_OverFlow(){
-        cout << invaild_message_string << endl;
+        cout << color::red << invaild_message_string << color::reset << endl;
 		cin.clear();
 		cin.ignore(numeric_limits<streamsize>::max(), ' ');
 }

@@ -7,10 +7,11 @@ Quadrilateral quad;
 
 	if(Measure_Type == 1){
 		//area
-		cout << "Specify three parameters of " << Shape_Name << " to find it's " << filter_measurement_name() << endl;
-        cout << dis.three_four_parameters_text(Shape_Value); cin >> first_parameter;
-        cout << "Input First Base: "; cin >> second_parameter;
-        cout << "Input Second Base: "; cin >> third_parameter;
+		cout << color::green <<"Specify three parameters of " << Shape_Name << " to find it's " << filter_measurement_name() << endl;
+        cout << color::white <<dis.three_four_parameters_text(Shape_Value); cin >> first_parameter;
+        cout << color::red <<"Input First Base: "; cin >> second_parameter;
+        cout << color::cyan <<"Input Second Base: "; cin >> third_parameter;
+        cout << color::reset;
         H_Exp.check_if_user_entered_string_and_shape_3D(false);
 
 
@@ -22,7 +23,7 @@ Quadrilateral quad;
         Log.close();        
 
         if (H_Exp.check_three_conditions(first_parameter, second_parameter, third_parameter)){
-            cout << H_Exp.negative_number_error_message;
+            cout << color::red << H_Exp.negative_number_error_message << color::reset;
             three_four_parameters();
         } else if (Shape_Value == 6){
             Sum_Solution2d();
@@ -36,11 +37,12 @@ Quadrilateral quad;
 	
     } else {
 		//perimeter
-	    cout << "Specify four parameters of " << Shape_Name << " to find it's " << filter_measurement_name() << endl;
-        cout << "Input First Side: "; cin >> first_parameter;
-        cout << "Input Second Side: "; cin >> second_parameter;
-        cout << "Input Third Side: "; cin >> third_parameter;
-        cout << "Input Fourth Side: "; cin >> fourth_parameter;
+	    cout << color::green << "Specify four parameters of " << Shape_Name << " to find it's " << filter_measurement_name() << endl;
+        cout << color::white << "Input First Side: "; cin >> first_parameter;
+        cout << color::red <<"Input Second Side: "; cin >> second_parameter;
+        cout << color::cyan << "Input Third Side: "; cin >> third_parameter;
+        cout << color::magenta << "Input Fourth Side: "; cin >> fourth_parameter;
+        cout << color::reset;
         H_Exp.check_if_user_entered_string_and_shape_3D(false);
 
         Log.open("Log.txt", ios::app);
@@ -52,7 +54,7 @@ Quadrilateral quad;
         Log.close();
 
         if (H_Exp.check_four_conditions(first_parameter, second_parameter, third_parameter, fourth_parameter)){
-            cout << H_Exp.negative_number_error_message;
+            cout << color::red << H_Exp.negative_number_error_message << color::reset;
             three_four_parameters();
         } else if (Shape_Value == 5){
             Sum_Solution2d();
@@ -68,10 +70,11 @@ Quadrilateral quad;
 
 void Parameter::three_parameters(){
 Handle_Exception H_Exp;
-	cout << "Specify three parameters of " << Shape_Name << " to find it's " << filter_measurement_name() << endl;
-    cout << dis.three_parameters_text(Shape_Value , 1); cin >> first_parameter;
-    cout << dis.three_parameters_text(Shape_Value , 2); cin >> second_parameter;
-    cout << dis.three_parameters_text(Shape_Value , 3); cin >> third_parameter;
+	cout << color::green << "Specify three parameters of " << Shape_Name << " to find it's " << filter_measurement_name() << endl;
+    cout << color::white << dis.three_parameters_text(Shape_Value , 1); cin >> first_parameter;
+    cout << color::red << dis.three_parameters_text(Shape_Value , 2); cin >> second_parameter;
+    cout << color::cyan << dis.three_parameters_text(Shape_Value , 3); cin >> third_parameter;
+    cout << color::reset;
     H_Exp.check_if_user_entered_string_and_shape_3D(is_3D);
 
     std::ofstream Log;
@@ -83,7 +86,7 @@ Handle_Exception H_Exp;
     Log.close();
 
     if (H_Exp.check_three_conditions(first_parameter, second_parameter, third_parameter)){
-		cout << H_Exp.negative_number_error_message;
+		cout << color::red << H_Exp.negative_number_error_message << color::reset;
 		three_parameters();
     } else if (Shape_Value == 2){
 		Cuboid cupuon;

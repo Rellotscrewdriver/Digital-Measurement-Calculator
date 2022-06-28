@@ -4,8 +4,9 @@
 Handle_Exception H_Exp;
 
 void Parameter::one_parameter(){
-	cout << "Specify one parameter of " << Shape_Name << " to find it's " << filter_measurement_name() << endl;
-    cout << dis.one_parameter_text(Shape_Value); cin >> first_parameter;
+    cout << color::green << "Specify one parameter of " << Shape_Name << " to find it's " << filter_measurement_name() << endl;
+    cout << color::white << dis.one_parameter_text(Shape_Value); cin >> first_parameter;
+    cout << color::reset;
     H_Exp.check_if_user_entered_string_and_shape_3D(is_3D);
 
     Log.open("Log.txt", ios::app);
@@ -14,7 +15,7 @@ void Parameter::one_parameter(){
     Log.close();
 
 	if (H_Exp.check_one_condition(first_parameter)){
-		cout << H_Exp.negative_number_error_message;
+		cout << color::red << H_Exp.negative_number_error_message << color::reset;
 		one_parameter();
     } else if (Shape_Value == 1 && dimension == "2D"){
         Square sqrt;

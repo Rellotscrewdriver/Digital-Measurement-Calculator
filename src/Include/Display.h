@@ -1,7 +1,9 @@
 #pragma once
 
 #include "../Include/declarations.h"
+#include "../../extlibs/termcolor/include/termcolor.hpp"
 #include "../Include/file-log.h"
+
 
 class Display {
 public:

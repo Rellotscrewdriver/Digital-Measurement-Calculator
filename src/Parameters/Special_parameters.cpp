@@ -3,10 +3,12 @@
 
 void Parameter::Special(){
     Handle_Exception H_Exp;
-	unsigned int No_Of_Sides;
+	  unsigned int No_Of_Sides;
     //TODO: Increase the number of sides to 20
-	cout << "Enter the Number of Sides(should not be more than 10): ";
+    cout << color::green << "Enter the Number of Sides(should not be more than 10): ";
     cin >> No_Of_Sides;
+    cout << color::reset;
+    
     H_Exp.check_if_user_entered_string_and_shape_3D(false);
 
     Log.open("Log.txt", ios::app);
@@ -15,16 +17,16 @@ void Parameter::Special(){
     Log.close();
 
     if(H_Exp.check_one_condition(No_Of_Sides)){
-        cout << H_Exp.negative_number_error_message;
+        cout << color::red << H_Exp.negative_number_error_message << color::reset;
         Special();
 	} else if(No_Of_Sides > 10){
-		cout << "You can't calculate more than 10 sides\n\n";
+		cout << color::red << "You can't calculate more than 10 sides\n\n" << color::reset;
 		Special();
 	} else if (Shape_Value == 7){
-		Polygon poly;
+	      Polygon porn;
         Log << "you choose to enter " << No_Of_Sides << " sides\n";
-        poly.PPolygon(No_Of_Sides);
-    }
+        porn.PPolygon(No_Of_Sides);
+  }
 	dis.select_dimension("2D");
 }
 
