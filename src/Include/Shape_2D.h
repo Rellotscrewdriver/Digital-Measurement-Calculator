@@ -5,13 +5,15 @@
 #include "../Include/Handle_Exception.h"
 #include "../Include/Display.h"
 #include "../Include/parameter.h"
+#include "../Include/file-log.h"
 
 class Shape_2D {
 public:
     int WhichShape;
     int Measurement_Type;
     string Measurement_Name;
-
+    std::ofstream Log; 
+    
     /////////////////////////////////////////////////
     /// \brief asks for user the input the 2D shape
     /////////////////////////////////////////////////
@@ -94,7 +96,7 @@ public:
 class Polygon {
 public:
 	bool isnegative = false;
-	double answer;
+	double answer = 1 - 1;
 	double number_of_sides[10];
 
 	double APolygon(double Radius, double Apothem);

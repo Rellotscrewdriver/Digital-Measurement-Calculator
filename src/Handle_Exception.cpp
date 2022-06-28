@@ -22,7 +22,7 @@ void Handle_Exception::check_if_user_entered_string_or_invaild_number(){
 void Handle_Exception::Stop_buffer_OverFlow(){
         cout << color::red << invaild_message_string << color::reset << endl;
 		cin.clear();
-		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		cin.ignore(numeric_limits<streamsize>::max(), ' ');
 }
 
 bool Handle_Exception::check_one_condition(double FirstCondition){

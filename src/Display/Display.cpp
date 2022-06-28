@@ -57,7 +57,10 @@ void Display::select_dimension(string dimensional){
         Shape_3D();
     } else if (user_typed_exit(dimensional)) {
 		cout << console_message;
-		getchar();
+        Log.open("Log.txt", ios::app);
+        Log << "you quitted it as soon as you opened your session\n";
+		Log.close();
+        getchar();
 	} else {
         Handle_Exception  H_Exp;
         H_Exp.check_if_user_entered_string_or_invaild_number();
