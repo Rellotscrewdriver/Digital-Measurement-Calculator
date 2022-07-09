@@ -1,8 +1,8 @@
-# Code::Blocks project files
-*.cbp
-*.depend
-*.layout
-*.cscope_file_list
+#Personal VScode settings
+/.vscode
+
+#Cmake generated folder
+/build
 
 #Complied Object Files
 *.o

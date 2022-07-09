@@ -19,7 +19,7 @@ void Parameter::two_parameters(){
             cout << color::red << H_Exp.negative_number_error_message << color::reset;
             two_parameters();
         } else if (Shape_Value == 2 && dimension == "2D"){
-            Rectangle get_rekt;
+            DIC_Rectangle get_rekt;
             Sum_Solution2d();
             filter_measurement_type2D(get_rekt.ARectangle(first_parameter, second_parameter), get_rekt.PRectangle(first_parameter, second_parameter));
         } else if (Shape_Value == 3 && dimension == "2D"){
@@ -27,7 +27,7 @@ void Parameter::two_parameters(){
             Sum_Solution2d();
             filter_measurement_type2D(paralol.AParallelogram(first_parameter, second_parameter), paralol.PParallelogram(first_parameter, second_parameter));
         } else if (Shape_Value == 7 && dimension == "2D"){
-            Polygon porn;
+            DIC_Polygon porn;
             Sum_Solution2d();
             filter_measurement_type2D(porn.APolygon(first_parameter, second_parameter), 0101010101);
         } else if (Shape_Value == 6 && dimension == "3D"){

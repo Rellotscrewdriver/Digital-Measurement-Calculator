@@ -1,3 +1,0 @@
-[submodule "extlibs/termcolor"]
-	path = extlibs/termcolor
-	url = https://github.com/ikalnytskyi/termcolor.git

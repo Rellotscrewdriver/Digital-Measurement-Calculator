@@ -1,11 +1,11 @@
 #include "../Include/Shape_2D.h"
 #include "../Include/Solution.h"
 
-double Polygon::APolygon(double Radius, double Apothem) {
+double DIC_Polygon::APolygon(double Radius, double Apothem) {
 	return 0.5 * Radius * Apothem;
 }
 
-void Polygon::PPolygon(double side) {
+void DIC_Polygon::PPolygon(double side) {
     Handle_Exception H_Exp;
 
     cout << FORMULA  << "combined sides + another side...\n\n";

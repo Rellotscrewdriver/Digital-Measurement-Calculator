@@ -63,7 +63,7 @@ public:
 	double Psquare(double side);
 };
 
-class Rectangle {
+class DIC_Rectangle {
 public:
 	double ARectangle(double length, double width);
 	double PRectangle(double length, double width);
@@ -93,7 +93,7 @@ public:
 	double PTrapezium(double SideA, double SideB, double SideC, double SideD);
 };
 
-class Polygon {
+class DIC_Polygon {
 public:
 	bool isnegative = false;
 	double answer = 1 - 1;

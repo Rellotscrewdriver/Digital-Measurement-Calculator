@@ -1,5 +1,6 @@
 #include "../Include/parameter.h"
 #include "../Include/Handle_Exception.h"
+#include "../Include/Shape_2D.h"
 
 void Parameter::Special(){
     Handle_Exception H_Exp;
@@ -23,9 +24,9 @@ void Parameter::Special(){
 		cout << color::red << "You can't calculate more than 10 sides\n\n" << color::reset;
 		Special();
 	} else if (Shape_Value == 7){
-	      Polygon porn;
+        DIC_Polygon porn;
         Log << "you choose to enter " << No_Of_Sides << " sides\n";
-        porn.PPolygon(No_Of_Sides);
+        //porn.PPolygon(No_Of_Sides);
   }
 	dis.select_dimension("2D");
 }
