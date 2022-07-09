@@ -11,7 +11,7 @@ void Solution::Shape_finder3D_Surface_Area(int ShapeNum){
         Sol_CuboidSA();
     }
 }
-//TODO: finish their solutions and formulas
+
 void Solution::Shape_finder3D_Volume(int ShapeNum){
     Parameter sol;
     

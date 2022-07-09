@@ -10,13 +10,13 @@ double Parallelogram::PParallelogram(double height, double width) {
 }
 
 void Solution::Sol_ParallelogramA(){
-   cout << FORMULA  << "width * height\n";
+   cout << color::yellow << FORMULA << "width * height\n" << color::reset;
    cout << SOLUTION;
    cout << "= " << first_para << " * " << second_para << "\n";
 }
 
 void Solution::Sol_ParallelogramP(){
-   cout << FORMULA  << "2 * (width * height)\n";
+   cout << color::yellow << FORMULA << "2 * (width * height)\n" << color::reset;
    cout << SOLUTION;
    cout << "= 2 * (" << first_para << " * " << second_para << ")\n";
    cout << "= 2 * (" << first_para * second_para << ")\n";

@@ -10,13 +10,13 @@ double DIC_Rectangle::ARectangle(double length, double width) {
 }
 
 void Solution::Sol_RectangleA(){
-    cout << FORMULA  << "length * width\n";
+    cout << color::yellow << FORMULA  << "length * width\n" << color::reset;
    	cout << SOLUTION;
     cout << "= " << first_para << " * " << second_para << endl; 
 }
 
 void Solution::Sol_RectangleP(){
-    cout << FORMULA  << "2 * (length + width)\n";
+    cout << color::yellow << FORMULA  << "2 * (length + width)\n" << color::reset;
    	cout << SOLUTION;
     cout << "= 2 * (" << first_para << " + " << second_para << ")\n";
 }

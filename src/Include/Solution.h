@@ -2,6 +2,7 @@
 
 #include "../Include/declarations.h"
 #include "../Include/parameter.h"
+#include "../../extlibs/termcolor.hpp"
 #define SOLUTION "\nSolution:\n"
 #define FORMULA "\nFormula: "
 

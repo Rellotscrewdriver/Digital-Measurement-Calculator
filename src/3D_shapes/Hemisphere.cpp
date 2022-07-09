@@ -13,7 +13,7 @@ double Hemisphere::VHemisphere(double Radius) {
 }
 
 void Solution::Sol_HemisphereTSA(){
-    cout << FORMULA  << "3 * PI * (Radius * Radius)\n";
+    cout << color::yellow << FORMULA  << "3 * PI * (Radius * Radius)\n" << color::yellow;
     cout << SOLUTION;
     cout << "= 3 * PI * (" << first_para << " * " << first_para << ")\n";
     cout << "= 3 * PI * (" << first_para * first_para << ")\n";
@@ -21,7 +21,7 @@ void Solution::Sol_HemisphereTSA(){
 }
 
 void Solution::Sol_HemisphereCSA(){
-    cout << FORMULA  << "2 * PI * (Radius * Radius)\n";
+    cout << color::yellow << FORMULA  << "2 * PI * (Radius * Radius)\n" << color::yellow;
     cout << SOLUTION;
     cout << "= 2 * PI * (" << first_para << " * " << first_para << ")\n";
     cout << "= 2 * PI * (" << first_para * first_para << ")\n";
@@ -29,7 +29,7 @@ void Solution::Sol_HemisphereCSA(){
 }
 
 void Solution::Sol_HemisphereV(){
-    cout << FORMULA  << "2 / 3 * PI * (Radius * Radius * Radius)\n";
+    cout << color::yellow << FORMULA  << "2 / 3 * PI * (Radius * Radius * Radius)\n" << color::yellow;
     cout << SOLUTION;
     cout << "= 2 / 3 * PI * (" << first_para << " * " << first_para << " * " << first_para << ")\n";
     cout << "= 2 / 3 * PI * (" << first_para * first_para * first_para << ")\n";

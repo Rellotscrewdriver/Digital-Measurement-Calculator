@@ -64,7 +64,7 @@ double Triangle::PTriangle(double SideA, double SideB, double SideC){
 void Solution::Sol_TriangleAHF(){
     double side_perimeter = first_para + second_para + third_para / 2;
     cout << "Side_Perimeter: " << "(SideA + SideB + SideC) / 2\n";
-    cout << FORMULA << "v/side_perimeter  * (side_perimeter - SideA) * (side_perimeter - SideB) * (side_perimeter - SideC)\n";
+    cout << color::yellow << FORMULA << "v/side_perimeter  * (side_perimeter - SideA) * (side_perimeter - SideB) * (side_perimeter - SideC)\n" << color::reset;
     cout << SOLUTION;
     cout << "= " << "( " << first_para << " + " << second_para << " + " << third_para << ") / 2\n";
     cout << "= " << "( " << first_para + second_para << " + " << third_para << ") / 2\n";
@@ -89,7 +89,7 @@ void Solution::Sol_TriangleAHF(){
 }
 
 void Solution::Sol_TriangleAofE(){
-    cout << FORMULA << "(sqrt(3) / 4) * Side * Side\n";
+    cout << color::yellow << FORMULA << "(sqrt(3) / 4) * Side * Side\n" << color::reset;
     cout << SOLUTION;
     cout << "= v/(3) / 4" << " * " << first_para << " * " << first_para << "\n";
     cout << "= v/(3) / 4" << " * " << first_para * first_para << "\n";
@@ -97,14 +97,14 @@ void Solution::Sol_TriangleAofE(){
 }
 
 void Solution::Sol_TriangleA(){
-    cout << FORMULA << "0.5 * base * height\n";
+    cout << color::yellow << FORMULA << "0.5 * base * height\n" << color::reset;
     cout << SOLUTION;
     cout << "= " << 0.5 << " * " << first_para << " * " << second_para << "\n";
     cout << "= " << 0.5 << " * " << first_para * second_para << "\n";
 }
 
 void Solution::Sol_TriangleAofI(){
-    cout << FORMULA << "(1 / 4) * SideB * sqrt((4 * SideA * SideA - SideB * SideB))\n";
+    cout << color::yellow << FORMULA << "(1 / 4) * SideB * sqrt((4 * SideA * SideA - SideB * SideB))\n" << color::reset;
     cout << SOLUTION;
     cout << "= (1 / 4) * " << second_para << " * v/(4 * " << first_para << " * " << first_para << " - " << second_para << " * " << second_para << "))\n"; 
     cout << "= (1 / 4) * " << second_para << " * v/(4 * " << first_para << " * " << first_para << " - " << second_para * second_para << "))\n"; 
@@ -115,7 +115,7 @@ void Solution::Sol_TriangleAofI(){
 }
 
 void Solution::Sol_TriangleP(){
-    cout << FORMULA << "SideA + SideB + SideC\n";
+    cout << color::yellow << FORMULA << "SideA + SideB + SideC\n" << color::reset;
     cout << SOLUTION;
     cout << "= " << first_para << " + " << second_para << " + " << third_para << "\n";
     cout << "= " << first_para << " + " << second_para + third_para << "\n";

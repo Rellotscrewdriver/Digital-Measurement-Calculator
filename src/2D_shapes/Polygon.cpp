@@ -8,7 +8,7 @@ double DIC_Polygon::APolygon(double Radius, double Apothem) {
 void DIC_Polygon::PPolygon(double side) {
     Handle_Exception H_Exp;
 
-    cout << FORMULA  << "combined sides + another side...\n\n";
+    cout << color::yellow << FORMULA << "combined sides + another side...\n\n" << color::reset;
 
 	for (int i = 1; i <= side; i++) {
 		isnegative = false;
@@ -35,7 +35,7 @@ void DIC_Polygon::PPolygon(double side) {
 }
 
 void Solution::Sol_PolygonA(){
-	cout << FORMULA  << "Radius * Apothem\n";
+	cout << color::yellow << FORMULA << "Radius * Apothem\n" << color::reset;
    	cout << SOLUTION;
 	cout << "= 0.5 * " << first_para << " * " << second_para << "\n"; 
 	cout << "= 0.5 * " << first_para * second_para << "\n"; 

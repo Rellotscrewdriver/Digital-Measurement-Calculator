@@ -10,7 +10,7 @@ double Cube::VCube(double Side) {
 }
 
 void Solution::Sol_CubeSA(){
-    cout << FORMULA  << "6 * (Side * Side)" << endl;
+    cout << color::yellow << FORMULA << "6 * (Side * Side)\n" << color::reset;
     cout << SOLUTION;
     cout << "= 6 * (" << first_para << " * " << first_para << ")\n";
     cout << "= 6 * " << first_para * first_para << endl;
@@ -18,7 +18,7 @@ void Solution::Sol_CubeSA(){
 
 
 void Solution::Sol_CubeV(){
-    cout << FORMULA  << "Side * Side * Side" << endl;
+    cout << color::yellow << FORMULA << "Side * Side * Side\n" << color::reset;
     cout << SOLUTION;
     cout << "= " << first_para << " * " << first_para << " * " << first_para << "\n";
     cout << "= " << first_para << " * " << first_para * first_para << "\n";
