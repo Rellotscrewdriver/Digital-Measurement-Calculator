@@ -20,13 +20,13 @@ void Parameter::Special(){
     if(H_Exp.check_one_condition(No_Of_Sides)){
         cout << color::red << H_Exp.negative_number_error_message << color::reset;
         Special();
-	} else if(No_Of_Sides > 10){
-		cout << color::red << "You can't calculate more than 10 sides\n\n" << color::reset;
+	} else if(No_Of_Sides > 25){
+		cout << color::red << "You can't calculate more than 25 sides\n\n" << color::reset;
 		Special();
 	} else if (Shape_Value == 7){
         DIC_Polygon porn;
         Log << "you choose to enter " << No_Of_Sides << " sides\n";
-        //porn.PPolygon(No_Of_Sides);
+        porn.PPolygon(No_Of_Sides);
   }
 	dis.select_dimension("2D");
 }

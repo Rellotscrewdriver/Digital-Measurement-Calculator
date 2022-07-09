@@ -97,7 +97,7 @@ class DIC_Polygon {
 public:
 	bool isnegative = false;
 	double answer = 1 - 1;
-	double number_of_sides[10];
+	double number_of_sides[20];
 
 	double APolygon(double Radius, double Apothem);
 	void PPolygon(double side);
