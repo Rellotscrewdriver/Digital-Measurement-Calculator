@@ -22,7 +22,7 @@ void Display::Welcome_Message(){
     horizontal_rule('-', 53);
     cout << color::white << "Hello There! :) \n"
     << "Welcome to the SMC " //TODO: Create an ASCII Logo
-    << color::grey << version::FULLVERSION_STRING[0] << "." << version::FULLVERSION_STRING[1] << " " << version::STATUS
+    << color::grey << version::MAJOR_CHANGE << "." << version::MINOR_CHANGE << "." << version::PATCH << " " << version::STATUS
     << color::white << "\nReleased on " << color::grey << version::RELEASE_DATE
     << color::white << "\nthis software can calculate 15 different types of shapes!\n"
     << "Ranging from their areas, curved surface area, volume and much more!\n"
