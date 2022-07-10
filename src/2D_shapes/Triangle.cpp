@@ -69,7 +69,7 @@ void Solution::Sol_TriangleAHF(){
     cout << "= " << "( " << first_para << " + " << second_para << " + " << third_para << ") / 2\n";
     cout << "= " << "( " << first_para + second_para << " + " << third_para << ") / 2\n";
     cout << "= " << "( " << first_para + second_para + third_para << ") / 2\n";
-    cout << "= " << side_perimeter << "\n";
+    cout << "= " << side_perimeter << "\n\n";
     cout << "= v/(" << side_perimeter << " * (" << side_perimeter << " - " << first_para << ")) * (" 
     << side_perimeter << " - " << second_para << ") * (" 
     << side_perimeter << " - " << third_para << ")\n";

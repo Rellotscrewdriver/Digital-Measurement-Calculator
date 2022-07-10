@@ -18,6 +18,10 @@ void DIC_Polygon::PPolygon(double side) {
 
 		H_Exp.check_if_user_entered_string_and_shape_3D(false);
 		if (!H_Exp.check_one_condition(number_of_sides[i]) ){
+			std::ofstream Log;
+			Log.open("Log.txt", ios::app);
+			Log << "\nside " << i << " : "<< number_of_sides[i];
+			Log.close();
 			if(i > 1){
 				cout << "= " << answer << " + " << number_of_sides[i] << "\n\n";
 			}
@@ -35,7 +39,7 @@ void DIC_Polygon::PPolygon(double side) {
 
 		std::ofstream Log;
 		Log.open("Log.txt", ios::app);
-		Log << "\nThe answer was " << answer << "\n";
+		Log << "\n\nThe answer was " << answer << "\n";
     	Log.close();
 	}
 }

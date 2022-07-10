@@ -13,8 +13,8 @@ void Parameter::Special(){
     H_Exp.check_if_user_entered_string_and_shape_3D(false);
 
     Log.open("Log.txt", ios::app);
-    Log << "You find perimeter of Polygon" << "\n";
-    Log << "Number Of Sides: " << No_Of_Sides;
+    Log << "You find perimeter of Polygon" << "\n\n";
+    Log << "number Of sides you entered: " << No_Of_Sides;
     Log.close();
 
     if(H_Exp.check_one_condition(No_Of_Sides)){
