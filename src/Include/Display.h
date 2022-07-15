@@ -45,7 +45,6 @@ public:
     /////////////////////////////////////////////////
 	bool dimension_compare2D(string parameter);
     bool dimension_compare3D(string parameter);
-    bool user_typed_exit(string parameter);
 
     /////////////////////////////////////////////////
     /// \brief this function asks the user to input 2d or 3d dimension
