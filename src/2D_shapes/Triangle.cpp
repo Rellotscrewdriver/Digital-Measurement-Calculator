@@ -2,23 +2,6 @@
 #include "../Include/Handle_Exception.h"
 #include <cmath>
 
-/*
-1. Area:
-0.5 * base * height
-
-2. area of equilateral triangle:
-(half-3)/4 * side * side
-
-3. area of isosceles triangle:
-1/4 b half-(4a * a - b * b)
-
-4. heron's formula:
-s = (a + b + c) / 2
-A =  half-(s(s-a) (s-b) (s-c))
-
-5. Perimeter:
-a + b + c
-*/
 
 void Triangle::filter_area_of_triangle(){
     Display dis;
@@ -48,8 +31,8 @@ double Triangle::AofETriangle(double Side){
     return (sqrt(3) / 4) * Side * Side;
 }
 
-double Triangle::AofITriangle(double SideA, double SideB){
-    return (1 / 4) * SideB * sqrt((4 * SideA * SideA - SideB * SideB));
+double Triangle::AofITriangle(double Comm_one_Side, double SideB){
+    return Comm_one_Side * SideB / 2;
 }
 
 double Triangle::AHFTriangle(double SideA, double SideB, double SideC){
@@ -104,14 +87,10 @@ void Solution::Sol_TriangleA(){
 }
 
 void Solution::Sol_TriangleAofI(){
-    cout << color::yellow << FORMULA << "(1 / 4) * SideB * sqrt((4 * SideA * SideA - SideB * SideB))\n" << color::reset;
+    cout << color::yellow << FORMULA << "Common Side + Another Upequal Side / 2\n" << color::reset;
     cout << SOLUTION;
-    cout << "= (1 / 4) * " << second_para << " * v/(4 * " << first_para << " * " << first_para << " - " << second_para << " * " << second_para << "))\n"; 
-    cout << "= (1 / 4) * " << second_para << " * v/(4 * " << first_para << " * " << first_para << " - " << second_para * second_para << "))\n"; 
-    cout << "= (1 / 4) * " << second_para << " * v/(4 * " << first_para * first_para << " - " << second_para * second_para << "))\n"; 
-    cout << "= (1 / 4) * " << second_para << " * v/(4 * " << first_para * first_para - second_para * second_para << "))\n"; 
-    cout << "= (1 / 4) * " << second_para << " * v/(" << 4 * first_para * first_para - second_para * second_para << ")\n"; 
-    cout << "= " << (1 / 4) * second_para << " * v/(" << 4 * first_para * first_para - second_para * second_para << ")\n"; 
+    cout << "= " << first_para << " * " << second_para << " / " << 2 << "\n";
+    cout << "= " << first_para * second_para << " / " << 2 << endl; 
 }
 
 void Solution::Sol_TriangleP(){

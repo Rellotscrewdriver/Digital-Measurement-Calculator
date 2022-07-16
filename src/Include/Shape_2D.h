@@ -115,7 +115,7 @@ public:
 
 	double ATriangle(double base, double height);
 	double AofETriangle(double Side);
-    double AofITriangle(double SideA, double SideB);
+    double AofITriangle(double Comm_one_Side, double SideB);
     double AHFTriangle(double SideA, double SideB, double SideC);
 	double PTriangle(double SideA, double SideB, double SideC);
 };
