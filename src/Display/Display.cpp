@@ -21,7 +21,7 @@ void Display::Welcome_Message(){
     << color::red << "- Type \"e\" or \"exit\" to exit this program\n" << color::reset
     << "- Type \"c\" or \"credit\" or \"contributors\" to see the credits \n"
     << "- Type \"l\" or \"license\" to see the license \n"
-    << "- Type \"d\" or \"contact details\" to see the links"
+    << "- Type \"d\" or \"contact details\" to see the links\n"
     << "- Type \"a\" or \"about\" to see the version info \n" << endl;
 }
 
