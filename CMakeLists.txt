@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.12)
 
 #add the project and it's version number
-project("DIC" VERSION 2.0)
+project("DIC" VERSION 2.1.1)
 
 #artifically increasing the requirements to make people contribute in my repo
 set(CMAKE_CXX_STANDARD 11)
