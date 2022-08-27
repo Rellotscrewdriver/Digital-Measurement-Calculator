@@ -11,7 +11,7 @@ the goal of this project to offer a lot of customizability, small file size(unde
 
 ## How do I get this project to work on my machine?
 
-you need Cmake to make a project on your preferrable IDE, then start Compiling with gcc
+you need Cmake to make a project on your preferable IDE, then start Compiling with gcc
 
 ##  How can I contribute for this project?
 
